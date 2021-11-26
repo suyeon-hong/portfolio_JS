@@ -76,21 +76,49 @@ class Slider{
 
 
 // box1 slide
-const $sliderBtns = $(".box1 .btns li");
-const $frame = $(".box1 .slider-wrapper");
-let enableClick = true;
-
-$sliderBtns.on("click", function(){
-
-    if(enableClick){
-        enableClick =false;
-        let index = $(this).index();
-
-        $sliderBtns.removeClass("on");
-        $(this).addClass("on");
-        $frame.animate({left: -(100 * index) +"%"}, speed/2, function(){
-            enableClick = true;
+class SliderBasic{
+    constructor(opt){
+        if(!opt.frame){
+            console.error("frame값은 필수 입력값입니다.");
+            return;
+        }
+        this.init(opt);
+        this.bindingEvent();
+    }
+    init(opt){
+        this.frame = document.querySelector(opt.frame);
+        this.btns = document.querySelectorAll(opt.btns);
+        this.enableClick = true;
+        this.speed = opt.speed;
+    }
+    bindingEvent(){
+        this.btns.forEach((btn,index)=>{
+            btn.addEventListener("click", ()=>{
+                if(this.enableClick){
+                    this.enableClick = false;
+        
+                    this.activation(this.btns, index);
+                    this.movingSlide(index);
+                }
+            })
         });
     }
-});
+    activation(item, index){
+        for(let el of item) el.classList.remove("on");
+        item[index].classList.add("on");
+    }
+    movingSlide(index){
+        new Anim(this.frame, {
+            prop: "left",
+            value: `${-100 * index}%`,
+            duration: this.speed,
+            callback: ()=>{
+                this.enableClick = true;
+            }
+        });
+    }
+}
+
+
+
 
