@@ -24,24 +24,29 @@ for(let i=0; i<gnbMo_tabs.length; i++){
 }
 
 // gnb 2depth menu
-$("#gnb>li").on("mouseenter", function(){
-    $(this).find(".sub").show();
-});
+const gnb_lis = gnb.querySelectorAll("li");
 
-$("#gnb>li").on("mouseleave", function(){
-    $(this).find(".sub").hide();
-});
-
-$("#gnb>li").each(function(index){
-    $("#gnb>li").eq(index).find("a").on("focusin", function(){
-        $("#gnb>li").eq(index).find(".sub").show();
+gnb_lis.forEach((gnb_li,index)=>{
+    gnb_li.addEventListener("mouseenter", e=>{
+        e.currentTarget.querySelector(".sub").style.display = "block";
     })
-    $("#gnb>li").eq(index).find("a").last().on("focusout", function(){
-        $("#gnb>li").eq(index).find(".sub").hide();
+    gnb_li.addEventListener("mouseleave", e=>{
+        e.currentTarget.querySelector(".sub").style.display = "none";
     })
+    // gnb_li.querySelector("a").addEventListener("focusin", e=>{
+    //     e.currentTarget.querySelector(".sub").style.display = "block";
+    // })
+    // gnb_li.querySelector("a").lastElementChild.addEventListener("focusout", e=>{
+    //     e.currentTarget.querySelector(".sub").style.display = "none";
+    // })
 });
 
-function activeBtn(item, index){
-    item.removeClass("on");
-    item.eq(index).addClass("on");
-}
+// 자바스크립트로 수정해야함!!
+// $("#gnb>li").each(function(index){
+//     $("#gnb>li").eq(index).find("a").on("focusin", function(){
+//         $("#gnb>li").eq(index).find(".sub").show();
+//     })
+//     $("#gnb>li").eq(index).find("a").last().on("focusout", function(){
+//         $("#gnb>li").eq(index).find(".sub").hide();
+//     })
+// });
