@@ -9,55 +9,55 @@ class MyScroll{
         this.bindingEvent();
     }
     initDOM(opt){
-        this.boxs = $(opt.panel);
-        this.btns = $(opt.btns);
+        this.boxs = document.querySelectorAll(opt.panel);
+        this.btns = document.querySelectorAll(opt.btns);
         this.posArr = [];
         this.baseLine = -300;
     }
     bindingEvent(){
-        $(window).on("resize", ()=>{
-            this.posArr = [];
-            let activeIndex = this.btns.find("a").filter(".on").parent().index();
-        
+        window.addEventListener("resize", ()=>{
             this.initScroll();
-            this.moveScroll(activeIndex);
         });
         
-        $(window).on("scroll", ()=>{
-            let scroll = $(window).scrollTop();
-        
+        window.addEventListener("scroll", ()=>{
+            let scroll = window.scrollY || window.pageYOffset;
             this.activation(scroll);
         });
         
-        this.btns.on("click", e=>{
-            e.preventDefault();
-            let index = $(e.currentTarget).index();
-    
-            this.moveScroll(index);
+        this.btns.forEach((btn,index)=>{
+            btn.addEventListener("click", e=>{
+                e.preventDefault();
+                this.moveScroll(index);
+                this.activationBtn(this.btns, index)
+            });
         });
     }
     initScroll(){
-        for (let i = 0; i < this.boxs.length; i++){
-            let id = this.btns.eq(i).children("a").attr("href");
-            this.posArr.push($(id).offset().top);
-        }
+        this.posArr = [];
+        for(let el of this.boxs) this.posArr.push(el.offsetTop);
     }
     activation(scroll){
-        for (let i = 0; i < this.posArr.length; i++){
+        this.boxs.forEach((_,i)=>{
             if(scroll >= this.posArr[i] + this.baseLine){
-                activeBtn(this.btns, i);
-                activeBtn(this.boxs, i);
+                this.activationBtn(this.btns, i);
+                this.activationBtn(this.boxs, i);
             }
             if(scroll >= this.posArr[1] + this.baseLine && scroll < this.posArr[2]){
-                $(".box2").addClass("on");
+                document.querySelector(".box2").classList.add("on");
             }else{
-                $(".box2").removeClass("on");
+                document.querySelector(".box2").classList.remove("on");
             }
-        }
+        });
     }
     moveScroll(index){
-        $("html, body").animate({
-            scrollTop : this.posArr[index]
-        }, 1000);
-    }    
+        new Anim(window, {
+            prop: "scroll",
+            value: this.posArr[index],
+            duration: 1000
+        });
+    }
+    activationBtn(item, index){
+        for(let el of item) el.classList.remove("on");
+        item[index].classList.add("on");
+    }
 }

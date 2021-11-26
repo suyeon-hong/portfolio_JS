@@ -12,7 +12,7 @@
     <script defer src="js/anime.js"></script>    
     <script defer src="js/common.js"></script>
     <script src="js/popup.js"></script>
-    <script defer src="js/scroll.js"></script>
+    <script src="js/scroll.js"></script>
     <script src="js/slider.js"></script>
     <script defer src="js/main.js"></script>
     <script>
@@ -40,6 +40,10 @@
                 default_percent: -100,
                 moving_percent: -200,
                 speed: 3000
+            });
+            new MyScroll({
+                panel: ".myScroll",
+                btns: "#navi li"
             })
         });
     </script>
