@@ -1,0 +1,475 @@
+.community{
+    .inner{
+        h1{
+            font: 600 32px/1 $font;
+            color: #333;
+            position: relative;
+            margin-bottom: 40px;
+
+            &::after{
+                content:'';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background: #333;
+                margin-top: 10px;
+            }
+        }
+        >dl{
+            position: relative;
+            padding-top: 100px;
+
+            >dt{
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                &:nth-of-type(2){
+                    left: 70px;
+                }
+                &.on a{
+                    color: #000;
+
+                    &::after{
+                        opacity: 1;
+                    }
+                }
+                a{
+                    font: 600 24px/1 $font;
+                    color: #555;
+                    position: relative;
+
+                    &::after{
+                        content:'';
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        background: #000;
+                        margin-top: 5px;
+                        opacity: 0;
+                    }
+                }
+            }
+            >dd{
+                width: 100%;
+                display: none;
+    
+                .pagination{
+                    text-align: center;
+                    margin-bottom: 50px;
+    
+                    >span{
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        vertical-align: text-bottom;
+                        margin-right: 15px;
+    
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .numbers{
+                        display: inline-block;
+                        margin: 0 10px;
+    
+                        span{
+                            a{
+                                display: inline-block;
+                                padding: 10px 13px;
+                                color: #606060;
+                                font: 600 16px/1 $font;
+    
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                            &.on a{
+                                background: #222;
+                                color: #fff;
+                                text-decoration: none;
+                                cursor: text;
+                                }
+                        }
+                    }
+                    
+                }
+                &#faq{
+                    display: block;
+    
+                    h2{
+                        font: 600 22px/1 $font;
+                        color: #000;
+                        margin-bottom: 20px;
+                    }
+                    .search{
+                        margin-bottom: 70px;
+                        
+                        form{
+                            width: 100%;
+                            background: #f3f3f3;
+                            padding: 30px 0;
+                            text-align: center;
+                            position: relative;
+    
+                            input{
+                                width: 644px;
+                                height: 66px;
+                                border: 2px solid #000;
+                                padding: 0 70px 0 30px;
+                                font: 600 20px/1 $font;
+                                color: #606060;
+                            }
+                            .btn{
+                                display: block;
+                                text-indent: -9999px;
+                                width: 30px;
+                                height: 30px;
+                                position: absolute;
+                                top: 50%;
+                                right: calc((100% - 644px) / 2 + 30px);
+                                margin-top: -15px;
+    
+                                &::before{
+                                    content:'';
+                                    display: block;
+                                    width: 70%;
+                                    height: 70%;
+                                    border-radius: 50%;
+                                    border: 2px solid #000;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                }
+                                &::after{
+                                    content:'';
+                                    display: block;
+                                    width: 12px;
+                                    height: 2px;
+                                    background: #000;
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                    transform-origin: right center;
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                    .tabs{
+                        margin-bottom: 50px;
+    
+                        li{
+                            float: left;
+                            width: calc(100% / 5);
+                            height: 55px;
+                            margin: 0 -1px -1px 0;
+    
+                            a{
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                border: 1px solid #b0b0b0;
+                                text-align: center;
+                                font: 500 15px/55px $font;
+                                color: #606060;
+    
+                                &.on{
+                                    color: #000;
+                                    border: 3px solid #000;
+                                }
+                            }
+                        }
+                    }
+                    .qna{
+                        border-top: 3px solid #000;
+                        border-bottom: 1px solid #000;
+                        margin-bottom: 100px;
+    
+                        dt, dd{
+                            padding: 20px;
+                            padding-left: 70px;
+                            position: relative;
+    
+                            .icon{
+                                display: block;
+                                color: #606060;
+                                position: absolute;
+                                top: 30px;
+                                left: 20px;
+                                font: 600 24px/1 $font;
+                                text-align: center;
+                            }
+                        }
+                        dt{
+                            border-bottom: 1px solid #c9c9c9;
+                            
+                            &:last-child{
+                                border-bottom: none;
+                            }
+                            cursor: pointer;
+    
+                            p{
+                                width: 90%;
+                                font: 600 16px/1 $font;
+                                color: #333;
+                                margin-bottom: 10px;
+                            }
+                            .subj{
+                                font: 500 14px/1 $font;
+                                color: #666;
+                            }
+                            .arrow{
+                                display: block;
+                                width: 16px;
+                                height: 16px;
+                                position: absolute;
+                                top: 30px;
+                                right: 20px;
+                                transition: 0.6s;
+    
+                                &::before{
+                                    content:'';
+                                    display: block;
+                                    width: 12px;
+                                    height: 1px;
+                                    background: #000;
+                                    transform: rotate(-45deg);
+                                    transform-origin: left center;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                }
+                                &::after{
+                                    content:'';
+                                    display: block;
+                                    width: 12px;
+                                    height: 1px;
+                                    background: #000;
+                                    transform: rotate(45deg);
+                                    transform-origin: right center;
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                }
+                            }
+                            &.on{
+                                .icon{
+                                    color: #111;
+                                }
+                                .arrow{
+                                    transform: rotate(-180deg);
+                                }
+                            } 
+                            
+                        }
+                        dd{
+                            display: none;
+                            background: #f1f1f1;
+    
+                            .icon{
+                                color: #008a00;
+                            }
+                            p{
+                                width: 70%;
+                                min-height: 50px;
+                                font: 500 14px/1.6 $font;
+                                color: #333;
+                            }
+                        }
+                    }
+                }
+                &#notice{
+                    table{
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin-bottom: 50px;
+    
+                        thead{
+                            tr{
+                                border-top: 2px solid #000;
+                                background: #efefef;
+    
+                                th{
+                                    padding: 18px 0;
+                                    text-align: center;
+                                    font: 600 15px/1 $font;
+                                    color: #222;
+        
+                                    &:nth-of-type(1){
+                                        width: 10%;
+                                    }
+                                    &:nth-of-type(3){
+                                        width: 18%;
+                                    }
+                                }
+                                
+                            }
+                        }
+                        tbody{
+                            tr{
+                                border-bottom: 1px solid #c9c9c9;
+    
+                                td{
+                                    padding: 25px 15px;
+                                    text-align: center;
+                                    font: 500 14px/1 $font;
+                                    color: #222;
+    
+                                    &:nth-of-type(1){
+                                        span{
+                                            display: block;
+                                            width: 100%;
+                                            height: 25px;
+                                            background: #666;
+                                            font: 400 12px/25px $font;
+                                            color: #fff;
+                                        }
+                                    }
+                                    &:nth-of-type(2){
+                                        text-align: left;
+    
+                                        a{
+                                            color: #555;
+                                            line-height: 1.2;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet2){
+    .community{
+        .inner{
+            dl dd{
+                &#faq .search form{
+                    padding: 30px;
+
+                    input{
+                        width: 100%;
+                    }
+                    .btn{
+                        right: 40px;
+                    }
+                }
+                &#notice table{
+                    thead tr th:nth-of-type(3){
+                        display: none;
+                    }
+                    tbody tr td:nth-of-type(3){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile){
+    .community{
+        .inner{
+            h1{
+                font-size: 26px;
+                margin-bottom: 30px;
+            }
+            >dl{
+                padding-top: 80px;
+
+                >dt{
+                    a{
+                        font-size: 20px;
+                    }
+                    &:nth-of-type(2){
+                        left: 50px;
+                    }
+                } 
+                dd{
+                    &#faq{
+                        h2{
+                            font-size: 18px;
+                        }
+                        .search{
+                            margin-bottom: 50px;
+    
+                            form{
+                                padding: 20px;
+    
+                                input{
+                                    height: 50px;
+                                    font-size: 16px;
+                                    padding: 0 40px 0 10px;
+                                }
+                                .btn{
+                                    width: 24px;
+                                    height: 24px;
+                                    margin-top: -12px;
+                                    right: 30px;
+    
+                                    &::after{
+                                        width: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        .tabs li{
+                            height: 50px;
+    
+                            a{
+                                font-size: 12px;
+                                line-height: 50px;
+                            }
+                        }
+                        .qna{
+                            margin-bottom: 50px;
+    
+                            dt, dd{
+                                padding-left: 40px;
+    
+                                .icon{
+                                    left: 10px;
+                                }
+                            }
+                            dt{
+                                p{
+                                    font-size: 14px;
+                                }
+                                .arrow{
+                                    right: 10px;
+                                }
+                            } 
+                            dd p{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &#notice{
+                        table{
+                            thead tr th:nth-of-type(1), tbody tr td:nth-of-type(1){
+                                display: none;
+                            }
+                        }
+                    }
+                    .pagination{
+                        >span{
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 5px;
+                        }
+                        .numbers span a{
+                            font-size: 14px;
+                            padding: 8px 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

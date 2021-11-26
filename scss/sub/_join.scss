@@ -1,0 +1,403 @@
+.join{
+    .visual{
+        background-image: url(../img/visual_join.jpg);
+        padding-top: 150px;
+
+        h1{
+            text-align: center;
+            margin-bottom: 70px;
+
+            &:hover span{
+                color: #000;
+            }
+            span{
+                display: inline-block;
+                font: 40px/1 "Arapey";
+                color: #fff;
+                margin-right: 20px;
+                transition-duration: .6s;
+            }
+        }
+    }
+    .inner{
+        form{
+            fieldset{
+                border: none;
+                
+                p.caution{
+                    margin-top: 10px;
+                    color: salmon;
+                    font-size: 12px;
+                }
+                table{
+                    width: 100%;
+                    border-top: 3px solid #bbb;
+                    margin-bottom: 100px;
+                    border-collapse: collapse;
+
+                    caption{
+                        font: 600 18px/1 $font;
+                        color: #222;
+                        margin-bottom: 20px;
+                        text-align: left;
+                    }
+                    tr{
+                        border-bottom: 2px solid #ddd;
+
+                        th{
+                            width: 250px;
+                            text-align: left;
+                            font: 500 16px/1.2 $font;
+                            color: #333;
+                            padding-left: 50px;
+                            background: #f3f3f3;
+                        }
+                        td{
+                            padding: 15px 0 15px 20px;
+                            font: 500 14px/1 $font;
+                            color: #777;
+                            
+                            input[type="text"], input[type="password"], select{
+                                width: 500px;
+                                height: 40px;
+                                font: 500 18px/40px $font;
+                                color: #777;
+                                padding: 10px 20px;
+                                border: 2px solid #ddd;
+
+                                &:focus{
+                                    outline: none;
+                                    border-color: #aaa;
+                                }
+                            }
+                            select{
+                                font-size: 14px;
+                            }
+                            input[type="button"], input[type="checkbox"]{
+                                width: 120px;
+                                height: 40px;
+                                font: 300 14px/40px $font;
+                                color: #555;
+                                background: #eee;
+                                border: 2px solid #ddd;
+                                cursor: pointer;
+                            }
+                            input[type="radio"]{
+                                vertical-align: text-top;
+                            }
+                            label{
+                                margin-right: 10px;
+                            }
+                            p{
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                    &:nth-of-type(1){
+                        tr{
+                            &:nth-of-type(1){
+                                input{
+                                    margin-right: 10px;
+                                }
+                                
+                            }
+                            &:nth-of-type(8){
+                                td{
+                                    input{
+                                        margin-right: 10px;
+                                        margin-bottom: 10px;
+        
+                                        &:nth-of-type(1){
+                                            width: 200px;
+                                        }
+                                        &:nth-of-type(4){
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-of-type(9){
+                                td{
+                                    font-size: 14px;
+                                    color: #777;
+    
+                                    select{
+                                        width: 100px;
+                                        margin-right: 5px;
+                                        vertical-align: top;
+                                    }
+                                    input{
+                                        width: 150px;
+                                        margin: 0 5px;
+                                    }
+                                }
+                            }
+                            &:nth-of-type(11){
+                                td{
+                                    font-size: 14px;
+                                    color: #777;
+
+                                    input{
+                                        width: 200px;
+                                        margin-right: 5px;
+
+                                        &:nth-of-type(2){
+                                            margin-left: 5px;
+                                        }
+                                    }
+                                    select{
+                                        width: 180px;
+                                        vertical-align: top;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-of-type(2){
+                        tr{
+                            &:nth-of-type(2), &:nth-of-type(3){
+                                td{
+                                    input[type="text"]{
+                                        width: 100px;
+                                        margin-right: 5px;
+
+                                        &:nth-of-type(n+2){
+                                            margin-left: 10px;
+                                        }
+                                    }
+                                    input[type="radio"]:nth-of-type(1){
+                                        margin-left: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                >div{
+                    margin-bottom: 100px;
+
+                    h2{
+                        font: 600 18px/1 $font;
+                        color: #222;
+                        position: relative;
+                        margin-bottom: 30px;
+            
+                        &::after{
+                            content:'';
+                            display: block;
+                            width: 100%;
+                            height: 3px;
+                            background: #bbb;
+                            margin-top: 20px;
+                        }
+                    }
+                    pre{
+                        word-wrap: break-word;
+                        white-space: pre-wrap;
+                        overflow-y: scroll;
+                        width: 100%;
+                        height: 300px;
+                        padding: 30px;
+                        resize: none;
+                        border: 2px solid #ddd;
+                        color: #555;
+                        background: #f3f3f3;
+                        margin-bottom: 20px;
+                    }
+                    span, label{
+                        font: 500 16px/1 $font;
+                        color: #444;
+                        margin-right: 10px;
+                    }
+                }
+                .btns{
+                    text-align: center;
+                    font-size: 0;
+
+                    input{
+                        width: 180px;
+                        height: 50px;
+                        font: 500 18px/50px $font;
+                        color: #666;
+                        border-radius: 0;
+                        border: 1px solid #888;
+                        background: transparent;
+                        cursor: pointer;
+
+                        &:first-child{
+                            margin-right: 10px;
+                        }
+                        &:last-child{
+                            background: #555;
+                            border-color: #555;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet){
+    .join{
+        .inner{
+            form fieldset table{
+                tr{
+                    th{
+                        width: 25%;
+                        padding-left: 20px;
+                    }
+                    td input[type="text"], td input[type="password"], td select{
+                        width: 70%;
+                    }
+                }
+                &:nth-of-type(1){
+                    tr:nth-of-type(1) input{
+                        margin-bottom: 10px;
+                    }
+                    tr:nth-of-type(11) td input{
+                        width: 18vw;
+                    }
+                }
+                &:nth-of-type(2){
+                    tr:last-child td{
+                        line-height: 1.6;
+
+                        input{
+                            vertical-align: text-top;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet2){
+    .join{
+        .visual h1 span{
+            font-size: 36px;
+            margin-right: 10px;
+        }
+        .inner{
+            form fieldset table{
+                tbody p{
+                    line-height: 1.2;
+                }
+                &:nth-of-type(1){
+                    tr:nth-of-type(9) td{
+                        select{
+                            width: 24%;
+                        }
+                        input{
+                            width: 25%;
+                        }
+                    }
+                    tr:nth-of-type(11) td{
+                        input{
+                            width: 35%;
+                        }
+                        select{
+                            display: block;
+                            margin-top: 10px;
+                            width: 80%;
+                        }
+                    } 
+                }
+                &:nth-of-type(2){
+                    tr:nth-of-type(2), tr:nth-of-type(3){
+                        td{
+                            input[type="text"]{
+                                width: 24%;
+                                margin-right: 0;
+                            }
+                            span{
+                                display: block;
+                                margin-top: 10px;
+
+                                label:nth-of-type(1){
+                                    margin-left: 0;
+                                }
+                            }
+                        } 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile){
+    .join{
+        .visual{
+            padding-top: 100px;
+
+            h1 span{
+                font-size: 24px;
+            }
+        }
+        .inner{
+            form fieldset{
+                table{
+                    caption{
+                        font-size: 16px;
+                    }
+                    tr{
+                        th{
+                            padding: 0 10px;
+                            font-size: 14px;
+                        }
+                        td{
+                            font-size: 12px;
+                            padding: 10px 0 10px 10px;
+    
+                            input[type="text"], input[type="password"], select{
+                                width: 100%;
+                                height: 30px;
+                                font-size: 12px;
+                                padding: 0 5px;
+                            }
+                            input[type="button"]{
+                                width: 100px;
+                                height: 30px;
+                                font-size: 12px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                    &:nth-of-type(1){
+                        tr:nth-of-type(8) td span:nth-of-type(1){
+                            display: block;
+                            margin-bottom: 10px;
+                        }
+                        tr:nth-of-type(8) td span:nth-of-type(2){
+                            display: block;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+                div{
+                    h2{
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+                    pre{
+                        height: 200px;
+                        padding: 10px;
+                    }
+                    span, label{
+                        font-size: 14px;
+                    }
+                }
+                .btns input{
+                    width: 120px;
+                    height: 34px;
+                    line-height: 34px;
+                    font-size: 14px;
+                }
+            }
+            
+        }
+    }
+}

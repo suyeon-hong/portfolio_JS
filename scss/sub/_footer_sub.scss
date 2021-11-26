@@ -1,0 +1,149 @@
+#footer_sub{
+    width: 100%;
+    border-top: 1px solid #888;
+
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+        padding: 70px 0 40px;
+        text-align: center;
+
+        .wrap{
+            width: 100%;
+            margin-bottom: 60px;
+            text-align: left;
+
+            h1{
+                float: left;
+                width: 13%;
+
+                a{
+                    font: bold 40px/1 'Pathway Gothic One';
+                    color: #000;
+                }
+            }
+            address{
+                float: left;
+                font: 500 14px/1.6 $font;
+                color: #222;
+                width: 35%;
+
+                span{
+                    font-weight: 600;
+                    color: #111;
+                }
+            }
+            ul{
+                float: right;
+
+                li{
+                    float: left;
+                    margin-right: 50px;
+
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    &:not(:nth-of-type(1)) p{
+                        cursor: pointer;
+                    }
+                    h2{
+                        font: 600 15px/1 $font;
+                        color: #333;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        font: 500 14px/1.6 $font;
+                        color: #555;
+                    }
+                }
+            }
+        }
+        >ul{
+            display: inline-block;
+
+            &::after{
+                content:'';
+                display: block;
+                clear: both;
+            }
+            li{
+                float: left;
+
+                a{
+                    display: block;
+                    font: 400 11px/1 $font;
+                    color: #aaa;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet){
+    #footer_sub{
+        .inner{
+            width: 100%;
+            padding: 70px 50px 40px;
+
+            .wrap{
+                h1{
+                    display: none;
+                }
+                address{
+                    width: 38%;
+                }
+                ul{
+                    li{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet2){
+    #footer_sub{
+        .inner{
+            padding: 70px 30px 40px;
+
+            .wrap{
+                margin-bottom: 50px;
+
+                address{
+                    width: 100%;
+                    margin-bottom: 50px;
+                    font-size: 13px;
+                }
+                ul{
+                    width: 100%;
+
+                    li{
+                        width: 50%;
+                        margin-right: 0;
+                        margin-bottom: 20px;
+
+                        h2{
+                            font-size: 14px;
+                        }
+                        p{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            >ul li a{
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile){
+    #footer_sub{
+        .inner{
+            padding: 60px 10px 20px;
+        }
+    }
+}

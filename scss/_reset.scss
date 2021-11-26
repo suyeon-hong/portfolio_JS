@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ol,ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.wrap::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+.wrap>article:last-child{
+    margin-right: 0!important;
+}
+.hidden{
+    position: absolute;
+    top: -9999px;
+    font-size: 0;
+    opacity: 0;
+}
+
+@mixin arrowLeft($wid:50px, $ht:2px, $bg:#777, $top: 50px, $right: 70px){
+    display: block;
+    width: $wid;
+    height: $ht;
+    background: #777;
+    position: absolute;
+    top: $top;
+    right: $right;
+
+    &::before{
+        content:'';
+        display: block;
+        width: 10px;
+        height: $ht;
+        background: inherit;
+        transform: rotate(-45deg);
+        transform-origin: left center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &::after{
+        content:'';
+        display: block;
+        width: 10px;
+        height: $ht;
+        background: inherit;
+        transform: rotate(45deg);
+        transform-origin: left center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@mixin arrowRight($wid:50px, $ht:2px, $bg:#777, $top: 50px, $right: 0){
+    display: block;
+    width: $wid;
+    height: $ht;
+    background: $bg;
+    position: absolute;
+    top: $top;
+    right: $right;
+
+    &::before{
+        content:'';
+        display: block;
+        width: 10px;
+        height: $ht;
+        background: inherit;
+        transform: rotate(-45deg);
+        transform-origin: right center;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &::after{
+        content:'';
+        display: block;
+        width: 10px;
+        height: $ht;
+        background: inherit;
+        transform: rotate(45deg);
+        transform-origin: right center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}

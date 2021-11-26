@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://kit.fontawesome.com/0c5c47f3c6.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/popup.js"></script>
+    <script defer src="js/scroll.js"></script>
+    <script defer src="js/slider.js"></script>
+    <script defer src="js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            new MyScroll({
+                panel: ".myScroll",
+                btns: "#navi li"
+            });
+            new Slider({
+                frame: ".mento .slider-wrapper",
+                slider: ".slider",
+                prev: ".mento .prev",
+                next: ".mento .next",
+                default_percent: -50,
+                moving_percent: -100,
+                speed: 2000
+            });
+            new Slider({
+                frame: ".box3 .slider-wrapper",
+                slider: ".slider",
+                prev: ".box3 .prev",
+                next: ".box3 .next",
+                default_percent: -100,
+                moving_percent: -200,
+                speed: 3000
+            });
+        });
+    </script>
+</head>
+<body>
+    <header id="header" class="myScroll">
+        <div class="inner">
+            <h1><a href="index.html">Lorem</a></h1>
+            <ul id="gnb">
+                <li>
+                    <a href="about.html">ABOUTUS</a>
+                    <div class="sub">
+                        <ul>
+                            <li>
+                                <h2>PROJECTS</h2>
+                                <a href="#">2017</a>
+                                <a href="#">2018</a>
+                                <a href="#">2019</a>
+                                <a href="#">2020</a>
+                            </li>
+                            <li>
+                                <h2>SERVICES</h2>
+                                <a href="#">architecture</a>
+                                <a href="#">interior</a>
+                                <a href="#">design</a>
+                            </li>
+                            <li>
+                                <h2>PROCESS</h2>
+                                <a href="#">method</a>
+                                <a href="#">technology</a>
+                                <a href="#">project</a>
+                            </li>
+                            <li>
+                                <h2>OUR TEAM</h2>
+                                <a href="#">member</a>
+                                <a href="#">org chart</a>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <img src="img/gnb1.jpg" alt="라디오 테이프 사진">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="community.html">COMMUNITY</a>
+                    <div class="sub">
+                        <ul>
+                            <li>
+                                <h2>FAQ</h2>
+                                <a href="#">전체</a>
+                                <a href="#">배송</a>
+                                <a href="#">결제/영수증</a>
+                                <a href="#">주문</a>
+                            </li>
+                            <li>
+                                <h2>NOTICE</h2>
+                                <a href="#">주문취소</a>
+                                <a href="#">배송지변경</a>
+                                <a href="#">서비스</a>
+                            </li>
+                            <li>
+                                <h2>FAQ</h2>
+                                <a href="#">검색</a>
+                                <a href="#">리뷰/포인트</a>
+                                <a href="#">기타</a>
+                            </li>
+                            <li>
+                                <h2>NOTICE</h2>
+                                <a href="#">공지사항</a>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <img src="img/gnb2.jpg" alt="창문 사진">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="youtube.html">YOUTUBE</a>
+                    <div class="sub">
+                        <ul>
+                            <li>
+                                <p>NEW</p>
+                                <p>BEST</p>
+                                <p>TREND</p>
+                            </li>
+                            <li>
+                                <h2>WOMEN</h2>
+                                <a href="#">S/S SEASON</a>
+                                <a href="#">F/W SEASON</a>
+                            </li>
+                            <li>
+                                <h2>MEN</h2>
+                                <a href="#">S/S SEASON</a>
+                                <a href="#">F/W SEASON</a>
+                            </li>
+                            <li>
+                                <h2>2021</h2>
+                                <a href="#">S/S SEASON</a>
+                                <a href="#">F/W SEASON</a>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <img src="img/gnb3.jpg" alt="꽃 사진">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="gallery.html">GALLERY</a>
+                    <div class="sub">
+                        <ul>
+                            <li>
+                                <p>NEW</p>
+                                <p>BEST</p>
+                                <p>PHOTOS</p>
+                            </li>
+                            <li>
+                                <h2>CATEGORY</h2>
+                                <a href="#">LANDSCAPE</a>
+                                <a href="#">FASHION</a>
+                            </li>
+                            <li>
+                                <h2>CATEGORY</h2>
+                                <a href="#">OCEAN</a>
+                                <a href="#">CITY</a>
+                            </li>
+                            <li>
+                                <h2>CATEGORY</h2>
+                                <a href="#">SEARCH</a>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <img src="img/gnb4.jpg" alt="벽에 비친 나뭇잎 그림자">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="location.html">LOCATION</a>
+                    <div class="sub">
+                        <ul>
+                            <li>
+                                <h2><a href="#">스타필드 하남</a></h2>
+                                <div class="pic">
+                                    <img src="img/gnb5.jpg" alt="관람차 사진">
+                                </div>
+                            </li>
+                            <li>
+                                <h2><a href="#">스타필드 코엑스몰</a></h2>
+                                <div class="pic">
+                                    <img src="img/gnb6.jpg" alt="관람차 사진">
+                                </div>
+                            </li>
+                            <li>
+                                <h2><a href="#">스타필드 시티 위례</a></h2>
+                                <div class="pic">
+                                    <img src="img/gnb7.jpg" alt="관람차 사진">
+                                </div>
+                            </li>
+                            <li>
+                                <p><a href="#">CONTACT</a></p>
+                                <p><a href="#">LOCATION</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul class="util">
+                <li>
+                    <a href="#">
+                        <span class="hidden">검색</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="join.html">
+                        <span class="hidden">로그인</span>
+                    </a>
+                </li>
+                <li class="btnMo">
+                    <a href="#">
+                        <span>메뉴</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="gnbMo">
+            <ul>
+                <li>
+                    <a href="about.html">
+                        <div class="pic">
+                            <img src="img/gnb1.jpg" alt="라디오 테이프">
+                        </div>
+                        ABOUT
+                    </a>
+                    <span class="arrow"></span>
+                    <ul>
+                        <li>
+                            <a href="#">project</a>
+                        </li>
+                        <li>
+                            <a href="#">services</a>
+                        </li>
+                        <li>
+                            <a href="#">process</a>
+                        </li>
+                        <li>
+                            <a href="#">our team</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="community.html">
+                        <div class="pic">
+                            <img src="img/gnb2.jpg" alt="창문">
+                        </div>
+                        COMMUNITY
+                    </a>
+                    <span class="arrow"></span>
+                    <ul>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#">NOTICE</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="youtube.html">
+                        <div class="pic">
+                            <img src="img/gnb3.jpg" alt="꽃">
+                        </div>
+                        YOUTUBE
+                    </a>
+                    <span class="arrow"></span>
+                    <ul>
+                        <li>
+                            <a href="#">runway</a>
+                        </li>
+                        <li>
+                            <a href="#">trend</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="gallery.html">
+                        <div class="pic">
+                            <img src="img/gnb4.jpg" alt="벽에 비친 나뭇잎 그림자">
+                        </div>
+                        GALLERY
+                    </a>
+                    <span class="arrow"></span>
+                    <ul>
+                        <li>
+                            <a href="#">flickr</a>
+                        </li>
+                        <li>
+                            <a href="#">photos</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="location.html">
+                        <div class="pic">
+                            <img src="img/gnb5.jpg" alt="관람차">
+                        </div>
+                        LOCATION
+                    </a>
+                    <span class="arrow"></span>
+                    <ul>
+                        <li>
+                            <a href="#">contact</a>
+                        </li>
+                        <li>
+                            <a href="#">map</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <figure id="visual">
+        <div class="inner">
+            <h1>CHOOSE YOUR</h1><br>
+            <h2>FASHION</h2>
+        </div>
+        <div class="filter">
+            <div class="inner">
+                <em>FILTER BY</em>
+                <ul>
+                    <li class="on"><a href="#">WOMAN</a></li>
+                    <li><a href="#">MAN</a></li>
+                    <li><a href="#">KIDS</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="inner wrapbox">
+            <div class="wrap">
+                <section>
+                    <article class="front">
+                        <h1>WOMAN</h1>
+                        <h2>ROMANTIC <br>COUNTRY</h2>
+                        <div class="wrap">
+                            <p>
+                                감미롭고 상냥함을 느끼게하는 이미지의 디자인. 또한 회고적인 디자인을 말할 때도 있다. 전원풍의 소박함 속에 소녀다운 귀여움을 살린 스타일을 말하며, 프릴이 붙은 에이프런, 드레스 등이 이에 해당된다.<br> 감미롭고 상냥함을 느끼게하는 이미지의 디자인. 또한 회고적인 디자인을 말할 때도 있다. 전원풍의 소박함 속에 소녀다운 귀여움을 살린 스타일을 말하며, 프릴이 붙은 에이프런, 드레스 등이 이에 해당된다. 감미롭고 상냥함을 느끼게하는 이미지의 디자인. 또한 회고적인 디자인을 말할 때도 있다. 전원풍의 소박함 속에 소녀다운 귀여움을 살린 스타일을 말하며, 프릴이 붙은 에이프런, 드레스 등이 이에 해당된다.
+                            </p>
+                            <ul>
+                                <li>RUFFLE </li>
+                                <li>RACE </li>
+                                <li>DRESS</li>
+                            </ul>
+                        </div>
+                        <div class="pic">
+                            <a href="#"><img src="img/woman1.jpg" alt="드레스코디"></a>
+                            <p>BEST<span>ITEM</span></p>
+                            <p>ROMANTIC<span>STYLE</span></p>
+                        </div>
+                    </article>
+                    <article class="back">
+                        <h1>WOMAN</h1>
+                    </article>
+                </section>
+                <section>
+                    <article class="front">
+                        <h1>WOMAN</h1>
+                        <h2>LAYERED / <br>LAYERED LOOK</h2>
+                        <div class="wrap">
+                            <p>
+                                서로 다른 아이템의 옷을 겹쳐 입음으로써 효과를 내는 코디 유형. 특히 70년대 전반에 유행한 속에 입은 것이 겉에 보이게 입거나, 긴 소매의 블라우스 위에 반 소매의 스웨터나 자켓 등을 여러 방법으로 겹쳐 입은 룩이 유행했다.<br> 서로 다른 아이템의 옷을 겹쳐 입음으로써 효과를 내는 코디 유형. 특히 70년대 전반에 유행한 속에 입은 것이 겉에 보이게 입거나, 긴 소매의 블라우스 위에 반 소매의 스웨터나 자켓 등을 여러 방법으로 겹쳐 입은 룩이 유행했다. 서로 다른 아이템의 옷을 겹쳐 입음으로써 효과를 내는 코디 유형. 특히 70년대 전반에 유행한 속에 입은 것이 겉에 보이게 입거나, 긴 소매의 블라우스 위에 반 소매의 스웨터나 자켓 등을 여러 방법으로 겹쳐 입은 룩이 유행했다.
+                            </p>
+                            <ul>
+                                <li>WRAP SKIRT </li>
+                                <li>MIX & MATCH </li>
+                                <li>LOOSE FIT</li>
+                            </ul>
+                        </div>
+                        <div class="pic">
+                            <a href="#"><img src="img/woman2.jpg" alt="자켓을 레이어드한 코디"></a>
+                            <p>NEW<span>ITEM</span></p>
+                            <p>MODERN<span>STYLE</span></p>
+                        </div>
+                    </article>
+                    <article class="back">
+                        <h1>WOMAN</h1>
+                    </article>
+                </section>
+                <section>
+                    <article class="front">
+                        <h1>WOMAN</h1>
+                        <h2>RIDERS <br>LOOK</h2>
+                        <div class="wrap">
+                            <p>
+                                불량스럽고 과격한 느낌을 주는 오토바이 라이더들의 복장에서 아이디어를 얻어 디자인한 패션스타일. 주로 검은색 가죽소재를 이용한 자켓과 바지등 아이템들을 함께 코디하여 강하고 단단한 이미지를 보여준다.<br> 불량스럽고 과격한 느낌을 주는 오토바이 라이더들의 복장에서 아이디어를 얻어 디자인한 패션스타일. 주로 검은색 가죽소재를 이용한 자켓과 바지등 아이템들을 함께 코디하여 강하고 단단한 이미지를 보여준다. 불량스럽고 과격한 느낌을 주는 오토바이 라이더들의 복장에서 아이디어를 얻어 디자인한 패션스타일. 주로 검은색 가죽소재를 이용한 자켓과 바지등 아이템들을 함께 코디하여 강하고 단단한 이미지를 보여준다.
+                            </p>
+                            <ul>
+                                <li>LEATER </li>
+                                <li>RUST </li>
+                                <li>BLACK</li>
+                            </ul>
+                        </div>
+                        <div class="pic">
+                            <a href="#"><img src="img/woman3.jpg" alt="가죽자켓을 활용해 올블랙컬러로 코디"></a>
+                            <p>HOT<span>ITEM</span></p>
+                            <p>CLASSIC<span>STYLE</span></p>
+                        </div>
+                    </article>
+                    <article class="back">
+                        <h1>WOMAN</h1>
+                    </article>
+                </section>
+            </div>
+            <div class="wrap">
+                <section>
+                    <article class="front">
+                        <h1>MAN</h1>
+                        <h2>MODS <br>LOOK</h2>
+                        <div class="wrap">
+                            <p>
+                                런던의 카너비 스트리트에서 생긴 유행으로, 기존의 보수화된 관습에 저항하며 이를 패션으로 승화시킨 사람들의 스타일을 모즈룩이라 부르게 되었다. 1960년대 초반 영국의 비틀즈와 미국의 엘비스 프레슬리에 의해 크게 유행하기 시작했다.<br> 런던의 카너비 스트리트에서 생긴 유행으로, 기존의 보수화된 관습에 저항하며 이를 패션으로 승화시킨 사람들의 스타일을 모즈룩이라 부르게 되었다. 1960년대 초반 영국의 비틀즈와 미국의 엘비스 프레슬리에 의해 크게 유행하기 시작했다. 런던의 카너비 스트리트에서 생긴 유행으로, 기존의 보수화된 관습에 저항하며 이를 패션으로 승화시킨 사람들의 스타일을 모즈룩이라 부르게 되었다. 1960년대 초반 영국의 비틀즈와 미국의 엘비스 프레슬리에 의해 크게 유행하기 시작했다.
+                            </p>
+                            <ul>
+                                <li>LONG HAIR </li>
+                                <li>FLORAL SHIRT </li>
+                                <li>SUIT</li>
+                            </ul>
+                        </div>
+                        <div class="pic">
+                            <a href="#">
+                                <img src="img/man1.jpg" alt="횡단보도 건너는 모습의 비틀즈">
+                            </a>
+                            <p>BEST<span>ITEM</span></p>
+                            <p>VINTAGE<span>STYLE</span></p>
+                        </div>
+                    </article>
+                    <article class="back">
+                        <h1>MAN</h1>
+                    </article>
+                </section>
+                <section>
+                    <article class="front">
+                        <h1>MAN</h1>
+                        <h2>DANDY / <br>MANNISH LOOK</h2>
+                        <div class="wrap">
+                            <p>
+                                19세기의 보 블럼멜로 알려진 죠지 브라이언 브럼멜이 대표적인 인물로 그는 질 좋은 순백의 마로 만든 셔츠와 장식이 없는 의복을 꼭 맞게 착용하였으며, 이후 이것은 영국 신사복 유행의 기본 원칙이 되었다.<br> 19세기의 보 블럼멜로 알려진 죠지 브라이언 브럼멜이 대표적인 인물로 그는 질 좋은 순백의 마로 만든 셔츠와 장식이 없는 의복을 꼭 맞게 착용하였으며, 이후 이것은 영국 신사복 유행의 기본 원칙이 되었다. 19세기의 보 블럼멜로 알려진 죠지 브라이언 브럼멜이 대표적인 인물로 그는 질 좋은 순백의 마로 만든 셔츠와 장식이 없는 의복을 꼭 맞게 착용하였으며, 이후 이것은 영국 신사복 유행의 기본 원칙이 되었다.
+                            </p>
+                            <ul>
+                                <li>BLAZER </li>
+                                <li>OXFORD </li>
+                                <li>LOAFER </li>
+                            </ul>
+                        </div>
+                        <div class="pic">
+                            <a href="#">
+                                <img src="img/man2.jpg" alt="정장입은 남자">
+                            </a>
+                            <p>NEW<span>ITEM</span></p>
+                            <p>CLASSIC<span>STYLE</span></p>
+                        </div>
+                    </article>
+                    <article class="back">
+                        <h1>MAN</h1>
+                    </article>
+                </section>
+                <section>
+                    <article class="front">
+                        <h1>MAN</h1>
+                        <h2>EDWARDIAN <br>LOOK</h2>
+                        <div class="wrap">
+                            <p>
+                                20세기 초 영국의 에드워드 7세 시대에 유행하였던 남녀 복장을 모티브로 한 패션으로 리전시 칼라, 목의 주름이 있는 우아한 실루엣이 특징이다. 특히 남성복의 우아한 프록코트 스타일을 가르키는 경우가 많다.<br> 20세기 초 영국의 에드워드 7세 시대에 유행하였던 남녀 복장을 모티브로 한 패션으로 리전시 칼라, 목의 주름이 있는 우아한 실루엣이 특징이다. 특히 남성복의 우아한 프록코트 스타일을 가르키는 경우가 많다. 20세기 초 영국의 에드워드 7세 시대에 유행하였던 남녀 복장을 모티브로 한 패션으로 리전시 칼라, 목의 주름이 있는 우아한 실루엣이 특징이다. 특히 남성복의 우아한 프록코트 스타일을 가르키는 경우가 많다.
+                            </p>
+                            <ul>
+                                <li>JACKET </li>
+                                <li>TROUSERS </li>
+                                <li>WAISTCOAT </li>
+                            </ul>
+                        </div>
+                        <div class="pic">
+                            <a href="#">
+                                <img src="img/man3.jpg" alt="프록코트입은 남자">
+                            </a>
+                            <p>HOT<span>ITEM</span></p>
+                            <p>MODERN<span>STYLE</span></p>
+                        </div>
+                    </article>
+                    <article class="back">
+                        <h1>MAN</h1>
+                    </article>
+                </section>
+            </div>
+            <div class="wrap">
+                <section>
+                    <article class="front">
+                        <h1>KIDS</h1>
+                        <h2>BIRTHDAY <br>LOOK</h2>
+                        <div class="wrap">
+                            <p>
+                                한국에서는 사람이 태어난 뒤 만 1세에 처음 맞는 생일은 첫돌, 첫돌과 같은 간지인 만 60세 생일을 환갑, 그 이듬해를 진갑이라고 부르는 등 특별한 생일에는 이름을 붙이기도 한다. 왕국에서는 왕의 생일을 공휴일로 지정하기도 한다.<br> 한국에서는 사람이 태어난 뒤 만 1세에 처음 맞는 생일은 첫돌, 첫돌과 같은 간지인 만 60세 생일을 환갑, 그 이듬해를 진갑이라고 부르는 등 특별한 생일에는 이름을 붙이기도 한다. 왕국에서는 왕의 생일을 공휴일로 지정하기도 한다. 한국에서는 사람이 태어난 뒤 만 1세에 처음 맞는 생일은 첫돌, 첫돌과 같은 간지인 만 60세 생일을 환갑, 그 이듬해를 진갑이라고 부르는 등 특별한 생일에는 이름을 붙이기도 한다. 왕국에서는 왕의 생일을 공휴일로 지정하기도 한다.
+                            </p>
+                            <ul>
+                                <li>DRESS </li>
+                                <li>SPARKLY </li>
+                                <li>BLACK TIE </li>
+                            </ul>
+                        </div>
+                        <div class="pic">
+                            <a href="#">
+                                <img src="img/kids1.jpg" alt="별무늬 드레스를 입은 아이">
+                            </a>
+                            <p>BEST<span>ITEM</span></p>
+                            <p>LOVELY<span>STYLE</span></p>
+                        </div>
+                    </article>
+                    <article class="back">
+                        <h1>KIDS</h1>
+                    </article>
+                </section>
+                <section>
+                    <article class="front">
+                        <h1>KIDS</h1>
+                        <h2>HALLOWEEN <br>PARTY</h2>
+                        <div class="wrap">
+                            <p>
+                                10월 31일 밤을 기념하여 행해지는 영미권의 전통 행사. 이 날에는 죽은 영혼들이 되살아나며 정령이나 마녀 등이 출몰한다고 믿고 귀신들에게 육신을 뺏기지 않기 위해 사람들은 유령이나 흡혈귀, 괴물 등의 복장을 하고 축제를 즐긴다.<br> 10월 31일 밤을 기념하여 행해지는 영미권의 전통 행사. 이 날에는 죽은 영혼들이 되살아나며 정령이나 마녀 등이 출몰한다고 믿고 귀신들에게 육신을 뺏기지 않기 위해 사람들은 유령이나 흡혈귀, 괴물 등의 복장을 하고 축제를 즐긴다. 10월 31일 밤을 기념하여 행해지는 영미권의 전통 행사. 이 날에는 죽은 영혼들이 되살아나며 정령이나 마녀 등이 출몰한다고 믿고 귀신들에게 육신을 뺏기지 않기 위해 사람들은 유령이나 흡혈귀, 괴물 등의 복장을 하고 축제를 즐긴다.
+                            </p>
+                            <ul>
+                                <li>COSTUME </li>
+                                <li>HERO </li>
+                                <li>PUMPKIN </li>
+                            </ul>
+                        </div>
+                        <div class="pic">
+                            <a href="#">
+                                <img src="img/kids2.jpg" alt="코끼리옷을 입은 아이">
+                            </a>
+                            <p>HOT<span>ITEM</span></p>
+                            <p>UNIQUE <span>STYLE</span></p>
+                        </div>
+                    </article>
+                    <article class="back">
+                        <h1>KIDS</h1>
+                    </article>
+                </section>
+                <section>
+                    <article class="front">
+                        <h1>KIDS</h1>
+                        <h2>HOLIDAY <br>LOOK</h2>
+                        <div class="wrap">
+                            <p>
+                                추수감사절, 블랙프라이데이 시점이나 11월을 기점으로, 새해 첫날 직후 까지를 홀리데이라고 칭한다. 이 때에는 여러 민족, 종교의 명절이 모여있기 때문에 이를 뭉뚱그려 "홀리데이 시즌"이라 칭하는 것이다.<br> 추수감사절, 블랙프라이데이 시점이나 11월을 기점으로, 새해 첫날 직후 까지를 홀리데이라고 칭한다. 이 때에는 여러 민족, 종교의 명절이 모여있기 때문에 이를 뭉뚱그려 "홀리데이 시즌"이라 칭하는 것이다. 추수감사절, 블랙프라이데이 시점이나 11월을 기점으로, 새해 첫날 직후 까지를 홀리데이라고 칭한다. 이 때에는 여러 민족, 종교의 명절이 모여있기 때문에 이를 뭉뚱그려 "홀리데이 시즌"이라 칭하는 것이다.
+                            </p>
+                            <ul>
+                                <li>NEAT </li>
+                                <li>TIDY </li>
+                                <li>FORMAL </li>
+                            </ul>
+                        </div>
+                        <div class="pic">
+                            <a href="#">
+                                <img src="img/kids3.jpg" alt="나비넥타이를 한 아이">
+                            </a>
+                            <p>NEW<span>ITEM</span></p>
+                            <p>BASIC<span>STYLE</span></p>
+                        </div>
+                    </article>
+                    <article class="back">
+                        <h1>KIDS</h1>
+                    </article>
+                </section>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="inner">
+                <div class="pic">
+                    <img src="" alt="">
+                </div>
+                <div class="con">
+                    <span class="arrow"></span>
+                    <h1>Titles</h1>
+                    <h2>subtitle</h2>
+                    <div class="wrap">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae minima aspernatur vel pariatur hic, maxime commodi doloremque, exercitationem voluptatem qui quisquam tenetur, eos adipisci necessitatibus officiis rerum animi veniam omnis perspiciatis ipsum ullam. Incidunt dolorum quidem aliquid debitis odit Molestiae minima aspernatur vel pariatur hic, maxime commodi doloremque<br><br> Explicabo consequatur at, similique deleniti natus a eum. Maiores perferendis repudiandae omnis nemo, et aliquam excepturi dolorum laboriosam.</p>
+                        <div class="thumb">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <h3>laboriosam</h3>
+                    <div class="date">
+                        <h1>date</h1>
+                        <h2>day</h2>
+                        <h3>month</h3>
+                    </div>
+                </div>
+                <a href="#" class="close"><span class="arrow"></span></a>
+                <p>Lorem ipsum dolor sit</p>
+            </div>
+        </div>
+    </figure>
+
+    <main id="main">
+        <div class="inner">
+            <section class="box1 myScroll">
+                <div class="wrap">
+                    <div class="frame">
+                        <div class="mySlider">
+                            <div class="slider-wrapper">
+                                <div>
+                                    <h1>This is who we are and how we like to work.1</h1>
+                                    <p>More about Lorem.</p>
+                                </div>
+                                <div>
+                                    <h1>This is who we are and how we like to work.2</h1>
+                                    <p>More about Lorem.</p>
+                                </div>
+                                <div>
+                                    <h1>This is who we are and how we like to work.3</h1>
+                                    <p>More about Lorem.</p>
+                                </div>
+                                <div>
+                                    <h1>This is who we are and how we like to work.4</h1>
+                                    <p>More about Lorem.</p>
+                                </div>
+                            </div>
+                            <ul class="btns">
+                                <li class="on"></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="con">
+                        <ul>
+                            <li>
+                                <div class="pic">
+                                    <img src="img/pic1-1.jpg" alt="미팅룸">
+                                </div>
+                                <h1>MEETING ROOMS.</h1>
+                                <h2>Fit for all your needs.</h2>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <img src="img/pic1-2.jpg" alt="멤버쉽가입하는 모습">
+                                </div>
+                                <h1>BECOME A MEMBER.</h1>
+                                <h2>Get connected.</h2>
+                            </li>
+                            <li>
+                                <h1>Let's talk</h1>
+                                <h2>021231234</h2>
+                            </li>
+                            <li>
+                                <h1>Let's get started</h1>
+                                <h2>JOIN TODAY.</h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="box2">
+                <h1>WE WELCOME ALL</h1>
+                <div class="wrap">
+                    <article>
+                        <div class="pic">
+                            <svg viewBox="1000 343 1160 977.2894">
+                                <path d="M1632.97,400c13.53-2.33,27.28-2.73,40.9501-3.7
+		c36.59-1.64,73.62,1.27,109.0299,10.93c2.2201,0.48,4.8101,2.05,4.55,4.67c0,14.3,0.05,28.62-0.03,42.93
+		c-0.11,3.15-3.6899,4.52-6.4,4.45c-5.5199-0.04-11.12,0.98-16.5699,0.09c-24.5-9.07-50.45-14.19-76.5601-15.11
+		c-17.3899-1.1-35.1599,2.16-50.87,9.73c-13.96,6.79-25.1499,18.93-30.59,33.49c-4.76,12.22-6.26,25.5-6.02,38.55
+		c-0.0299,19.79,0.0601,39.58-0.0499,59.37c39.87-0.04,79.74,0,119.61-0.02c2.75-0.21,6.4199,1.34,6.25,4.59
+		c0.0499,13.03,0.08,26.07-0.01,39.09c-0.11,3.1-3.6,4.56-6.28,4.45c-39.86,0.01-79.72,0.03-119.58-0.01
+		c0.0699,13.5,0.15,27.02-0.04,40.53c-0.16,18.1-5.39,36.36-16.0699,51.1c-11.4401,16.09-28.0701,27.73-45.7201,36.14
+		c84.13,0.26,168.27,0.04,252.41,0.11c8.36-0.18,16.72,0.42,25.0801,0.86c2.35,0.2,4.9399,2.15,4.73,4.73
+		c-0.0801,13.01,0.09,26.02-0.0801,39.02c-0.75,3.38-4.77,4.29-7.74,4.1c-48.46-0.1201-96.9299,0.15-145.38-0.14
+		c0.4501,2.26,1.74,4.55,1.01,6.9c-2.5399,9.71-4.63,19.6-8.98,28.72c-3.24,8.79-7.26,17.22-12.1801,25.2
+		c0.6001,3.75,1.05,7.53,1.65,11.28c-0.9,1.13-1.7799,2.27-2.65,3.41c-1.1699,7.7599-1.1,15.59-1.09,23.41
+		c5.0601,0.03,7.89,4.42,11.3,7.44c7.8099,7.03,13.9299,15.66,19.98,24.2c7.38,5.93,15.5699,10.87,22.95,16.82
+		c4.49,5.62,10.04,10.22,14.75,15.63c8.77,2.14,18.3501,2.32,26.14,7.36c2.75,1.65,4.47,4.48,6.86,6.59
+		c1.76,0.77,3.7301,0.83,5.6001,1.34c1.08,0.78,2.38,3.29,3.9399,1.82c8.42-7.36,16.58-15.07,25.46-21.87
+		c3.4701-1.38,7.13-2.19,10.6801-3.34c2.12,0.75,4.24,1.52,6.4,2.27c2.39-2.26,5.74-2.66,8.73-3.68c1.92-0.52,4-1.63,5.97-0.58
+		c4.01,1.71,8.4,2.64,12.21,4.79c11.6901,12.33,23.1801,24.8701,34.77,37.3c6.4301,7.53,12.9301,15.03,19.17,22.72
+		c1.29,3.74,2.46,7.5499,3.42,11.3999c-0.7101,5.2001-1.9,10.4-3.14,15.5c-5.5,6.76-11.87,12.76-18.3301,18.5901
+		c-30.84,29.48-61.7,58.95-92.6499,88.2999c-3.2001-2.13-6.39-4.25-9.55-6.4c-3.29,2.88-6.39,5.9601-9.61,8.91
+		c-2.5-1.11-4.5701-2.98-6.87-4.4c-5.4501-3.87-11.5701-6.61-17.28-10.0299c5.55,13.95,10.6801,28.0599,16.15,42.0399
+		c2.72,4.98-0.65,10.64,0.88,15.9c1.4099,5.79,2.4399,12.1-0.41,17.66c-22.03,5.33-43.96,11.03-65.84,16.91
+		c-1.38,6.98-0.85,14.11-0.97,21.1799c1.3099-0.2,2.6399-0.37,3.99-0.52c3.3199,13.16,3.2699,26.8101,5.58,40.13
+		c0.55,4.39,2.4,8.47,3.9399,12.59c3.9801,5.29,10.1001,8.77,13.6001,14.4901c2.98,4.0599,2.2999,9.45,4.38,13.9399
+		c-7.3201,2.3101-14.25-2.12-21.3201-3.46c0.75,1.99,1.5,3.98,2.23,6.01c-1.85,0.38-3.6899,0.7699-5.5299,1
+		c-11.1901-2.52-21.9601-6.51-32.5701-10.78c-3.15-2.15-5.75-4.99-8.67-7.41c-2.72-2.6-6.12-4.6899-7.8199-8.16
+		c-3.85-7.0099-8.1899-13.72-12.29-20.5699c-2.38,1.35-4.74,2.74-7.11,4.08c-4.63-3.0399-9.46-5.7799-13.99-8.95
+		c-4.91-4.46-9.6-9.16-14.4299-13.6901c-2.42-2.09-3.6101-5.1299-5.17-7.8099c4.22-3.2,7-7.9301,11.47-10.88
+		c0.66,0.25,1.3301,0.52,2.03,0.8101c2.02-3.67,3.51-8.42,7.92-9.8301c5.0499-2.08,8.99-5.9299,13.51-8.86
+		c0.6799,0.62,2.0399,1.87,2.72,2.5c-2.17-20.97-4.85-41.89-6.39-62.91c0.28-8.45,2.54-16.99,1.04-25.3999
+		c-3.12-5.3101-6.4-10.54-9.7201-15.7201c1.62,5.76-1.8999,11.03-3.26,16.4701c-1.0699,5.45-5.7799,8.84-8.8999,13.1
+		c-2.5801,0.4299-5.2101,0.64-7.7201,1.2899c-3.1499,2.8501-4.85,7.05-8.38,9.53c-5.33,3.98-10.59,8.05-15.88,12.0801
+		c-3.98,3.0499-8.99,4.2699-13.3099,6.6399c-7.33,6.64-12.99,14.9-20.05,21.8c-8.5,6.23-17.21,12.1801-25.6599,18.46
+		c-6.53,5.6001-12.89,11.39-19.3501,17.0701c-4.4299,4.75-11.2699,5.3199-16.97,7.77c-5.35,1.2999-9.38,5.1799-13.7999,8.2
+		c-4.8,3.29-8.7301,8.39-14.9601,8.8c-1.2899-2.1901-2.5499-4.37-3.76-6.5701c-5.0399,3.3301-8.99,8.9401-15.5299,9.1901
+		c-2.2101-3.67-4.1001-7.55-6.6101-11.01c-4.1799-4.49-8.49-8.85-12.83-13.17c-0.63,6.16-2.5699,12.22-2.05,18.47
+		c0.3301,6.01,0.5,12.04,0.89,18.0701c2.66,7.33,8.24,13.73,8.24,21.88c-1.61,3.6699-3.4099,7.25-5.47,10.7
+		c-3.36-0.54-6.72-0.97-10.08-1.38c-1.5-1.63-2.97-3.28-4.4301-4.9199c-1.4199,3.0499-3.0299,6.0199-4.6799,8.95
+		c-3.35-0.47-6.6801-0.95-10.03-1.3101c-7.41-7.8899-14.8-15.8199-21.36-24.4399c-3.1-4.35-7.73-7.91-8.85-13.36
+		c-1.29-4.4401-2.8401-8.8101-3.9601-13.28c0.0901-6.97,1.48-13.87,1.61-20.84c-0.2-4.23-0.11-8.4601-0.35-12.6801
+		c-2.01,0.79-4.01,1.6-5.99,2.4301c-1.4199-2.54-3.76-4.72-3.98-7.75c-0.96-6.78-2.26-13.5-3.12-20.28
+		c0.72-2.73,2.08-5.23,3.1801-7.8101c4.59-1.48,8.97-3.6799,13.75-4.5399c4.2799-1.11,8.34-2.91,12.5399-4.27
+		c1.74,0.33,3.54,1.0699,5.35,0.59c4.0801-1.09,8.39-1.11,12.3601-2.65c1.6899-0.9299,3.49-0.0399,5.25,0.2401
+		c0.71-2.6001,1.1299-5.29,2.2699-7.7401c1.88-1.45,4.42-2.0599,5.8501-4.08c2.86-3.47,5.1899-7.64,9.37-9.72
+		c3.35-1.78,6.1699-5.11,10.21-5.14c6.74-0.47,13.46-1.23,20.04-2.78c8.08-6.83,15.0399-14.8199,22.49-22.2999
+		c4.37-4.66,9-9.0701,13.23-13.8501c2.1899-2.4099,3.3199-6.12,6.6799-7.1899c3.4-1.3101,6.65-2.96,9.75-4.9
+		c-1.47-6.96-4.7999-13.25-7.72-19.66c-1.11,0.4-2.1899,0.8501-3.29,1.1901c-1.1399-0.51-2-1.37-2.96-2.0601
+		c-0.4199-4.9199-0.89-9.83-0.63-14.76c-0.49,3.8101-0.37,7.6801-1.02,11.4801c-1.6699,1.2699-4.0399,2.01-6.09,1.7999
+		c-2.58-7.47-1.47-15.64-2.75-23.36c-0.59,2.53-0.85,5.14-0.97,7.75c-1.64,1.67-4.03,4.12-6.53,2.8201
+		c-1.09-5.55,0.05-11.25,0.13-16.8501c1.33-6.27,4.9401-11.87,5.86-18.27c-4.73-13.4399-9.9199-26.7699-13.4199-40.59
+		c0.2799-6.29,0.1899-12.6,0.5199-18.88c2-6.81,4.6001-13.4399,6.99-20.11c-0.13-0.5-0.37-1.5-0.49-2.01
+		c1.61-2.71,4.3201-4.41,6.53-6.5699c2.83-3.91,5-8.2401,7.46-12.38c-0.2999-0.47-0.8999-1.42-1.1899-1.89
+		c3.39-4.17,6.37-8.66,9.89-12.72c3.76-3.47,7.8199-6.61,11.71-9.95c0.97-5.21,2.03-10.41,2.91-15.63c0.42-4.12,2.95-7.53,4.62-11.2
+		c3.0599-7.03,9.08-12.07,13.34-18.29c0.77-2.72,0.2001-5.6,0.8-8.34c2.53-5.69,8.1799-9.87,8.97-16.35
+		c1.42-4.11,1.53-8.41,1.53-12.7c1.78-4.08,4.52-7.64,7.3099-11.07c-0.98-3.7,2.16-5.87,4.36-8.22c0.53-2.89,2.26-5.29,3.79-7.73
+		c-0.4299-4.77,1.3101-9.22,3.79-13.18c-22.86,0.43-45.74,0.07-68.6,0.19c-14.3301-0.08-28.7101,0.49-42.9501-1.28
+		c-2.21-0.38-4.13-2.39-3.88-4.7c-0.0399-12.06-0.03-24.11,0-36.17c-0.37-2.77,2.1901-4.73,4.7001-5.04
+		c19.86-4.27,39.7699-10.51,56.61-22.2c12.13-8.36,22.1-20.23,26.89-34.28c3.6799-10.02,4.2899-20.81,4.1499-31.39
+		c0-13.85-0.0399-27.69,0.02-41.54c-25.5299,0.07-51.0499,0.1201-76.5699-0.06c-2.77,0.17-6.8-1.04-6.8-4.3799
+		c-0.0699-12.9901-0.03-25.9901-0.02-38.9901c-0.23-3.52,3.9301-4.9,6.8201-4.57c25.52-0.1899,51.0499-0.08,76.58-0.05
+		c-0.09-16.79-0.02-33.59-0.0399-50.38c0.09-10.04-0.42-20.13,0.96-30.11c2.34-18.68,10.23-36.57,22.2999-51.01
+		c11.7401-14.19,26.76-25.4,42.91-34.12C1590.78,409.66,1611.7,403.33,1632.97,400 M1603.88,949.26c1.14,2.1,2.33,4.2,3.49,6.31
+		c-0.74,7.13-1.29,14.28-2.45,21.36c-1.89,2.15-3.9401,4.18-5.5601,6.54c-1.13,2.67-1.74,5.52-2.59,8.28
+		c0.34,0.86,0.71,1.73,1.09,2.61c-1.08,1.71-2.73,3.46-1.72,5.65c4.45,2.16,9.65,2.16,14.37,3.56c2.36,1.53,3.92,4.16,6.65,5.16
+		c4.87,1.85,7.95,6.61,12.96,8.25c14.4,5.48,26.71,15.05,40.67,21.41c1.64,1.11,3.5599,0.16,5.34-0.08
+		c5.8,3.49,11.85,6.85,15.88,12.49c4.5699-3.2301,8.22-7.53,12.39-11.25c-3.24-4.3401-5.7001-9.2001-8.29-13.92
+		c0.5701-5.82,1.86-11.57,2.77-17.35c-6.63-1.9901-12.49-5.8-18.22-9.55c-0.4501-2.18-1.2201-4.22-3.49-5
+		c0.76,0.96,1.5499,1.91,2.35,2.89c-1.64,1.18-3.52,1.83-5.49,2.11c-6.8101-4.68-12.4301-10.75-18.27-16.53
+		c-2.3201-2.35-5.5701-3.58-7.65-6.15c-2.36-5.51-8.16-8.06-12.66-11.53c-8.7799-5.39-16.2699-12.5-24.22-18.98
+		C1608.78,946.8,1606.35,948.06,1603.88,949.26 M1731.75,1013.68c2.12-1.93,4.28-3.83,6.1899-5.98
+		C1735.36,1008.99,1731.34,1010.01,1731.75,1013.68 M1713.27,1013.5c-0.49,1.17-0.4301,2.58-1.14,3.66
+		c-1.33,0.64-2.91,0.31-4.29,0.52c-0.7899,1.85-1.5299,3.71-2.27,5.58c0.8201,3.84,2.1101,7.58,4.5901,10.7
+		c2.52-2.2899,5.0699-4.5399,7.51-6.9199c-0.8401-1.38-1.67-2.76-2.4501-4.1201c0.74-4.05,1.3101-8.12,2.0601-12.16
+		C1715.9,1011.64,1714.51,1012.47,1713.27,1013.5 M1725.05,1019.96c1.83-1.66,3.58-3.41,5.35-5.15c-0.84,0.04-2.53,0.13-3.37,0.17
+                                C1726.34,1016.63,1725.67,1018.28,1725.05,1019.96z"/>    
+                            </svg>
+                        </div>
+                        <h2>Office Spaces.</h2>
+                        <p>Lorem ipsum dolor, consectetur adipisicing elit, fugiat.</p>
+                        <a href="#">Find out more<span class="arrow"></span></a>
+                    </article>
+                    <article>
+                        <div class="pic">
+                            <svg viewBox="370 383 1100 977.2894">
+                                <path d="M940.95,435.66c10.61-1.73,21.35-1.08,32.05-1.18
+                                    c10.02,0.02,20.05-0.04,30.07,0.01c2.89-0.22,4.43,3.02,4.03,5.53c-0.58,12.94,0.25,25.88-0.25,38.83
+                                    c37.8201,1.39,75.9,2.2,113.22,9.15c6.9801,1.48,14,2.94,20.76,5.3c2.03,0.51,2.87,2.77,2.7201,4.69
+                                    c-0.02,13.96,0.0199,27.93-0.02,41.9c0.11,2.19-1.66,4.31-3.92,4.28c-4.87,0.28-9.75,0.51-14.61,0.72
+                                    c-3.88,0.22-7.24-2.09-10.86-3.09c-34.4301-11.74-70.91-15.99-107.09-17.72c-0.22,41.41-0.04,82.81-0.18,124.24
+                                    c24.23,5.95,48.4,12.19,72.21,19.66c17.75,5.61,35.41,11.72,52.3301,19.53c15.5,7.21,30.49,16.26,42.1699,28.92
+                                    c8.8501,9.68,15.2001,22.25,15.24,35.58c0.5,14.07-5.1499,27.91-14.33,38.43c-12.59,14.6-29.78,24.25-47.23,31.86
+                                    c-19.5701,8.3-40.1801,13.97-61.04,17.92c6.2101,6.11,11.1801,13.28,16.04,20.48c1.99,2.99,3.45,6.37,5.88,9.05
+                                    c5.48,4.55,11.03,9.03,16.5599,13.52c6.49,4.55,10.17,11.8,15.77,17.27c5.49,1.11,11.17,2.06,16.11,4.87
+                                    c2.52,1.41,4.62,3.54,7.3201,4.67c3.28,1.46,6.64,3.2,8.88,6.11c0.95,0.95,1.6,2.55,3.1699,2.59c3.5,0.6299,7.03,1.11,10.54,1.74
+                                    c8.79-8.88,17.4-17.94,26.63-26.38c5.25-3.11,11.03-5.21,16.84-7.08c3.9501,1.78,8.02,3.3,12.01,5.04
+                                    c2.22,0.98,3.3401,3.55,5.78,4.22c2.37,1.17,5.36,1.53,7.0601,3.78c11.2,13.8,22.5099,27.53,33.7,41.35
+                                    c6.12,8.25,12.4,16.41,18.3199,24.81c1.49,4.08,2.3101,8.41,3.25,12.67c-0.2899,4.78-1.5599,9.44-2.1599,14.19
+                                    c-0.3401,4.52-4.39,7.33-6.75,10.85c-12.1901,13.86-25.0901,27.05-37.39,40.8101c-21.9,23.65-43.5701,47.51-65.55,71.08
+                                    c-0.37-0.41-1.11-1.21-1.48-1.61c-1.3199,1.39-2.6,2.8199-3.89,4.23c-3.08-2.22-5.91-4.75-9.09-6.7999
+                                    c-0.41,0.11-1.25,0.3199-1.67,0.4199c-4.64-3.4299-9.01-7.24-13.98-10.1899c-3.28-2.12-6.77-3.91-9.87-6.27
+                                    c-3.03-2.99-5.21-6.72-8.21-9.72c3.74,8.85,6.4299,18.08,9.5599,27.1499c4.13,12.3,8.1801,24.63,12.37,36.91
+                                    c2.3301,5.4401-0.87,11.3301,0.5801,16.9501c1.37,6.5499,2.73,13.6799-0.37,19.97c-2.7201,0.26-4.87,1.78-7.1001,3.12
+                                    c-19.26,5.5-38.5499,10.91-57.6499,16.9399c-0.8501,7.4501-0.7201,14.9501-0.7401,22.4401c1.3301-0.16,2.67-0.3101,4.03-0.4301
+                                    c0.6901,4.3301,1.53,8.65,2.24,13c1.79,14.76,1.2201,30.1,6.49,44.23c0.5901,2.78,2.88,4.6101,4.67,6.65
+                                    c4.28,4.73,9.5,9.2001,11.09,15.64c0.5,3.7,1.26,7.37,2.4501,10.9301c-1.8301,0.6-4.11,0.38-5.53,1.85
+                                    c-1.28,1.53-3.36,1.77-5.21,1.97c-10.9-2.7-21.24-7.15-31.4501-11.77c-2.26-1.33-3.9099-3.59-6.48-4.37
+                                    c-6.51-1.85-10.09-8.02-14.91-12.26c-6.2699-5.2899-8.2799-13.59-12.4399-20.37c-0.52,0.15-1.5601,0.4501-2.08,0.6
+                                    c-2.89-1.58-5.26-3.9299-8.1201-5.5399c-4.61-1.15-7.9099-4.76-11.7899-7.23c-4.64-2.9401-7.7401-7.5701-11.57-11.38
+                                    c-4.53-4.61-9.39-9.17-11.47-15.4701c3.69-3.37,5.94-8.0399,9.93-11.11c0.89-0.9,1.98-1.08,3.26-0.5499
+                                    c1.29-2.99,2.85-5.8401,4.37-8.7001c5.96-3.0499,11.19-7.2,16.15-11.6699c1.29,0.4199,3.2301,0.74,2.7001-1.3501
+                                    c-1.52-17.6899-3.66-35.3199-4.88-53.0299c-0.34-6.3501-1.6-12.7101-0.58-19.0601c0.2599-7.5499,2.0099-15.1699,0.58-22.6699
+                                    c-4.63-8.9401-9.57-17.7201-14.4-26.55c0.78,5.76,1.49,11.53,2.2,17.3099c0.78,4.27-1.4,8.25-2.34,12.3101
+                                    c-1.3199,3.7-1.59,7.9301-4.21,11.04c-1.91,2.5499-3.86,5.0699-5.71,7.6699c-1.35,0.2001-2.69,0.4401-4.02,0.6801
+                                    c-0.55,0.7-1.09,1.4199-1.62,2.16c-1.18,0.13-2.34,0.2799-3.49,0.46c-3.84,7.62-11.06,12.33-17.18,17.9399
+                                    c-3.12,2.61-6.02,5.55-9.67,7.4501c-3.45,2.21-7.86,3.0399-10.46,6.4399c-5.94,7.11-11.18,14.8101-17.21,21.8401
+                                    c-8.23,7.11-16.9,13.6899-25.19,20.72c-6.41,6.2899-12.66,12.73-18.98,19.1c-4.04,4.86-10.41,6.58-15.96,9.08
+                                    c-9.73,2.77-16.03,11.25-23.79,17.12c-3.68,1.37-6.89,3.8501-10.85,4.4601c-1.41-2.66-2.76-5.3401-4.09-8.02
+                                    c-2.07,0.73-4.17,1.34-6.28,1.9399c-2.29-4.1699-4.08-8.63-6.7-12.59c-4.62-5.39-8.99-11.01-14.03-16.01
+                                    c-1.0099,4.12-1.24,8.41-1.91,12.61c-0.53,4.8201-1.8,9.61-1.46,14.5c0.42,7.3101,0.29,14.66,1.09,21.9401
+                                    c2.03,6.85,6.5,12.95,7.5,20.11c1.22,5.8199-2.86,10.78-4.89,15.9199c-1.33-0.22-2.66-0.4399-3.97-0.6399
+                                    c-0.52,1.1-1.03,2.22-1.53,3.35c-3.37-0.53-6.72-1.05-10.07-1.59c-1.34-1.7101-2.7-3.39-4.08-5.04
+                                    c-2.13-0.41-4.39-0.48-6.3701-1.3301c-10.16-11.75-19.16-24.4399-27.9-37.2599c-2.13-6.3401-3.61-12.91-5.3-19.38
+                                    c0.11-9.03,1.93-18,1.55-27.05c-0.02-3.49-0.27-6.96-0.19-10.4301c-2,0.88-3.99,1.8101-5.96,2.7401
+                                    c-1.52-2.8401-3.73-5.5-3.93-8.8301c-0.96-7.5499-2.29-15.0499-2.98-22.62c0.73-2.8099,1.73-5.5599,2.99-8.17
+                                    c5.28-2.9199,10.83-5.46,16.53-7.5099c5.22-1.0701,9.91-3.6901,14.9399-5.3601c1.32,0.16,2.58,0.65,3.8701,1.05
+                                    c3.69-1.38,7.59-1.92,11.49-2.3099c0.53,0.5499,1.07,1.12,1.63,1.7c1.13-3.3101,0.34-8.3,4.16-9.9c5.22-2.72,6.45-9.37,11.16-12.71
+                                    c3.6899-2.4401,6.81-5.92,11.15-7.22c1.78-0.7201,3.16-2.4801,5.22-2.41c5.35-0.39,10.69-1.11,16-1.9301
+                                    c3.62-2.7,6.37-6.4299,9.37-9.7799c7.65-9.05,15.33-18.0801,23.01-27.1001c2.35-2.74,3.83-6.09,6.09-8.89
+                                    c3.87-2.2699,8.08-3.98,11.65-6.7699c-1.38-6.74-4.04-13.0701-6.59-19.42c-1.37,0.41-2.74,0.8099-4.09,1.22
+                                    c-0.79-1.77-1.72-3.45-2.9301-4.9399c-0.19-1.4601-0.33-2.91-0.46-4.35c-2.11,1.6699-4.57,2.74-7.17,3.37
+                                    c-1.7401-5.4501-1.89-11.27-1.94-16.9401c-0.56-0.03-1.69-0.11-2.25-0.15c-1.45,1.3101-3.1201,2.3401-4.78,3.36
+                                    c-2.1-1.6499-1.6-4.45-1.62-6.7799c0.25-4.64,0.24-9.3,0.75-13.91c1.38-6.63,4.74-12.72,5.6-19.48
+                                    c-4.67-14.76-9.54-29.4901-13.05-44.58c-0.13-7.32,0.15-14.68,0.47-21.99c1.92-7.59,4.23-15.1,7-22.42
+                                    c-0.32-0.67-0.64-1.32-0.94-1.97c1.65-3.06,4.5-5.11,6.73-7.69c2.52-4.42,5.03-8.9,7-13.6c-0.2-0.59-0.58-1.78-0.78-2.38
+                                    c2.2-3.41,4.5-6.75,6.72-10.15c3.53-6.02,9.61-9.86,14.11-15.05c0.48-1.58,0.65-3.23,0.95-4.83c-44.26-2.7-88.85-7.3-131.39-20.49
+                                    c-2.19-0.56-5.15-1.59-5.04-4.36c-0.09-14.69-0.05-29.4-0.02-44.1c-0.12-2.43,2.33-4.33,4.68-3.77c6.09,0.62,12.6-0.26,18.19,2.73
+                                    c23.08,9.36,47.55,14.69,71.98,19.13c24.84,4.12,49.87,7.97,75.11,8.03c0.76,0.05,2.29,0.15,3.05,0.2
+                                    c-0.07-40.41,0.03-80.83-0.03-121.24c-35.27-8.54-70.48-17.89-104.4301-30.82c-14.92-5.88-29.92-12.36-42.53-22.46
+                                    c-10.31-8.15-19.4-18.41-24.13-30.8199c-6.07-15.32-5.08-33.34,2.91-47.79c7.65-14.13,20.31-24.75,33.7-33.23
+                                    c25.02-15.58,53.35-25.14,82.1-31.08c17.28-3.62,34.84-5.8,52.43-7.17c-0.02-13.84-0.12-27.68,0.04-41.52
+                                    C932.38,435.57,937.76,436.1,940.95,435.66 M883.55,543.55c-7.99,5.04-15.6,11.69-18.95,20.77c-3.85,11.01-0.8,23.74,6.58,32.58
+                                    c6.36,7.67,15.23,12.67,24.07,16.97c11.96,5.66,24.46,10.07,37.09,13.99c-0.08-33.8-0.06-67.6-0.01-101.4
+                                    C915.35,529.63,898.33,534.36,883.55,543.55 M1006.84,704.58c0.45,11.8,0.09,23.61,0.0699,35.42
+                                    c0.27,20.53-0.0699,41.06-0.02,61.61c18.12-3.03,36.5-6.98,52.77-15.84c7.47-4.18,14.59-9.81,18.4-17.66
+                                    c3.2899-6.65,3.95-14.96,0.4299-21.66c-4.27-8.34-11.92-14.26-19.61-19.28C1042.79,717.05,1024.78,710.55,1006.84,704.58
+                                    M1015.98,878.59c1.13,2.37,2.5,4.66,3.31,7.19c-0.4,7.11-1.03,14.22-1.89,21.29c-0.2,4.58-5.14,6.88-6.26,11.1
+                                    c-0.72,2.59-1.32,5.22-2.02,7.82c1.28,2.18,0.81,4.4-0.88,6.23c1.26,0.27,2.53,0.59,3.79,0.98c2.42,1.31,3.46,4.67,6.3799,5.13
+                                    c1.3701,0.32,2.76,0.56,4.17,0.86c2.18,1.96,3.69,4.83,6.54,5.94c3.3,1.3,5.3101,4.48,8.4,6.14c12.09,6.7,23.76,14.1,35.24,21.8
+                                    c0.9299-0.26,2.78-0.79,3.7-1.05c2.9501,2.05,5.8101,4.24,8.78,6.27c4.6901-0.22,6.92,6.08,11.63,5.45
+                                    c2.09,1.69,4.12,3.47,6.13,5.29c4.63-5.46,9.8-10.4301,14.54-15.79c-3.3401-4.95-5.5701-10.52-8.27-15.81
+                                    c1.08-6.17,1.6-12.42,2.7999-18.57c-3.35-1.99-6.96-3.51-10.12-5.8c-4.8999,1.72-7.8099-3.26-11.1599-5.86
+                                    c-1.49-0.05-3.1801,0.51-4.29-0.75c-8.42-6.23-13.66-15.73-22.0601-21.96c-2.34-1.56-2.83-4.45-4.35-6.57
+                                    c-4.13-3.91-8.62-7.42-13.14-10.84c-6.46-4.67-11.85-10.59-17.6399-16.02C1024.92,873.66,1020.47,876.17,1015.98,878.59z"/>
+                            </svg>
+                        </div>
+                        <h2>Memberships.</h2>
+                        <p>Lorem ipsum dolor, consectetur adipisicing elit, fugiat.</p>
+                        <a href="#">Find out more<span class="arrow"></span></a>
+                    </article>
+                    <article>
+                        <div class="pic">
+                            <svg viewBox="-250 383 1100 977.2894">
+                                <path d="M366.9,458.33c47.31-6.86,95.61-7.55,142.98-0.76
+                                    c14.16,2.18,28.25,4.93,42.06,8.8c2.15,0.34,3.56,2.46,3.25,4.6c0.02,12.69,0.01,25.38,0,38.07c0.34,2.34-1.57,4.93-4.08,4.62
+                                    c-3.31-0.02-6.69,0.95-9.93,0.15c-39.33-14.23-81.52-19.47-123.2-18.38c-40.18,2.5-80.36,16.95-110.67,43.89
+                                    c-11.93,10.6-21.54,23.64-28.76,37.84c72.84-0.15,145.67,0,218.51-0.0699c2.35-0.51,4.83,1.39,4.54,3.87
+                                    c0.02,11.36,0.03,22.72,0,34.08c0.27,2.5-2.17,4.37-4.55,3.95c-77.05,0.14-154.1-0.07-231.14,0.1
+                                    c-1.42,12.28-1.87,24.72-0.34,37.02c77.16-0.05,154.32-0.06,231.48,0.01c2.31-0.46,4.83,1.31,4.55,3.8
+                                    c0.03,11.35,0.02,22.71,0,34.06c0.28,2.52-2.14,4.62-4.61,4.12c-59.67-0.03-119.34,0.01-179-0.02c-14.27-0.1-28.54,0.2-42.8-0.15
+                                    c5.56,13.42,13.25,26.01,23.18,36.65c11.47,12.42,25.75,22.09,41.23,28.8c18.78,8.27,39.11,12.49,59.46,14.5
+                                    c48.08,3.26,96.4-4.94,142.01-19.98c3.57-0.7401,7.28,0,10.89,0.25c2.42-0.03,3.47,2.72,3.25,4.78c-0.01,11.7-0.02,23.41,0,35.11
+                                    c0.2,2.12-0.78,4.66-3.12,5.06c-45.81,13.65-93.89,19.14-141.61,17.75c1.16,4.29,2.18,8.62,3.32,12.92
+                                    c-1.78,6.59-3.12,13.31-5.16,19.83c-4.23,10.76-7.92,21.8-14.12,31.63c0.45,3.53,0.92,7.06,1.4,10.59
+                                    c-0.83,1.38-2.11,2.61-2.4,4.26c-1.06,6.96-0.77,14.02-0.89,21.04c1.38,0.25,2.77,0.49,4.17,0.77c8.2,7.98,16.05,16.39,22.11,26.16
+                                    c1.87,3.46,5.47,5.28,8.45,7.65c4.5,3.45,9.22,6.62,13.58,10.25c3.74,4.23,7.31,8.67,11.6,12.38c3.95,0.91,8.06,1.5,11.69,3.47
+                                    c4.05,2.22,8.85,2.68,12.74,5.26c2.65,1.46,4.44,3.96,6.4,6.19c3.63,0.49,7.29,0.9,10.89,1.69c9.15-8.42,18.03-17.18,27.68-25.04
+                                    c3.1-1.44,6.49-2.34,9.84-3.05c6.25,1.97,12.22,4.75,18.4,6.95c1.8,0.75,3.88,1.19,5.22,2.73c15.36,17.3199,31.2,34.25,45.5,52.49
+                                    c3.13,2.98,3.3,7.48,4.59,11.35c1.01,2.51-0.11,5.12-0.5,7.64c-0.62,2.78-0.9,5.63-1.65,8.39
+                                    c-4.51,6.0599-10.11,11.1799-15.42,16.51c-27.95,27.7999-56.05,55.45-83.95,83.2999c-2.89-2.0299-5.78-4.0499-8.65-6.08
+                                    c-0.48,0.51-1.44,1.53-1.91,2.04c-6.83-5.3101-14.37-9.51-21.83-13.8101c-6.25-6.1899-11.72-13.15-17.72-19.58
+                                    c5.34,10.24,9.4,21.09,13.27,31.95c4.35,11.78,8.64,23.5801,12.97,35.37c0.9,2.1901,0.12,4.5701,0.02,6.86
+                                    c-1.08,6.73,3.11,13.28,0.86,19.98c-0.22,3.1201-3.65,3.17-5.96,3.9c-18.09,4.54-36.08,9.4501-54.03,14.52
+                                    c-1.22,6.53-0.81,13.1801-0.95,19.79c1.23-0.14,2.46-0.26,3.71-0.36c4.26,16.2999,1.71,34,8.78,49.59
+                                    c4.4,5.3099,10.73,9.21,13.37,15.84c0.64,3.3401,1.18,6.7101,2.35,9.9401c-2.44,0.49-5,1.1799-7.39,0.15
+                                    c-11.49-2.9601-22.34-7.79-33.41-11.9601c-5.64-1.6799-9.03-6.88-13.46-10.4c-5.58-4.1899-6.99-11.51-11.33-16.6899
+                                    c-2.83-2-5.81-3.77-8.67-5.71c-0.53,0.37-1.59,1.11-2.12,1.48c-4.1-2.85-8.46-5.3101-12.43-8.3301
+                                    c-4.36-4.08-8.45-8.4299-12.74-12.5699c-2.2-1.99-3.44-4.7-4.87-7.21c3.7-2.9601,5.88-7.65,10.19-9.8401
+                                    c0.48,0.02,1.44,0.05,1.92,0.0701c1.83-3.13,2.92-7.3101,6.65-8.6901c4.63-2.08,8.44-5.48,12.41-8.5699c0.82,1,1.66,2.01,2.5,3.03
+                                    c-1.7-19.65-4.48-39.2101-5.64-58.91c-0.16-8.1901,2.62-16.51,0.62-24.5701c-6.73-11.21-13.24-22.5499-20.21-33.6
+                                    c0.89,4.0601,2.68,7.9,3.08,12.0701c0.69,6.02,1.68,12.01,2.24,18.0399c-0.97,4.1001-2.46,8.05-3.66,12.0901
+                                    c-0.88,3.86-3.98,6.5299-6.27,9.58c-1.77,2.89-5.61,2.08-8.45,2.79c-2.65,3.2999-4.71,7.1699-8.22,9.6799
+                                    c-4.86,3.76-9.59,7.6901-14.49,11.41c-4.15,3.0699-9.89,3.5601-13.26,7.71c-5.18,5.8101-9.9,12.05-15.24,17.7101
+                                    c-7.51,5.9199-15.39,11.36-22.93,17.23c-6.96,6.09-13.54,12.61-20.52,18.6699c-6.63,3.4701-14.7,4.15-20.48,9.2201
+                                    c-3.85,2.7799-7.53,5.77-11.15,8.85c-1.69,1.62-4.12,1.79-6.25,2.47c-1.24-2.26-2.48-4.5-3.71-6.75
+                                    c-2.04,1.46-4.47,2.12-6.88,2.6801c-2.5-4.2201-4.28-8.99-7.86-12.4601c-4.67-5.0299-9.27-10.13-14.51-14.58
+                                    c-1.29,6.5601-2.06,13.2-3.17,19.79c-1.3,6.9299-0.08,13.98,0.03,20.97c-0.45,9.03,7.9,15.6799,7.61,24.76
+                                    c-1.47,3.35-3.07,6.64-4.82,9.86c-3-0.45-5.99-0.86-8.98-1.29c-0.9-1.0299-1.79-2.01-2.69-3c-2.59-0.38-5.25-0.4399-7.75-1.21
+                                    c-9.17-9.3199-17.05-19.8-25.01-30.14c-1.93-2.78-2.21-6.29-3.33-9.41c-0.89-3.47-2.71-6.88-2.16-10.5399
+                                    c0.89-9.48,2.02-18.99,0.89-28.5c-1.77,0.64-3.48,1.4399-5.2,2.21c-4.09-4.64-3.95-10.95-4.99-16.6899
+                                    c-0.46-3.13-0.92-6.27-1.47-9.3701c1.02-2.3199,1.78-4.7799,3.06-6.96c7.5-3.64,15.8-5.08,23.46-8.3099
+                                    c5.14,2.2799,10.62-2.78,15.59,0.0699c1.39,0.42,2.91,0.1901,4.35,0.37c0.72-2.61,1.32-5.24,2.02-7.83
+                                    c0.26-2.41,3.16-2.7101,4.67-4.12c2.91-2.8101,4.55-6.8,7.93-9.16c2.77-1.95,5.63-3.79,8.42-5.72c6.12,0.12,12.27-2.36,18.32-0.92
+                                    c8.28-7.26,15.47-15.62,23.02-23.62c5.15-5.62,10.69-10.9299,14.82-17.39c3.46-2.22,7.62-3.35,10.92-5.9299
+                                    c-1.37-5.79-3.7-11.25-6.23-16.6001c-2.38,0.41-4.84-0.6899-6.15-2.7c-0.75-3.6899-0.39-7.48-0.86-11.1899
+                                    c-0.56,2.71-0.55,5.5-1.06,8.23c-1.42,1.2899-3.45,1.46-5.19,2.09c-2.46-7.24-0.96-15.03-2.74-22.34
+                                    c-0.54,2.6-0.51,5.2999-1.21,7.88c-1.15,1.74-3.3,2.1599-5.09,2.9399c-1.18-4.79-0.26-9.74-0.14-14.58
+                                    c0.21-6.87,5.27-12.65,5.12-19.55c-3.67-10.7999-7.61-21.52-10.62-32.53c-1.94-5.07-0.79-10.55-0.95-15.81
+                                    c-0.52-8.87,4.1-16.84,6.53-25.11c-0.12-0.46-0.37-1.4-0.49-1.86c1.62-2.61,4.32-4.21,6.22-6.55c2.32-3.54,4.21-7.34,6.38-10.97
+                                    c-0.25-0.5-0.74-1.5-0.98-2c3.01-3.91,5.69-8.09,8.89-11.85c3.33-3.12,6.83-6.05,10.26-9.06c1.28-5.82,1.97-11.76,3.28-17.57
+                                    c1.65-3.9,3.62-7.67,5.54-11.44c3.06-4.59,6.87-8.63,10.02-13.15c0.54-2.65,0.09-5.41,0.66-8.05c2.04-3.85,4.99-7.15,6.98-11.03
+                                    c1.07-4.41,2.75-8.79,2.34-13.41c-0.6-6.3,7.23-9.72,6.56-15.92c3.07-2.55,4.58-6.11,6.19-9.62c1.98-2.59,0.78-6.04,1.97-8.89
+                                    c0.54-1.46,1.15-2.89,1.94-4.23c1.53-1.73,3.96-2.75,4.65-5.13c1.46-3.85,3.55-7.41,5.92-10.76c2.1,0.72,4.28,1.13,6.5,1.1
+                                    c-33.77-8.19-66.58-23.78-91.21-48.73c-17-17.1801-29.4-38.66-36.66-61.66c-17.25-0.24-34.51,0.3-51.75-0.34
+                                    c-2.62,0.34-4.4-2.4-4.1-4.77c0-10.69,0-21.37,0-32.05c-0.3-2.41,1.42-5.36,4.15-4.9c14.63,0.06,29.27-0.04,43.9,0.06
+                                    c-1.77-12.35-0.92-24.91,0.94-37.19c-14.95,0.22-29.89,0.06-44.83,0.1c-2.32,0.4-4.18-1.86-4.14-4.02
+                                    c-0.06-11.03-0.01-22.06-0.02-33.08c-0.28-2.41,1.63-4.93,4.2-4.63c18.78-0.42,37.57-0.1,56.36-0.18
+                                    c12.49-30.73,34.99-56.83,62.32-75.39C285.16,478.12,325.76,464.55,366.9,458.33 M370.57,949.83c-4.32,4.04-10.22,5.71-15.19,8.79
+                                    c1.04,2.06,2.69,3.98,3.1,6.29c-0.5,6.36-0.93,12.77-2.07,19.06c-1.34,2.39-3.58,4.13-5,6.47c-0.96,2.51-1.48,5.16-2.32,7.72
+                                    c0.27,0.55,0.81,1.66,1.08,2.22c-0.76,1.24-1.54,2.47-2.31,3.72c1.67,0.63,3.38,1.23,4.75,2.45c2.46,2.08,5.98,1.64,8.87,2.74
+                                    c2.2,1.56,3.68,4.09,6.35,4.97c2.41,1.04,4.28,2.93,6.29,4.56c2.63,2.28,6.03,3.32,9.11,4.83c8.5,3.78,16.06,9.3199,24.21,13.72
+                                    c3.74,0.36,6.5,3.03,9.52,4.99c0.83-0.1799,2.51-0.5499,3.34-0.73c5.06,3.46,10.78,6.37,14.34,11.5599
+                                    c6.35-5.1899,11.76-11.4399,17.8-16.99c-2.88-4.1899-5.33-8.71-7.47-13.2999c0.61-5.34,1.65-10.63,2.38-15.95
+                                    c-4.46-1.33-8.28-4.05-12.58-5.74c-2.01-1.28-3.79-2.88-5.62-4.38c-1.3,0.44-2.6,0.87-3.9,1.27c-6.73-4.65-11.83-11.1-17.76-16.63
+                                    c-2.9-2.0699-5.95-4.17-7.24-7.66c-5.4-5.43-12.33-9.03-18.2-13.9C378.28,956.48,374.33,953.26,370.57,949.83 M470.13,1016.15
+                                    c0.03,0.64,0.1,1.9,0.13,2.54c1.91-1.94,3.98-3.73,5.64-5.88C473.8,1013.58,471.94,1014.85,470.13,1016.15 M453.16,1021.07
+                                    c0.75,3.27,1.65,6.57,3.74,9.28c-0.4-1.12-0.83-2.22-1.27-3.2999c0.43-3.9401,1.07-7.85,1.68-11.7601
+                                    C454.35,1015.56,454.22,1018.92,453.16,1021.07 M465.81,1019.8c-0.74,1.7-1.44,3.42-2.13,5.16c1.97-1.74,3.81-3.61,5.74-5.39
+                                    C468.21,1019.63,467.01,1019.71,465.81,1019.8z"/>
+                            </svg>
+                        </div>
+                        <h2>Meeting rooms.</h2>
+                        <p>Lorem ipsum dolor, consectetur adipisicing elit, fugiat.</p>
+                        <a href="#">Find out more<span class="arrow"></span></a>
+                    </article>
+                </div>
+            </section>
+        </div>
+        <div class="mento myScroll">
+            <div class="inner">
+                <h1>World Style Star</h1>
+                <h2>FASHION NEWS AND TRENDS</h2>
+                <h3>LATEST STORIES</h3>
+                <div class="sliderbox">
+                    <div class="frame">
+                        <div class="slider-wrapper">
+                            <div class="slider">
+                                <div class="pic">
+                                    <img src="img/mento1.jpg" alt="할로윈파티를 위해 모인 사람들">
+                                </div>
+                                <h4>Harry Styles Threw the Best Halloween Party in New York</h4>
+                            </div>
+                            <div class="slider">
+                                <div class="pic">
+                                    <img src="img/mento2.jpg" alt="닥터마틴을 신은 사람들">
+                                </div>
+                                <h4>An Ode to Dr. Martens, the Combat Boots That Stole My Heart at 13</h4>
+                            </div>
+                            <div class="slider">
+                                <div class="pic">
+                                    <img src="img/mento3.jpg" alt="디왈리를 기념하는 Mindy Kaling">
+                                </div>
+                                <h4>Mindy Kaling Celebrated Diwali by Honoring Inspiring Women</h4>
+                            </div>
+                            <div class="slider">
+                                <div class="pic">
+                                    <img src="img/mento4.jpg" alt="베스트 드레서로 뽑힌 사람들">
+                                </div>
+                                <h4>This Week, The Best Dressed Stars Kickstarted Party Season</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="prev"></a>
+                    <a href="#" class="next"></a>
+                </div>
+            </div>
+        </div>
+        <div class="inner">
+            <section class="box3 myScroll">
+                <div class="wrap">
+                    <div class="left">
+                        <article>
+                            <div class="pic">
+                                <img src="img/box3-1.jpg" alt="레몬물에 잠긴 얼굴">
+                            </div>
+                            <span class="tag">FASHION</span>
+                            <h1>Macaulay Culkin makes surprise runway appearance at star-studded Gucci show</h1>
+                            <h2>Macaulay Culkin often shirks the spotlight, but he made a surprise appearance Tuesday as a runway model for Gucci.</h2>
+                        </article>
+                        <article>
+                            <h1>LOREM LOVES</h1>
+                            <h2>#패션, #트렌드, #쇼핑, #fashion, #trend, #style, #shopping</h2>
+                            <div class="wrap">
+                                <div>
+                                    <div class="pic">
+                                        <img src="img/box3-2.jpg" alt="독특한 어글리슈즈">
+                                    </div>
+                                    <h3>Love’ Em or Hate’ Em—A Complete Guide to the Ugly Shoe</h3>
+                                </div>
+                                <div>
+                                    <div class="pic">
+                                        <img src="img/box3-3.jpg" alt="버킷햇 모자를 쓴 사람들">
+                                    </div>
+                                    <h3>The Bucket-Hat Trend Is (Still) Going Nowhere </h3>
+                                </div>
+                            </div>
+                            <a href="#" class="more">More<span class="arrow"></span></a>
+                        </article>
+                        <article>
+                            <h1>HOROSCOPE<span>WEEKLY 2021.11.08-2021.11.15</span></h1>
+                            <div class="frame">
+                                <div class="slider-wrapper">
+                                    <div class="slider">
+                                        <div class="wrap">
+                                            <div class="pic">
+                                                <img src="img/aquarius.jpg" alt="물병자리">
+                                            </div>
+                                            <div class="con">
+                                                <h2>AQUARIUS</h2>
+                                                <h3>물병자리</h3>
+                                                <p>갑작스러운 소식에 놀라지 않도록 긴장을 늦추지 마세요. 회사 경영진의 예상치 못한 발표로 지금의 회사에 남을지 이직할지 결정해야 하거나, 먼 곳으로 이사해야 할 수도 있어요.</p>
+                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider">
+                                        <div class="wrap">
+                                            <div class="pic">
+                                                <img src="img/picses.jpg" alt="물고기자리">
+                                            </div>
+                                            <div class="con">
+                                                <h2>PISCES</h2>
+                                                <h3>물고기자리</h3>
+                                                <p>예상 밖의 소식이 찾아오겠네요. 누 군가의 비밀이나 불성실한 행동이 표 면 위로 드러날 수 있어요. 미디어와 관련된 프로젝트를 맡게 될지도 모르 겠고요.</p>
+                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider">
+                                        <div class="wrap">
+                                            <div class="pic">
+                                                <img src="img/aries.jpg" alt="양자리">
+                                            </div>
+                                            <div class="con">
+                                                <h2>ARIES</h2>
+                                                <h3>양자리</h3>
+                                                <p>예상치 못한 변화가 찾아올 수 있습니다. 특히 돈 문제를 조심하세요. 상황이 유동적이니 임금 협상은 나중으로 미루는 것이 좋겠어요. 미래의 수입을 생각하고 미리 지출했다가 화를 당할 수도 있습니다.</p>
+                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider">
+                                        <div class="wrap">
+                                            <div class="pic">
+                                                <img src="img/taurus.jpg" alt="황소자리">
+                                            </div>
+                                            <div class="con">
+                                                <h2>TAURUS</h2>
+                                                <h3>황소자리</h3>
+                                                <p>가까운 관계가 느닷없이 불안정해지면서, 친밀한 사람에 대해 어떤 결정을 내려야 할 수도 있습니다. 상대의 의견을 충분히 경청하고 수용하려는 태도가 필요해요.</p>
+                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider">
+                                        <div class="wrap">
+                                            <div class="pic">
+                                                <img src="img/gemini.jpg" alt="쌍둥이자리">
+                                            </div>
+                                            <div class="con">
+                                                <h2>GEMINI</h2>
+                                                <h3>쌍둥이자리</h3>
+                                                <p>시간을 유연하게 활용하는 태도가 중요한 달이에요. 그러니 일정을 과도하게 잡지 않도록 주의하세요. 이달 당신의 모든 활동이 회사 업무에 집중되겠군요.</p>
+                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider">
+                                        <div class="wrap">
+                                            <div class="pic">
+                                                <img src="img/cancer.jpg" alt="게자리">
+                                            </div>
+                                            <div class="con">
+                                                <h2>CANCER</h2>
+                                                <h3>게자리</h3>
+                                                <p>4일 이후 애정 관계에 난기류가 찾아올지도 모릅니다. 상대가 다른 사람을 마음에 두고 있다는 가슴 아픈 이야기를 전하거나 자녀와 의견이 충돌할 수 있으니 신중한 대응이 필요합니다. </p>
+                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider">
+                                        <div class="wrap">
+                                            <div class="pic">
+                                                <img src="img/leo.jpg" alt="사자자리">
+                                            </div>
+                                            <div class="con">
+                                                <h2>LEO</h2>
+                                                <h3>사자자리</h3>
+                                                <p>가족, 거주지 또는 재산과 관련된 문제가 생깁니다. 예상치 못한 부분이기에 충격을 받을 수 있어요. 마치 세상의 모든 어려움을 짊어진 듯한 기분이 들지도 모르지만, 잠시뿐이라는 걸 기억해요.</p>
+                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider">
+                                        <div class="wrap">
+                                            <div class="pic">
+                                                <img src="img/virgo.jpg" alt="처녀자리">
+                                            </div>
+                                            <div class="con">
+                                                <h2>VIRGO</h2>
+                                                <h3>처녀자리</h3>
+                                                <p>분주한 시간을 보내온 터라 여행을 가고 싶은 마음은 이해하지만, 이달은 여행운이 좋 지 않아요. 집에서 가까운 곳에 다녀오는 것만으로도 충분할 겁니다.</p>
+                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider">
+                                        <div class="wrap">
+                                            <div class="pic">
+                                                <img src="img/libra.jpg" alt="천칭자리">
+                                            </div>
+                                            <div class="con">
+                                                <h2>LIBRA</h2>
+                                                <h3>천칭자리</h3>
+                                                <p>4일 이후 뜻밖의 지출이 발생하면서 여러 대금을 지불하는 데 몰두해야 할 것 같네요. 사람들을 냉정하게 비판하고 싶은 생각이 들더라도 그 엄격함을 내려놓고 다정한 시선을 건네보 는 건 어떨까요.</p>
+                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="prev"></a>
+                                <a href="#" class="next"></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="right">
+                        <h1>WEEKLY HOT ISSUE</h1>
+                        <article>
+                            <div class="pic">
+                                <img src="img/issue1.jpg" alt="모자">
+                            </div>
+                            <h2>Hat styling for autumn daily look</h2>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/issue2.jpg" alt="요리하는 방탄소년단 정국">
+                            </div>
+                            <h2>Wear Knitwear Like a Street Styler This Labor Day Weekend</h2>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/issue3.jpg" alt="보아">
+                            </div>
+                            <h2>Shane Gabier Puts His Colorful, Collectible Ceramics</h2>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/issue4.jpg" alt="대화하는모습">
+                            </div>
+                            <h2>Like Gwyneth, Street Style Loves a Power Suit</h2>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="box4 myScroll">
+                <h1>WHAT WE'RE ALL ABOUT</h1>
+                <div class="wrap">
+                    <article>
+                        <div class="pic">
+                            <img src="img/pic4-1.jpg" alt="개인공간">
+                        </div>
+                        <h2>Independent Spaces</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugiat incidunt amet totam obcaecati eius atque exercitationem cupiditate cumque accusantium.</p>
+                    </article>
+                    <article>
+                        <div class="pic">
+                            <img src="img/pic4-2.jpg" alt="바다가 보이는 사무실">
+                        </div>
+                        <h2>Inspiring Ofiice Spaces</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugiat incidunt amet totam obcaecati eius atque exercitationem cupiditate cumque accusantium.</p>
+                    </article>
+                    <article>
+                        <div class="pic">
+                            <img src="img/pic4-3.jpg" alt="멤버십 가입 공간">
+                        </div>
+                        <h2>Spaces Membership</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugiat incidunt amet totam obcaecati eius atque exercitationem cupiditate cumque accusantium.</p>
+                    </article>
+                    <article>
+                        <div class="pic">
+                            <img src="img/pic4-4.jpg" alt="여러사람들이 협업하는 모습">
+                        </div>
+                        <h2>Social Networking</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugiat incidunt amet totam obcaecati eius atque exercitationem cupiditate cumque accusantium.</p>
+                    </article>
+                    <article>
+                        <div class="pic">
+                            <img src="img/pic4-5.jpg" alt="메뉴사진">
+                        </div>
+                        <h2>Service & Catering</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugiat incidunt amet totam obcaecati eius atque exercitationem cupiditate cumque accusantium.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="inner">
+            <div class="wrap">
+                <h1><a href="index.html" title="홈으로">Lorem</a></h1>
+                <address>
+                    <span>(주)Lorem</span> 대표: 홍길동 사업자등록번호: 123-12-12345<br>
+                    주소: 서울특별시 종로구 율곡로12 1234호<br>
+                    통신판매업번호: 2021-서울종로-1234 호스팅사업자: Lorem<br>
+                    계좌: 신한은행 123-123-123456 예금주: (주)Lorem
+                </address>
+                <ul>
+                    <li>
+                        <h2>CS CENTER</h2>
+                        <p>문의 02-123-1234</p>
+                        <p>평일 10:00-18:00</p>
+                        <p>점심시간 12:30-13:30</p>
+                    </li>
+                    <li>
+                        <h2>CONTACT</h2>
+                        <p>카카오톡 채팅상담</p>
+                        <p>온라인숍 이용안내</p>
+                        <p>1:1문의</p>
+                    </li>
+                    <li>
+                        <h2>HELP</h2>
+                        <p>고객센터</p>
+                        <p>혜택안내</p>
+                        <p>교환 및 환불</p>
+                    </li>
+                    <li>
+                        <h2>MENU</h2>
+                        <p>캘린더</p>
+                        <p>회사소개</p>
+                        <p>매장안내</p>
+                    </li>
+                </ul>
+            </div>
+            <ul>
+                <li><a href="#">COPYRIGHT &copy; SUYEONHONG, ALL RIGHTS RESERVED.</a></li>
+                <li><a href="#">PRIVACY</a></li>
+                <li><a href="#">TERMS OF USE</a></li>
+                <li><a href="#">BELLAHONG95@GMAIL.COM</a></li>
+                <li><a href="#">SITE BY SUYEON</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <ul id="navi">
+        <li class="on"><a href="#header"></a></li>
+        <li><a href=".box1"></a></li>
+        <li><a href=".mento"></a></li>
+        <li><a href=".box3"></a></li>
+        <li><a href=".box4"></a></li>
+    </ul>
+
+    <div id="popup">
+        <div class="inner">
+            <div class="con">
+                <h1>Limited time offer</h1>
+                <h2>Get 15% off</h2>
+                <p>Use your unique coupon code on checkout page. <span>Style15</span></p>
+                <a href="#">Shop now</a>
+                <input type="checkbox" name="ck" id="ck">
+                <label for="ck">Dont' show again for 24h</label>
+            </div>
+            <div class="pic">
+                <img src="img/popup.png" alt="">
+            </div>
+            <a href="#" class="close" title="닫기버튼"></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,864 @@
+.about{
+    .inner{
+        h1{
+            padding-top: 50px;
+            margin-bottom: 120px;
+            font: 300 80px/1.2 $font;
+            letter-spacing: -2px;
+            color: #222;
+        }
+        >div{
+            margin-bottom: 150px;
+
+            h2{
+                font: 300 36px/1 $font;
+                letter-spacing: -1px;
+                color: #222;
+                margin-bottom: 20px;
+                position: relative;
+
+                &::after{
+                    content:'';
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background: #888;
+                    margin-top: 20px;
+                }
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: grayscale(95%);
+            }
+            .wrap{
+                margin-left: 300px;
+            }
+            .btnMore{
+                display: inline-block;
+                margin-left: 300px;
+                font: 500 14px/1.2 $font;
+                color: #222;
+
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background: #000;
+                }
+            }
+            &.projects{
+                position: relative;
+
+                .wrap{
+                    margin-bottom: 30px;
+                    border-bottom: 1px solid #000;
+    
+                    article{
+                        float: left;
+                        width: 49%;
+                        margin-right: 2%;
+                        margin-bottom: 50px;
+    
+                        &:nth-of-type(even){
+                            margin-right: 0;
+                        }
+                        .pic{
+                            width: 100%;
+                            height: 400px;
+                            background: #bbb;
+                            margin-bottom: 20px;
+                        }
+                        h3{
+                            font: 400 14px/1 $font;
+                            color: #777;
+                            margin-bottom: 10px;
+                        }
+                        h4{
+                            font: 500 18px/1 $font;
+                            color: #333;
+                        }
+                    }
+                }
+                .swiper{
+                    position: absolute;
+                    top: 58px;
+                    left: -100%;
+                    opacity: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 200px;
+                    background: #f5f5f5;
+                    transition: 1s;
+
+                    &.on{
+                        opacity: 1;
+                        left: 0;
+                    }
+                    .swiper-slide{
+                        width: 100%;
+                        height: 600px;
+
+                        img{
+                            filter: grayscale(50%);
+                        }
+                        h3{
+                            text-align: center;
+                            font: 500 18px/1 $font;
+                            color: #333;
+                            margin-top: 20px;
+                            margin-bottom: 10px;
+                        }
+                        h4{
+                            text-align: center;
+                            font: 500 24px/1 $font;
+                            color: #111;
+                        }
+                    }
+                    .swiper-button{
+                        &-next, &-prev{
+                            color: #333;
+                            top: 45%;
+                        }
+                    }
+                    .swiper-pagination{
+                        &-fraction{
+                            width: auto;
+                            left: 20px;
+                            bottom: auto;
+                            top: 150px;
+                            font-size: 16px;
+                            color: #555;
+                        }
+                        &-current{
+                            font-size: 24px;
+                            color: #111;
+                        }
+                    }
+                    .btnClose{
+                        position: absolute;
+                        top: 70px;
+                        right: 20px;
+                        font: 600 16px/1 $font;
+                        color: #111;
+                    }
+                }
+            }
+            &.services{
+                .wrap{
+                    ul{
+                        float: left;
+    
+                        li{
+                            padding: 34px 0;
+    
+                            a{
+                                display: inline-block;
+                                font: 300 24px/1 $font;
+                                color: #666;
+                                position: relative;
+    
+                                &::after{
+                                    content: '';
+                                    display: block;
+                                    width: 0;
+                                    height: 2px;
+                                    background: #777;
+                                    position: absolute;
+                                    bottom: -5px;
+                                    left: 0;
+                                    opacity: 0;
+                                    transition: .6s;
+                                }
+                            }
+                            &:hover, &.on{
+                                a{
+                                    color: #000;
+    
+                                    &::after{
+                                        width: 100%;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .pic{
+                        float: right;
+                        width: 50%;
+                        height: 500px;
+
+                        img{
+                            display: none;
+                            filter: grayscale(80%);
+
+                            &:first-child{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            &.process{
+                >div{
+                    margin-left: 300px;
+    
+                    p{
+                        width: 70%;
+                        font: 400 20px/1.2 $font;
+                        color: #666;
+                        margin-bottom: 20px;
+                    }
+                    .btnMore{
+                        margin-left: 0;
+                        margin-bottom: 50px;
+                    }
+                    .pic{
+                        width: 100%;
+                        height: 400px;
+                        background: #bbb;
+                        margin-bottom: 150px;
+                    }
+                    h3{
+                        font: 300 80px/1 $font;
+                        color: #222;
+                        margin-bottom: 20px;
+                    }
+                    .contact{
+                        display: inline-block;
+                        font: 500 12px/1.2 $font;
+                        color: #444;
+                        position: relative;
+                        padding-right: 15px;
+    
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: calc(100% + 15px);
+                            height: 1px;
+                            background: #000;
+                        }
+                        .arrow{
+                            @include arrowRight($wid:10px, $ht: 1px, $bg: #222, $top: 50%);
+    
+                            &::before, &::after{
+                                width: 7px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.team{
+                position: relative;
+
+                .wrap{
+                    width: calc(100% - 300px);
+                    border-bottom: 1px solid #000;
+                    margin-bottom: 20px;
+
+                    article{
+                        float: left;
+                        width: calc((100% - 40px)/3);
+                        margin-right: 20px;
+                        margin-bottom: 30px;
+
+                        &:nth-of-type(3n){
+                            margin-right: 0;
+                        }
+                        .pic{
+                            width: 100%;
+                            height: 300px;
+                            background: #bbb;
+                            margin-bottom: 20px;
+                        }
+                        h3{
+                            font: 400 18px/1 $font;
+                            color: #222;
+                            margin-bottom: 10px;
+                        }
+                        h4{
+                            font: 400 16px/1 $font;
+                            color: #888;
+                        }
+                    }
+                }
+                .orgchart{
+                    width: 100%;
+                    height: 100%;
+                    padding: 200px 0;
+                    background: #f5f5f5;
+                    position: absolute;
+                    top: 55px;
+                    left: -100%;
+                    opacity: 0;
+                    z-index: 10;
+                    transition: 1s;
+        
+                    &.on{
+                        left: 0;
+                        opacity: 1;
+                    }
+                    >ul{
+                        width: 100%;
+                        text-align: center;
+                        
+                        >li{
+                            display: inline-block;
+                            position: relative;
+        
+                            span{
+                                display: inline-block;
+                                width: 120px;
+                                height: 50px;
+                                margin-bottom: 120px;
+                                font: 500 16px/50px $font;
+                                color: #eee;
+                                background: #111;
+                                border: 1px solid #111;
+                                position: relative;
+                                
+                                &::after{
+                                    content: '';
+                                    display: block;
+                                    width: 2px;
+                                    height: 120px;
+                                    background: #ddd;
+                                    position: absolute;
+                                    bottom: -121px;
+                                    left: 59px;
+                                }
+                            }
+                            >ul{
+                                margin-right: 50px;
+                                position: relative;
+        
+                                >li{
+                                    display: inline-block;
+                                    margin-right: 50px;
+                                    vertical-align: top;
+        
+                                    &:nth-of-type(1){
+                                        >span{
+                                            position: absolute;
+                                            top: -110px;
+                                            left: 200px;
+            
+                                            &::after{
+                                                width: 383px;
+                                                height: 2px;
+                                                left: 119px;
+                                                bottom: 25px;
+                                            }
+                                        }
+                                    } 
+                                    &:nth-of-type(2){
+                                        >span{
+                                            position: absolute;
+                                            top: -110px;
+                                            right: 150px;
+            
+                                            &::after{
+                                                width: 697px;
+                                                height: 2px;
+                                                bottom: -30px;
+                                                left: -536px;
+                                            }
+                                        }
+                                    }
+                                    
+                                    &:nth-of-type(3), &:nth-of-type(6){
+                                        span::after{
+                                            height: 201px;
+                                            bottom: -121px;
+                                            z-index:-1;
+                                        }
+                                    }
+                                    &:nth-of-type(4){
+                                        span::after{
+                                            height: 141px;
+                                            bottom: -61px;
+                                            z-index:-1;
+                                        }
+                                    }
+                                    &:nth-of-type(5){
+                                        span::after{
+                                            height: 170px;
+                                            bottom: -171px;
+                                            z-index:-1;
+                                        }
+                                    }
+                                    &:nth-of-type(7){
+                                        span::after{
+                                            height: 151px;
+                                            bottom: -71px;
+                                            z-index:-1;
+                                        }
+                                    }
+                                    >span{
+                                        margin-bottom: 20px;
+                                        color: #111;
+                                        background: #bbb;
+                                        border-color: #777;
+                                    }
+                                    ul li{
+                                        span{
+                                            height: 40px;
+                                            line-height: 40px;
+                                            margin-bottom: 10px;
+                                            color: #555;
+                                            border-color: #bbb;
+                                            background: #eee;
+        
+                                            &::after{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .close{
+                        position: absolute;
+                        top: 50px;
+                        right: 50px;
+                        font: 600 14px/1 $font;
+                        color: #111;
+                    }
+                }
+            }
+            &.news{
+                position: relative; 
+
+                .wrap{
+                    padding-bottom: 50px;
+                    margin-bottom: 30px;
+                    border-bottom: 1px solid #000;
+
+                    article{
+                        float: left;
+                        width: 49%;
+                        margin-right: 2%;
+
+                        .pic{
+                            width: 100%;
+                            height: 350px;
+                            background: #bbb;
+                            margin-bottom: 20px;
+                        }
+                        h3{
+                            font: 400 14px/1 $font;
+                            color: #777;
+                            margin-bottom: 10px;
+                        }
+                        h4{
+                            font: 500 18px/1 $font;
+                            color: #333;
+                        }
+                    }
+                }
+                .more{
+                    position: absolute;
+                    top: 50px;
+                    left: -100%;
+                    opacity: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #f5f5f5;
+                    padding-top: 100px;
+                    transition: 1s;
+
+                    &.on{
+                        left: 0;
+                        opacity: 1;
+                    }
+                    .swiper{
+                        width: 350px;
+                        height: 400px;
+
+                        .swiper-slide{
+                            position: relative;
+                            border-radius: 15px;
+
+                            img{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                filter: grayscale(0%);
+                            }
+                            h3{
+                                font: 400 16px/1 $font;
+                                color: #ddd;
+                                position: absolute;
+                                left: 10px;
+                                bottom: 90px;
+                            }
+                            h4{
+                                font: 400 18px/1 $font;
+                                color: #f7f7f7;
+                                position: absolute;
+                                left: 10px;
+                                bottom: 20px;
+                            }
+                        }
+                    }
+                    .btnClose{
+                        font: 600 14px/1 $font;
+                        color: #111;
+                        position: absolute;
+                        top: 50px;
+                        right: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet){
+    .about{
+        .inner{
+            h1{
+                font-size: 6vw;
+            }
+            &>div{
+                .wrap{
+                    margin-left: 25vw;
+                }
+                .btnMore{
+                    margin-left: 25vw;
+                }
+                &.projects .wrap{
+                    article .pic{
+                        height: 40vw;
+                    }
+                }
+                &.services .wrap{
+                    ul li{
+                        padding: 3vw 0;
+                    }
+                    .pic{
+                        width: 60%;
+                        height: 50vw;
+                    }
+                }
+                &.process>div{
+                    margin-left: 25vw;
+    
+                    h3{
+                        font-size: 8vw;
+                    }
+                }
+                &.team{
+                    .wrap{
+                        width: calc(100% - 25vw);
+        
+                        article .pic{
+                            height: 25vw;
+                        }
+                    }
+                    .orgchart{
+                        >ul >li{
+                            span{
+                                width: 100px;
+        
+                                &::after{
+                                    left: 50px;
+                                }
+                            }
+                            >ul{
+                                margin-right: 20px;
+        
+                                >li{
+                                    margin-right: 20px;
+        
+                                    &:nth-of-type(1){
+                                        >span{
+                                            left: 130px;
+        
+                                            &::after{
+                                                width: 223px;
+                                                left: 99px;
+                                            }
+                                        }
+                                    }
+                                    &:nth-of-type(2){
+                                        >span{
+                                            right: 110px;
+        
+                                            &::after{
+                                                width: 497px;
+                                                left: -355px;
+                                            }
+                                        }
+                                    }
+                                }
+                            } 
+                        }
+                    }
+                }
+                &.news .wrap article .pic{
+                    height: 40vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet2){
+    .about{
+        .inner{
+            h1{
+                margin-bottom: 70px;
+            }
+            >div{
+                .wrap{
+                    margin-left: 0;
+                }
+                .btnMore{
+                    margin-left: 0;
+                }
+                &.process>div{
+                    margin-left: 0;
+                }
+                &.team{
+                    .wrap{
+                        width: 100%;
+        
+                        article .pic{
+                            height: 200px;
+                        }
+                    }
+                    .orgchart{
+                        padding: 100px 0;
+        
+                        >ul >li{
+                            span{
+                                width: 80px;
+                                height: 40px;
+                                font: 14px/40px $font;
+        
+                                &::after{
+                                    height: 120px;
+                                    bottom: -121px;
+                                    left: 40px;
+                                }
+                            }
+                            >ul{
+                                margin-right: 5px;
+        
+                                >li{
+                                    margin-right: 0;
+
+                                    &:nth-of-type(1) >span{
+                                        left: 70px;
+
+                                        &::after{
+                                            left: 79px;
+                                            bottom: 19px;
+                                            width: 133px;
+                                        }
+                                    }
+                                    &:nth-of-type(2) >span{
+                                        right: 60px;
+
+                                        &::after{
+                                            left: -235px;
+                                            width: 337px;
+                                        }
+                                    }
+                                }
+                            } 
+                        }
+                    }
+                } 
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: $mobile){
+    .about{
+        .inner{
+            h1{
+                margin-bottom: 50px;
+            }
+            >div{
+                margin-bottom: 100px;
+                
+                h2{
+                    font-size: 28px;
+                    margin-bottom: 20px;
+
+                    &::after{
+                        margin-bottom: 10px;
+                    }
+                }
+                .btnMore{
+                    font-size: 12px;
+                }
+                &.projects .wrap article{
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+                &.services .wrap{
+                    position: relative;
+
+                    ul{
+                        position: absolute;
+                        top: 30px;
+                        left: 30px;
+                        z-index: 1;
+
+                        li a{
+                            color: #fff;
+
+                            &::after{
+                                background: #ddd;
+                            }
+                        }
+                    }
+                    .pic{
+                        width: 100%;
+                        height: 350px;
+                    }
+                }
+                &.process>div{
+                    p{
+                        width: 100%;
+                        font-size: 16px;
+                    }
+                    .pic{
+                        height: 200px;
+                        margin-bottom: 50px;
+                    }
+                } 
+                &.team{
+                    .wrap article{
+                        width: 49%;
+                        margin-right: 2%;
+    
+                        &:nth-of-type(even){
+                            margin-right: 0;
+                        }
+                        &:nth-of-type(3){
+                            margin-right: 2%;
+                        }
+                    }
+                    .orgchart{
+                        top: 37px;
+        
+                        >ul >li{
+                            span{
+                                margin-bottom: 0;
+        
+                                &::after{
+                                    height: 622px;
+                                    bottom: -623px;
+                                }
+                            }
+                            >ul{
+                                >li{
+                                    display: block;
+                                    position: relative;
+        
+                                    &::after{
+                                        content:'';
+                                        display: block;
+                                        width: 65px;
+                                        height: 2px;
+                                        background: #ddd;
+                                        position: absolute;
+                                        top: 20px;
+                                        left: 80px;
+                                    }
+                                    &:nth-of-type(1){
+                                        &::after{
+                                            display: none;
+                                        }
+                                        >span{
+                                            position: relative;
+                                            top: 20px;
+                                            left: -100px;
+        
+                                            &::after{
+                                                width: 120px;
+                                            }
+                                        }
+                                    }
+                                    &:nth-of-type(2){
+                                        &::after{
+                                            display: none;
+                                        }
+                                        >span{
+                                            position: relative;
+                                            top: -40px;
+                                            right: -100px;
+        
+                                            &::after{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                    &:nth-of-type(3){
+                                        transform: translateX(-100px);
+        
+                                        span::after{
+                                            height: 120px;
+                                        }
+                                    }
+                                    &:nth-of-type(4){
+                                        &::after{
+                                            left: -55px;
+                                            width: 55px;
+                                        }
+                                        transform: translate(100px, -210px);
+        
+                                        span::after{
+                                            height: 60px;
+                                        }
+                                    }
+                                    &:nth-of-type(5){
+                                        &::after{
+                                            left: -55px;
+                                            width: 55px;
+                                        }
+                                        transform: translate(100px, -160px);
+                                    }
+                                    &:nth-of-type(6){
+                                        transform: translate(-100px, -310px);
+        
+                                        span::after{
+                                            height: 120px;
+                                        }
+                                    }
+                                    &:nth-of-type(7){
+                                        &::after{
+                                            left: -55px;
+                                            width: 55px;
+                                        }
+                                        transform: translate(100px, -310px);
+        
+                                        span::after{
+                                            height: 70px;
+                                        }
+                                    }
+                                }
+                            } 
+                        }
+                    }
+                }
+                
+                &.news .wrap article{
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

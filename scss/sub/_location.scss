@@ -1,0 +1,409 @@
+.location{
+    .visual{
+        background-image: url(../img/visual_location.jpg);
+    }
+    .inner{
+        .contact{
+            margin-bottom: 100px;
+
+            .wrap{
+                h1{
+                    float: left;
+                    width: 50%;
+                    padding: 80px 0;
+                    font: 600 60px/1.2 $font;
+                    color: #111;
+                }
+                form{
+                    float: right;
+                    width: 50%;
+
+                    fieldset{
+                        border: none;
+
+                        table{
+                            width: 100%;
+                            border-collapse: collapse;
+
+                            tr{
+                                border-top: 2px solid #eee;
+
+                                th{
+                                    display: inline-block;
+                                    width: 90px;
+                                    padding: 30px 0;
+                                    font: 600 16px/1 $font;
+                                    text-align: left;
+                                    color: #222;
+
+                                    input[type="submit"]{
+                                        width: 150px;
+                                        height: 40px;
+                                        border: 2px solid #ddd;
+                                        background: transparent;
+                                        font: 500 18px/1 $font;
+                                        color: #888;
+                                        cursor: pointer;
+
+                                        &:hover{
+                                            color: #555;
+                                            background: #eee;
+                                        }
+                                    }
+                                }
+                                td{
+                                    display: inline-block;
+                                    padding: 30px 0;
+                                    width: 70%;
+
+                                    input{
+                                        width: 90%;
+                                        border: none;
+                                        outline: none;
+                                        font: 500 16px/1 $font;
+                                        color: #888;
+                                        background: transparent;
+                                    }
+                                    
+                                    textarea{
+                                        width: 100%;
+                                        height: 100px;
+                                        resize: none;
+                                        border: none;
+                                        outline: none;
+                                        font: 500 16px/1 $font;
+                                        color: #888;
+                                        background: transparent;
+                                    }
+                                }
+                                &:nth-of-type(1){
+                                    display: inline-block;
+                                    width: 40%;
+                                    border-right: 2px solid #eee;
+
+                                    td{
+                                        width: auto;
+
+                                        input{
+                                            width: 120px;
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    display: inline-block;
+                                    width: 60%;
+                                    padding-left: 30px;
+
+                                    td{
+                                        width: auto;
+
+                                        input{
+                                            width: 120px;
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(4){
+                                    th{
+                                        vertical-align: top;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .tabmenu{
+            width: 100%;
+
+            &::after{
+                content:'';
+                display: block;
+                clear: both;
+            }
+            li{
+                width: 33.3%;
+                float: left;
+                padding: 15px 0;
+                border-top: 1px solid rgba(0,0,0,0.2);
+                border-bottom: 1px solid rgba(0,0,0,0.2);
+                border-right: 1px solid rgba(0,0,0,0.2);
+                text-align: center;
+                font: 400 16px/1 $font;
+                color: #555;
+                cursor: pointer;
+
+                &:last-child{
+                    border-right: none;
+                }
+                &.on{
+                    font-weight: 500;
+                    color: #000;
+                    background: #f1f1f1;
+                }
+                h1, address, p{
+                    display: none;
+                }
+            }
+        }
+        #map{
+            width: 100%;
+            height: 500px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #222;
+            filter: grayscale(60%);
+            position: relative;
+
+            .traffic{
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                z-index: 10;
+                display: block;
+                padding: 2px;
+                background: #fff;
+                box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+                color: #111;
+                border-radius: 5px;
+
+                span{
+                    display: block;
+                    width: 70px;
+                    height: 32px;
+                    font: 500 12px/32px $font;
+                    text-align: center;
+                    border-radius: 5px;
+                }
+
+                &.on span{
+                    background: #3396FF;
+                    color: #fff;
+                }
+            }
+            .address{
+                position: absolute;
+                left: 3px;
+                top: 50px;
+                width: 200px;
+                background: #fff;
+                border-radius: 5px;
+                box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+                z-index: 10;
+                padding: 10px;
+
+                h1{
+                    font: 600 14px/1 $font;
+                    color: #111;
+                    margin-bottom: 15px;
+                }
+                address{
+                    font: normal 400 14px/1 $font;
+                    color: #333;
+                    margin-bottom: 5px;
+                }
+                p{
+                    font: normal 400 14px/1 $font;
+                    color: #777;
+                }
+            }
+        }
+        .trafficInfo{
+            width: 100%;
+            margin-bottom: 150px;
+
+            article{
+                width: 100%;
+                min-height: 200px;
+                padding: 50px 0;
+                position: relative;
+                border-bottom: 1px dotted rgba(0,0,0,0.2);
+
+                .pic{
+                    position: absolute;
+                    top: 50%;
+                    left: 100px;
+                    transform: translateY(-50%);
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    background: #000;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .txt{
+                    padding-left: 350px;
+
+                    h1{
+                        font: 600 18px/1 $font;
+                        color: #222;
+                        margin-bottom: 20px;
+                    }
+                    p{
+                        font: 400 16px/1.6 $font;
+                        color: #666;
+
+                        span{
+                            display: inline-block;
+                            width: 100px;
+                            color: #444;
+                        }
+                    }
+                }
+            }
+        }
+        .txtbox{
+            width: 100%;
+            
+            h1{
+                font: 300 38px/1 "Zen Kaku Gothic Antique";
+                color: #555;
+                letter-spacing: -2px;
+                margin-bottom: 10px;
+            }
+            p{
+                font: 400 18px/1 "Zen Kaku Gothic Antique";
+                color: #bbb;
+            }
+            .wrap{
+                article{
+                    width: 50%;
+                    float:left;
+                    padding-top: 50px;
+                    padding-right: 50px;
+
+                    h2{
+                        font: 600 18px/1 "Zen Kaku Gothic Antique";
+                        color: #222;
+                        margin-bottom: 10px;
+                        
+                    i{
+                        margin-right: 10px;
+                        color: #ccc;
+                    }
+                    }
+                    p{
+                        font: 500 12px/1.4 "Zen Kaku Gothic Antique";
+                        color: #777;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet){
+    .location{
+        .inner{
+            .contact .wrap form fieldset table tr{
+                &:nth-of-type(1){
+                    display: block;
+                    width: 100%;
+                    border-right: none;
+                }
+                &:nth-of-type(2){
+                    display: block;
+                    width: 100%;
+                    padding-left: 0;
+                }
+            }
+            .trafficInfo article{
+                .pic{
+                    left: 8vw;
+                }
+                .txt{
+                    padding-left: 30vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet2){
+    .location{
+        .inner{
+            .contact{
+                .wrap{
+                    h1{
+                        width: 100%;
+                        font-size: 50px;
+                        padding: 30px 0;
+                    }
+                    form{
+                        width: 100%;
+                    }
+                } 
+            }
+            #map{
+                height: 400px;
+            }
+            .trafficInfo article{
+                padding: 30px 0;
+
+                .pic{
+                    left: 0;
+                }
+                .txt{
+                    padding-left: 170px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile){
+    .location{
+        .inner{
+            .contact{
+                .wrap h1{
+                    font-size: 38px;
+                    padding: 60px 0;
+                }
+            } 
+            .tabmenu li{
+                font-size: 12px;
+            }
+            #map{
+                height: 300px;
+            }
+            .trafficInfo{
+                margin-bottom: 100px;
+
+                article{
+                    min-height: auto;
+                    text-align: center;
+    
+                    .pic{
+                        width: 100px;
+                        height: 100px;
+                        transform: translate(-50%, 0);
+                        position: relative;
+                        left: 50%;
+                        margin-bottom: 20px;
+                    }
+                    .txt{
+                        padding-left: 0;
+    
+                        p{
+                            margin-bottom: 10px;
+    
+                            span{
+                                display: block;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .txtbox .wrap article{
+                width: 100%;
+                padding-top: 30px;
+                padding-right: 0;
+            }
+        }
+    }
+}
