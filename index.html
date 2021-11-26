@@ -16,6 +16,14 @@
     <script defer src="js/slider.js"></script>
     <script defer src="js/main.js"></script>
     <script>
+        window.addEventListener("load", ()=>{
+            new CookiePopup("#popup", {
+                btnClose: ".close",
+                name: "popup",
+                value: "isdone",
+                delay: 1
+            });
+        })
         $(document).ready(function(){
             new MyScroll({
                 panel: ".myScroll",
@@ -1241,7 +1249,7 @@
                 <label for="ck">Dont' show again for 24h</label>
             </div>
             <div class="pic">
-                <img src="img/popup.png" alt="">
+                <img src="img/popup.png" alt="걸어가는 모델">
             </div>
             <a href="#" class="close" title="닫기버튼"></a>
         </div>
