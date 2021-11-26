@@ -13,23 +13,17 @@
     <script defer src="js/common.js"></script>
     <script src="js/popup.js"></script>
     <script defer src="js/scroll.js"></script>
-    <script defer src="js/slider.js"></script>
+    <script src="js/slider.js"></script>
     <script defer src="js/main.js"></script>
     <script>
         window.addEventListener("load", ()=>{
             new CookiePopup("#popup");
-            new SliderBasic({
+            new BasicSlider({
                 frame: ".box1 .slider-wrapper",
                 btns: ".box1 .btns li",
                 speed: 500
             });
-        })
-        $(document).ready(function(){
-            new MyScroll({
-                panel: ".myScroll",
-                btns: "#navi li"
-            });
-            new Slider({
+            new LoopSlider({
                 frame: ".mento .slider-wrapper",
                 slider: ".slider",
                 prev: ".mento .prev",
@@ -38,7 +32,7 @@
                 moving_percent: -100,
                 speed: 2000
             });
-            new Slider({
+            new LoopSlider({
                 frame: ".box3 .slider-wrapper",
                 slider: ".slider",
                 prev: ".box3 .prev",
@@ -46,7 +40,7 @@
                 default_percent: -100,
                 moving_percent: -200,
                 speed: 3000
-            });
+            })
         });
     </script>
 </head>

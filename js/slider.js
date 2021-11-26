@@ -1,4 +1,4 @@
-class Slider{
+class LoopSlider{
     constructor(opt){
         if(!opt.frame || !opt.slider){
             console.error("frame과 slider값은 필수입력사항 입니다");
@@ -6,8 +6,8 @@ class Slider{
         }
 
         const defaults = {
-            prev: $(".prev"),
-            next: $(".next"),
+            prev: ".prev",
+            next: ".next",
             default_percent: "-100%",
             moving_percent: "100%",
             speed: 1000,
@@ -20,24 +20,26 @@ class Slider{
         this.bindingEvent();
     }
     initDOM(opt){
-        this.frame = $(opt.frame);
-        this.slider = $(opt.slider);
-        this.prev = $(opt.prev);
-        this.next = $(opt.next);
+        this.frame = document.querySelector(opt.frame);
+        this.slider = document.querySelector(opt.slider);
+        this.prev = document.querySelector(opt.prev);
+        this.next = document.querySelector(opt.next);
         this.default_per = opt.default_percent;
         this.moving_per = opt.moving_percent;
         this.speed = opt.speed;
         this.enableClick = true;
+        this.len = this.slider.lenth;
     }
     init(){
-        this.frame.find(this.slider).last().prependTo(this.frame);
+        this.frame.style.left = "-100%";
+        this.frame.prepend(this.frame.lastElementChild);
     
         this.timer = setInterval(()=>{
             this.movingRight();
         }, this.speed);
     }
     bindingEvent(){
-        this.prev.on("click", e=>{
+        this.prev.addEventListener("click", e=>{
             e.preventDefault();
         
             if(this.enableClick){
@@ -47,7 +49,7 @@ class Slider{
             }
         });
         
-        this.next.on("click", e=>{
+        this.next.addEventListener("click", e=>{
             e.preventDefault();
         
             if(this.enableClick){
@@ -58,25 +60,34 @@ class Slider{
         });
     }
     movingLeft(){
-        this.frame.animate({marginLeft: "0%"}, 1000, ()=>{
-            this.frame.css({marginLeft: this.default_per +"%"});
-            this.frame.children(this.slider).last().prependTo(this.frame);
-            this.enableClick = true;
+        new Anim(this.frame,{
+            prop: "margin-left",
+            value: "0%",
+            duration: 1000,
+            callback: ()=>{
+                this.frame.style.marginLeft = `${this.default_per}%`;
+                this.frame.append(this.frame.lastElementChild);
+                this.enableClick = true;
+            }
         });
     }
     movingRight(){
-        this.frame.animate({marginLeft: this.moving_per +"%"}, 1000, ()=>{
-            this.frame.css({marginLeft: this.default_per +"%"});
-            this.frame.children(this.slider).first().appendTo(this.frame);
-            this.enableClick = true;
+        new Anim(this.frame,{
+            prop: "margin-left",
+            value: `${this.moving_per}%`,
+            duration: 1000,
+            callback: ()=>{
+                this.frame.style.marginLeft = `${this.default_per}%`;
+                this.frame.append(this.frame.firstElementChild);
+                this.enableClick = true;
+            }
         });
     }
 }
 
 
 
-// box1 slide
-class SliderBasic{
+class BasicSlider{
     constructor(opt){
         if(!opt.frame){
             console.error("frame값은 필수 입력값입니다.");
