@@ -11,18 +11,13 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script defer src="js/common.js"></script>
-    <script defer src="js/popup.js"></script>
+    <script src="js/popup.js"></script>
     <script defer src="js/scroll.js"></script>
     <script defer src="js/slider.js"></script>
     <script defer src="js/main.js"></script>
     <script>
         window.addEventListener("load", ()=>{
-            new CookiePopup("#popup", {
-                btnClose: ".close",
-                name: "popup",
-                value: "isdone",
-                delay: 1
-            });
+            new CookiePopup("#popup");
         })
         $(document).ready(function(){
             new MyScroll({

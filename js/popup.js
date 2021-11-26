@@ -1,6 +1,17 @@
 class CookiePopup{
     constructor(selector, opt){
-        this.init(selector, opt);
+        if(!selector){
+            console.error("selector값은 필수입력값입니다.");
+            return;
+        }
+        const defaults = {
+            btnClose: ".close",
+            name: "popup",
+            value: "isdone",
+            delay: 1
+        }
+        let results = Object.assign({}, defaults, opt);
+        this.init(selector, results);
         this.bindingEvent();
     }
     init(selector, opt){
