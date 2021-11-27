@@ -1,41 +1,3 @@
-// visual letter motion
-const visual = document.querySelector("#visual");
-const letter1 = visual.querySelector(".inner >h1");
-const letter2 = visual.querySelector(".inner >h2");
-
-letterMotion(letter1, 0.1);
-letterMotion(letter2, 0.2);
-
-function letterMotion(item, delay){
-    let txt = item.innerText;
-    let bg = getComputedStyle(item).color;
-    let num = 0;
-    let letters = "";
-
-    item.innerHTML = "";
-
-    for(let el of txt){
-        letters += `
-            <span style="transition-delay: ${delay * num}s">${el}</span>
-        `;
-        num++;
-    }
-    letters += `<p style="background=${bg}"></p>`
-    item.innerHTML = letters;
-
-    new Anim(item.querySelector("p"),{
-        prop: "left",
-        value: "100%",
-        duration: 1000
-    });
-    for(let el of item.querySelectorAll("span")){
-        el.style.opacity = 1;
-    }
-}
-
-
-// visual article motion
-
 class Visual{
     constructor(){
         this.initDOM();
@@ -43,10 +5,13 @@ class Visual{
         this.bindingEvent();
     }
     initDOM(){
-        this.wrap = visual.querySelectorAll(".wrapbox >.wrap");
-        this.section = visual.querySelectorAll(".wrapbox section");
-        this.back = visual.querySelectorAll("section .back");
-        this.btns = visual.querySelectorAll(".filter li");
+        this.visual = document.querySelector("#visual");
+        this.letter1 = this.visual.querySelector(".inner >h1");
+        this.letter2 = this.visual.querySelector(".inner >h2");
+        this.wrap = this.visual.querySelectorAll(".wrapbox >.wrap");
+        this.section = this.visual.querySelectorAll(".wrapbox section");
+        this.back = this.visual.querySelectorAll("section .back");
+        this.btns = this.visual.querySelectorAll(".filter li");
         this.enableClick = true;
         this.i=0;
         this.timer;
@@ -66,6 +31,9 @@ class Visual{
         }, 4000);
     }
     bindingEvent(){
+        this.letterMotion(this.letter1, 0.1);
+        this.letterMotion(this.letter2, 0.2);
+
         this.btns.forEach((btn,index)=>{
             btn.addEventListener("click", e=>{
                 e.preventDefault();
@@ -80,6 +48,32 @@ class Visual{
                 }
             })
         });
+    }
+    letterMotion(item, delay){
+        let txt = item.innerText;
+        let bg = getComputedStyle(item).color;
+        let num = 0;
+        let letters = "";
+    
+        item.innerHTML = "";
+    
+        for(let el of txt){
+            letters += `
+                <span style="transition-delay: ${delay * num}s">${el}</span>
+            `;
+            num++;
+        }
+        letters += `<p style="background=${bg}"></p>`
+        item.innerHTML = letters;
+    
+        new Anim(item.querySelector("p"),{
+            prop: "left",
+            value: "100%",
+            duration: 1000
+        });
+        for(let el of item.querySelectorAll("span")){
+            el.style.opacity = 1;
+        }
     }
     reverse(index){
         this.activeBtn(this.btns, index);
@@ -103,85 +97,91 @@ class Visual{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+const visual = document.querySelector("#visual");
+const wrap = visual.querySelectorAll(".wrapbox >.wrap");
 //visual detail page
-const $detail = $(".detail");
-const $btnClose = $detail.find(".close");
-const $img = $wrap.find("img");
-const $detail_img = $detail.find(".pic");
-let imgPos;
+const detail = visual.querySelector(".detail");
+const btnClose = detail.querySelector(".close");
+const imgs = visual.querySelectorAll(".wrapbox img");
+const detail_img = detail.querySelector(".pic");
+let imgPos = {};
 
-$img.on("click", function(e){
-    e.preventDefault();
-    let imgSrc = $(this).attr("src");
-    let imgAlt = $(this).attr("alt");
-    let imgTop = $(this).offset().top;
-    let imgLeft = $(this).offset().left;
-    let itemIndex = $(this).closest("section").index();
-    let boxIndex = $(this).closest("article").parent("section").parent(".wrap").index();
+wrap.forEach((item, index)=>{
+    item.addEventListener("click", e=>{
+        e.preventDefault();
+        console.log(e.target);
 
-    imgPos = {
-        width: "250px",
-        height: "280px",
-        top: imgTop - 70,
-        left: imgLeft
-    }
-    let tit1 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("h2").text();
-    let tit2 = $wrap.eq(boxIndex).find("section").eq(itemIndex).find("li").text();
-    let desc = $wrap.eq(boxIndex).find("section").eq(itemIndex).find(".wrap p").text();
+        let target = e.target.closest("article").querySelector("img");
+        if(e.target !== target) return;
 
-    clearInterval(timer);
+        let imgSrc = e.target.getAttribute("src");
+        let imgAlt = e.target.getAttribute("alt");
+        let imgTop = e.target.offsetTop;
+        let imgleft = e.target.offsetLeft;
 
-    $detail_img.css(imgPos);
-    setTimeout(function(){
-        $detail_img.css({
-            width: "40vw",
-            height: "100%",
-            left: "10vw",
-            top: 0
-        })
-    }, 100);
-    $detail_img.find("img").attr({src: imgSrc, alt: imgAlt});
-    $detail.find(".thumb img").attr({src: imgSrc, alt: imgAlt});
-    $detail.find(".con >h1").text(tit1);
-    $detail.find(".con >h2").text(tit2);
-    $detail.find(".con p").text(desc);
+        let tit1 = item.querySelector("h2").innerText;
 
-    $detail.fadeIn(0);
-    $detail.addClass("on");
+        // let tit2 = wrap[boxIndex].querySelectorAll("section")[itemIndex].querySelector("h1").innerText;
+        // let desc = wrap[boxIndex].querySelectorAll("section")[itemIndex].querySelector(".wrap p").innerText;
+    })
 });
 
-$btnClose.on("click", function(e){
-    e.preventDefault();
+/*
+imgs.forEach((img,index)=>{
+    img.addEventListener("click", e=>{
+        e.preventDefault();
+        let imgSrc = img.getAttribute("src");
+        let imgAlt = img.getAttribute("alt");
+        let imgTop = img.offsetTop;
+        let imgleft = img.offsetLeft;
+        // let itemIndex = wrap.indexOf(img.closest("section"));
+        // let boxIndex = img.closest(".wrap").indexOf();
+
+        let tit1 = wrap[index].querySelector("h2").innerText;
+        let tit2 = wrap[boxIndex].querySelectorAll("section")[itemIndex].querySelector("h1").innerText;
+        let desc = wrap[boxIndex].querySelectorAll("section")[itemIndex].querySelector(".wrap p").innerText;
+        clearInterval(timer);
+
+        detail_img.style.width = "250px";
+        detail_img.style.height = "280px";
+        detail_img.style.top = imgTop - 70;
+        detail_img.style.left = imgleft;
+        setTimeout(()=>{
+            detail_img.style.width = "40vw";
+            detail_img.style.height = "100%";
+            detail_img.style.top = 0;
+            detail_img.style.left = "10vw";
+        }, 100);
+        detail_img.querySelector("img").setAttribute("src") = imgSrc;
+        detail_img.querySelector("img").setAttribute("alt") = imgAlt;
+        detail_img.querySelector(".con >h1").innerText = tit1;
+        detail_img.querySelector(".con >h2").innerText = tit2;
+        detail_img.querySelector(".con p").innerText = desc;
+        detail.classList.add("on");
+    })
+});
+
+// $btnClose.on("click", function(e){
+//     e.preventDefault();
     
-    $detail_img.css(imgPos);
-    $detail.removeClass("on");
-    $detail.fadeOut(1000);
+//     $detail_img.css(imgPos);
+//     $detail.removeClass("on");
+//     $detail.fadeOut(1000);
 
-    timer = setInterval(function(){
-        (i >= 2) ? i=0 : i++;
-        reverse(i)
-    }, 4000);
-});
+//     timer = setInterval(function(){
+//         (i >= 2) ? i=0 : i++;
+//         reverse(i)
+//     }, 4000);
+// });
 
-// detail page date
-const $date = $detail.find(".date");
-const date = new Date();
-const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+// // detail page date
+// const $date = $detail.find(".date");
+// const date = new Date();
+// const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+// const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-$date.find("h1").text(date.getDate());
-$date.find("h2").text(day[date.getDay()]);
-$date.find("h3").text(month[date.getMonth()]);
+// $date.find("h1").text(date.getDate());
+// $date.find("h2").text(day[date.getDay()]);
+// $date.find("h3").text(month[date.getMonth()]);
+
+*/
