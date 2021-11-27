@@ -3436,6 +3436,9 @@ body {
           width: calc(100% / 5);
           height: 55px;
           margin: 0 -1px -1px 0; }
+          .community .inner > dl > dd#faq .tabs li.on a {
+            color: #000;
+            border: 3px solid #000; }
           .community .inner > dl > dd#faq .tabs li a {
             display: block;
             width: 100%;
@@ -3444,9 +3447,6 @@ body {
             text-align: center;
             font: 500 15px/55px "Gothic A1";
             color: #606060; }
-            .community .inner > dl > dd#faq .tabs li a.on {
-              color: #000;
-              border: 3px solid #000; }
       .community .inner > dl > dd#faq .qna {
         border-top: 3px solid #000;
         border-bottom: 1px solid #000;

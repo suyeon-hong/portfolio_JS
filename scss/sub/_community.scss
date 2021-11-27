@@ -168,6 +168,10 @@
                             height: 55px;
                             margin: 0 -1px -1px 0;
     
+                            &.on a{
+                                color: #000;
+                                border: 3px solid #000;
+                            }
                             a{
                                 display: block;
                                 width: 100%;
@@ -176,11 +180,6 @@
                                 text-align: center;
                                 font: 500 15px/55px $font;
                                 color: #606060;
-    
-                                &.on{
-                                    color: #000;
-                                    border: 3px solid #000;
-                                }
                             }
                         }
                     }

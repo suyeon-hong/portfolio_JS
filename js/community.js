@@ -1,27 +1,18 @@
-// // community tabs 버튼
-// const $tabs = $(".community .tabs li a");
+const tabs = document.querySelectorAll(".community .tabs li");
+const faq_nums = document.querySelectorAll(".community #faq .numbers span");
+const notice_nums = document.querySelectorAll(".community #notice .numbers span");
 
-// $tabs.on("click", function(e){
-//     e.preventDefault();
+activeBtn(tabs);
+activeBtn(faq_nums);
+activeBtn(notice_nums);
 
-//     $tabs.removeClass("on");
-//     $(this).addClass("on");
-// });
-
-// // community pagination
-// const $faqBtns = $(".community #faq .numbers span");
-// const $noticeBtns = $(".community #notice .numbers span");
-
-// $faqBtns.on("click", function(e){
-//     e.preventDefault();
-
-//     $faqBtns.removeClass("on");
-//     $(this).addClass("on");
-// });
-
-// $noticeBtns.on("click", function(e){
-//     e.preventDefault();
-
-//     $noticeBtns.removeClass("on");
-//     $(this).addClass("on");
-// });
+function activeBtn(items){
+    items.forEach((item, index)=>{
+        item.addEventListener("click", e=>{
+            e.preventDefault();
+    
+            for(let el of items) el.classList.remove("on");
+            items[index].classList.add("on");
+        });
+    });
+}
