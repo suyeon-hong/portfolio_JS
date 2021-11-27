@@ -66,6 +66,22 @@ class MyFlickr{
             }
         });
         
+        this.photoBox.addEventListener("click", e=>{
+            e.preventDefault();
+
+            if(e.target !== e.target.closest(".item").querySelector("img")) return;
+            
+            let target = e.target.closest(".item");
+            let imgSrc = target.querySelector("a").getAttribute("href");
+
+            let pop = document.createElement("aside");
+            let pops = `
+                <img src=${imgSrc}>
+                <span>CLOSE</span>
+            `
+            pop.innerHTML = pops;
+            this.gallery.append(pop);
+        })
         // $("body").on("click", this.photoBox.selector +(" li"), e=>{
         //     e.preventDefault();
         

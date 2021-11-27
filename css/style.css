@@ -4016,8 +4016,7 @@ body {
           right: 0;
           color: #777;
           font-weight: 300; }
-
-.pop {
+.gallery aside {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -4026,11 +4025,11 @@ body {
   padding: 100px;
   background: rgba(0, 0, 0, 0.8);
   z-index: 3; }
-  .pop img {
+  .gallery aside img {
     width: 100%;
     height: 100%;
     object-fit: contain; }
-  .pop span {
+  .gallery aside span {
     font: 500 16px/1 "Gothic A1";
     color: #fff;
     position: absolute;
