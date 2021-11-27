@@ -418,12 +418,13 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      display: none;
-      perspective: 5000px; }
-      #visual .inner > .wrap:nth-child(1) {
-        display: block; }
-      #visual .inner > .wrap.on section {
-        transform: rotateY(180deg); }
+      opacity: 0;
+      perspective: 5000px;
+      transition: .6s; }
+      #visual .inner > .wrap.on {
+        opacity: 1; }
+        #visual .inner > .wrap.on section {
+          transform: rotateY(180deg); }
       #visual .inner > .wrap section {
         width: 380px;
         transform-style: preserve-3d;

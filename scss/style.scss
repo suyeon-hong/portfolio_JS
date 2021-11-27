@@ -522,15 +522,17 @@ body{
             position: absolute;
             top: 0;
             left: 0;
-            display: none;
+            opacity: 0;
             perspective: 5000px;
+            transition: .6s;
 
-            &:nth-child(1){
-                display: block;
-            }
-            &.on section{
-                transform: rotateY(180deg);
-            }
+            &.on{
+                opacity: 1;
+
+                section{
+                    transform: rotateY(180deg);
+                }
+            } 
             section{
                 width: 380px;
                 transform-style: preserve-3d;

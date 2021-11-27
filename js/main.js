@@ -35,55 +35,84 @@ function letterMotion(item, delay){
 
 
 // visual article motion
-const $wrap = $("#visual .wrapbox >.wrap");
-const $section = $("#visual .wrapbox section");
-const $back = $section.find(".back");
-const $btns = $("#visual .filter li");
-let i=0;
-let timer;
 
-init();
-bindingEvent();
-
-function init(){
-    $wrap.eq(0).addClass("on");
-    $back.hide(2500);
-
-    timer = setInterval(function(){
-        (i >= 2) ? i=0 : i++;
-        reverse(i)
-    }, 4000);
-}
-
-function bindingEvent(){
-    $btns.on("click", function(e){
-        e.preventDefault();
-        
-        let isActive = $(e.currentTarget).hasClass("on");
-        i = $(e.currentTarget).index();
+class Visual{
+    constructor(){
+        this.initDOM();
+        this.init();
+        this.bindingEvent();
+    }
+    initDOM(){
+        this.wrap = visual.querySelectorAll(".wrapbox >.wrap");
+        this.section = visual.querySelectorAll(".wrapbox section");
+        this.back = visual.querySelectorAll("section .back");
+        this.btns = visual.querySelectorAll(".filter li");
+        this.enableClick = true;
+        this.i=0;
+        this.timer;
+    }
+    init(){
+        this.wrap[0].classList.add("on");
     
-        if(isActive) return;
-        if(enableClick){
-            enableClick = false;
+        setTimeout(()=>{
+            for(let el of this.back){
+                el.style.display = "none";
+            }
+        },2000);
     
-            clearInterval(timer);
-            reverse(i);
+        this.timer = setInterval(()=>{
+            (this.i >= 2) ? this.i=0 : this.i++;
+            this.reverse(this.i)
+        }, 4000);
+    }
+    bindingEvent(){
+        this.btns.forEach((btn,index)=>{
+            btn.addEventListener("click", e=>{
+                e.preventDefault();
+    
+                let isActive = btn.classList.contains("on");
+                if(isActive) return;
+    
+                if(this.enableClick){
+                    this.enableClick = false;
+                    clearInterval(this.timer);
+                    this.reverse(index);
+                }
+            })
+        });
+    }
+    reverse(index){
+        this.activeBtn(this.btns, index);
+        this.activeBtn(this.wrap, index);
+    
+        for(let el of this.back){
+            el.style.display = "block";
         }
-    });
+    
+        setTimeout(()=>{
+            for(let el of this.back){
+                el.style.display = "none";
+            }
+            this.enableClick = true;
+        },2000);
+    }
+    activeBtn(item, index){
+        for(let el of item) el.classList.remove("on");
+        item[index].classList.add("on");
+    }
 }
 
-function reverse(index){
-    $btns.removeClass("on");
-    $btns.eq(index).addClass("on");
 
-    $back.show();
-    $wrap.fadeOut().removeClass("on");
 
-    $wrap.eq(index).fadeIn().addClass("on");
-    $back.fadeOut(2500, function(){
-        enableClick = true;
-    });
-}
+
+
+
+
+
+
+
+
+
 
 
 
