@@ -3674,7 +3674,7 @@ body {
             border-color: #aaa; }
         .join .inner form fieldset table tr td select {
           font-size: 14px; }
-        .join .inner form fieldset table tr td input[type="button"], .join .inner form fieldset table tr td input[type="checkbox"] {
+        .join .inner form fieldset table tr td input[type="button"] {
           width: 120px;
           height: 40px;
           font: 300 14px/40px "Gothic A1";
@@ -3682,7 +3682,7 @@ body {
           background: #eee;
           border: 2px solid #ddd;
           cursor: pointer; }
-        .join .inner form fieldset table tr td input[type="radio"] {
+        .join .inner form fieldset table tr td input[type="radio"], .join .inner form fieldset table tr td input[type="checkbox"] {
           vertical-align: text-top; }
         .join .inner form fieldset table tr td label {
           margin-right: 10px; }

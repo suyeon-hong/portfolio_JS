@@ -73,7 +73,7 @@
                             select{
                                 font-size: 14px;
                             }
-                            input[type="button"], input[type="checkbox"]{
+                            input[type="button"]{
                                 width: 120px;
                                 height: 40px;
                                 font: 300 14px/40px $font;
@@ -82,7 +82,7 @@
                                 border: 2px solid #ddd;
                                 cursor: pointer;
                             }
-                            input[type="radio"]{
+                            input[type="radio"], input[type="checkbox"]{
                                 vertical-align: text-top;
                             }
                             label{
