@@ -7,21 +7,18 @@
     <title>community</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/0c5c47f3c6.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script defer src="js/common.js"></script>
     <script defer src="js/tab.js"></script>
     <script defer src="js/community.js"></script>
     <script>
-        $(document).ready(function(){
+        window.addEventListener("load", ()=>{
             new Tab({
                 btns: ".inner>dl>dt",
                 boxs: ".inner>dl>dd",
             });
             new Tab({
                 btns: ".qna dt",
-                boxs: ".qna dd",
-                motion: "slideDown",
-                speed: 500
+                boxs: ".qna dd"
             })
         });
     </script>
@@ -314,7 +311,7 @@
         <div class="inner">
             <h1>COMMUNITY</h1>
             <dl>
-                <dt class="on"><a href="#faq" class="on">FAQ</a></dt>
+                <dt class="on"><a href="#faq">FAQ</a></dt>
                 <dd id="faq">
                     <div class="search">
                         <h2>FAQ 검색</h2>

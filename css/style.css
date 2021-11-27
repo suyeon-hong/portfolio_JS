@@ -3327,7 +3327,8 @@ body {
   .community .inner > dl > dt {
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+    transition: .6s; }
     .community .inner > dl > dt:nth-of-type(2) {
       left: 70px; }
     .community .inner > dl > dt.on a {

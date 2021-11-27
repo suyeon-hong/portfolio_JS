@@ -4,61 +4,35 @@ class Tab{
             console.error("btns와 boxs는 필수 입력사항 입니다.");
             return;
         }
-        const defaults = {
-            motion: "show"
-        }
-        let result = Object.assign({}, defaults, opt);
 
-        this.init(result);
+        this.init(opt);
         this.bindingEvent();
     }
     init(opt){
-        this.btns = $(opt.btns);
-        this.boxs = $(opt.boxs);
+        this.btns = document.querySelectorAll(opt.btns);
+        this.boxs = document.querySelectorAll(opt.boxs);
         this.motion = opt.motion;
         this.speed = opt.speed;
     }
     bindingEvent(){
-        this.btns.on("click focus", e=>{
-            e.preventDefault();
+        this.btns.forEach((btn, index)=>{
+            btn.addEventListener("click", e=>{
+                e.preventDefault();
 
-            if(this.motion == "show"){
-                this.activation(e.currentTarget);
-                this.showBox();
-            }
-            if(this.motion == "slideDown"){
-                let i = $(e.currentTarget).index();
-                let isOn = $(e.currentTarget).hasClass("on");
-                
-                if (isOn) {
-                    this.slideUp(e.currentTarget);
-                } else{
-                    this.slideDown(e.currentTarget, i);
-                }
-            }
+                this.activation(btn);
+                this.showBox(index);
+            });
         });
     }
-    activation(e){
-        this.target = $(e).children("a").attr("href");
-        this.isOn = $(e).hasClass("on");
+    activation(btn){
+        this.isOn = btn.classList.contains("on");
         if (this.isOn) return;
     
-        this.btns.removeClass("on");
-        $(e).addClass("on");
+        for(let el of this.btns) el.classList.remove("on");
+        btn.classList.add("on");
     }
-    showBox(){
-    this.boxs.hide();
-    $(this.target).show();
-    }
-    slideUp(e){
-        $(e).removeClass("on");
-        $(e).next().slideUp();
-    }
-    slideDown(e, i){
-        this.btns.removeClass("on");
-        $(e).addClass("on");
-
-        this.boxs.slideUp();
-        $(e).next().slideDown(this.speed);
+    showBox(index){
+        for(let el of this.boxs) el.style.display = "none";
+        this.boxs[index].style.display = "block";
     }
 }
