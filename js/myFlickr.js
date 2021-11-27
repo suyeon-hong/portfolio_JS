@@ -94,25 +94,29 @@ class MyFlickr{
             }
         });
 
-        // this.main.on("click", ()=>{
-        //     this.type = "interest",
-        //     this.tag = "interest";
-        //     this.loadingImg.removeClass("off");
-        //     this.photoBox.removeClass("on");
-            
-        //     this.getList();
-        // });
+        this.main.addEventListener("click", ()=>{
+            this.type = "interest",
+            this.tag = "interest";
+            this.loadingImg.classList.remove("off");
+            this.photoBox.classList.remove("on");
 
-        // this.tabBox.find("li a").on("click", e=>{
-        //     e.preventDefault();
-        //     this.tag = $(e.currentTarget).text();
-        //     this.loadingImg.removeClass("off");
-        //     this.photoBox.removeClass("on");
-        //     this.tabBox.find("li a").removeClass("on");
-        //     $(e.currentTarget).addClass("on");
-        
-        //     this.getList();
-        // });
+            this.getList();
+        });
+
+        this.tabBox.querySelectorAll("li a").forEach((btn, index)=>{
+            btn.addEventListener("click", e=>{
+                e.preventDefault();
+
+                this.tag = e.currentTarget.innerText;
+                this.loadingImg.classList.remove("off");
+                this.photoBox.classList.remove("on");
+
+                for(let el of this.tabBox.querySelectorAll("li a")) el.classList.remove("on");
+                btn.classList.add("on");
+
+                this.getList();
+            });
+        });
     }
     
     getList(){
@@ -135,10 +139,13 @@ class MyFlickr{
             this.createList(items);
         })
     }
+
     createList(items){
         let htmls ="";
 
         items.map(data=>{
+            if(!data.title) data.title = "THIS PICTURE HAS NO TITLE";
+
             htmls += `
                 <li class='item'>
                     <a href="https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg" title="새창열림">
