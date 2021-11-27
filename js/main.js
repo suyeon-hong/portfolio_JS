@@ -1,39 +1,36 @@
 // visual letter motion
-const letter1 = $("#visual .inner >h1");
-const letter2 = $("#visual .inner >h2");
+const visual = document.querySelector("#visual");
+const letter1 = visual.querySelector(".inner >h1");
+const letter2 = visual.querySelector(".inner >h2");
 
 letterMotion(letter1, 0.1);
 letterMotion(letter2, 0.2);
 
-
 function letterMotion(item, delay){
-    let txt = item.text().split("");
-    let bg = $(item).css("color");
+    let txt = item.innerText;
+    let bg = getComputedStyle(item).color;
     let num = 0;
-    $(item).empty();
+    let letters = "";
 
-    $(txt).each(function(_, data){
-        $(item).append(
-            $("<span>").text(data).css({transitionDelay: delay * num +"s"})
-        )
+    item.innerHTML = "";
+
+    for(let el of txt){
+        letters += `
+            <span style="transition-delay: ${delay * num}s">${el}</span>
+        `;
         num++;
-    });
+    }
+    letters += `<p style="background=${bg}"></p>`
+    item.innerHTML = letters;
 
-    $(item).append(
-        $("<p>").css({
-            position: "absolute",
-            background: bg,
-            width: "100%",
-            height: "100%",
-            top: 0,
-            left: 0
-        })
-    );
-
-    item.find("p").animate({left: "100%"}, speed, function(){
-        $(this).remove();
+    new Anim(item.querySelector("p"),{
+        prop: "left",
+        value: "100%",
+        duration: 1000
     });
-    item.find("span").css({opacity: 1});
+    for(let el of item.querySelectorAll("span")){
+        el.style.opacity = 1;
+    }
 }
 
 
