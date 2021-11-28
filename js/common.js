@@ -24,7 +24,7 @@ for(let i=0; i<gnbMo_tabs.length; i++){
 }
 
 // gnb 2depth menu
-const gnb_lis = gnb.querySelectorAll("li");
+const gnb_lis = document.querySelectorAll(" #gnb >li");
 
 gnb_lis.forEach((gnb_li,index)=>{
     gnb_li.addEventListener("mouseenter", e=>{

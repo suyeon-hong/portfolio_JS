@@ -113,7 +113,7 @@ class Visual{
             this.timer = setInterval(()=>{
                         let i;
                         (i >= 2) ? i=0 : i++;
-                        reverse(i)
+                        this.reverse(i)
                     }, 4000);
         });
     }
