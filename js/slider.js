@@ -31,7 +31,7 @@ class LoopSlider{
         this.len = this.slider.lenth;
     }
     init(){
-        this.frame.style.left = "-100%";
+        this.frame.style.marginLeft = `${this.default_per}%`;
         this.frame.prepend(this.frame.lastElementChild);
     
         this.timer = setInterval(()=>{
