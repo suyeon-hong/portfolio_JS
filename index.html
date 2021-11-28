@@ -13,11 +13,23 @@
     <script src="js/popup.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/slider.js"></script>
-    <script defer src="js/main.js"></script>
+    <script src="js/visual.js"></script>
     <script>
         window.addEventListener("load", ()=>{
             new CookiePopup("#popup");
-            new Visual();
+            new Visual("#visual",{
+                letter1: ".inner >h1",
+                letter2: ".inner >h2",
+                cardBoxs: ".wrapbox >.wrap",
+                cards: "section",
+                card_back: ".back",
+                card_img: ".wrapbox img",
+                btns: ".filter li",
+                detail: ".detail",
+                detail_close: ".close",
+                detail_img: ".pic",
+                date: ".date"
+            });
             new BasicSlider({
                 frame: ".box1 .slider-wrapper",
                 btns: ".box1 .btns li",
