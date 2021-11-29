@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <script src="https://kit.fontawesome.com/0c5c47f3c6.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script defer src="js/common.js"></script>
-    <script defer src="js/tab.js"></script>
+    <script src="js/tab.js"></script>
     <script defer src="js/about.js"></script>
     <script>
-        $(document).ready(function(){
+        window.addEventListener("load", ()=>{
             new Tab({
                 btns: ".services ul li",
                 boxs: ".services img"
@@ -376,17 +375,17 @@
                 <div class="wrap">
                     <ul>
                         <li class="on"><a href="#architecture" title="architecture 이미지 보기">Architecture</a></li>
-                        <li><a href="#landscape" title="landscape 이미지 보기">Landscape</a></li>
-                        <li><a href="#interior" title="interior 이미지 보기">Interior</a></li>
-                        <li><a href="#product" title="product 이미지 보기">Product design</a></li>
-                        <li><a href="#graphic" title="graphic 이미지 보기">Graphic design</a></li>
+                        <li><a href="#" title="landscape 이미지 보기">Landscape</a></li>
+                        <li><a href="#" title="interior 이미지 보기">Interior</a></li>
+                        <li><a href="#" title="product 이미지 보기">Product design</a></li>
+                        <li><a href="#" title="graphic 이미지 보기">Graphic design</a></li>
                     </ul>
                     <div class="pic">
-                        <img src="img/architecture.jpg" alt="architecture image" id="architecture">
-                        <img src="img/landscape.jpg" alt="landscape image" id="landscape">
-                        <img src="img/interior.jpg" alt="interior image" id="interior">
-                        <img src="img/product.jpg" alt="product design image" id="product">
-                        <img src="img/graphic.jpg" alt="graphic design image" id="graphic">
+                        <img src="img/architecture.jpg" alt="architecture image">
+                        <img src="img/landscape.jpg" alt="landscape image">
+                        <img src="img/interior.jpg" alt="interior image">
+                        <img src="img/product.jpg" alt="product design image">
+                        <img src="img/graphic.jpg" alt="graphic design image">
                     </div>
                 </div>
             </div>

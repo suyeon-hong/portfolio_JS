@@ -11,8 +11,6 @@ class Tab{
     init(opt){
         this.btns = document.querySelectorAll(opt.btns);
         this.boxs = document.querySelectorAll(opt.boxs);
-        this.motion = opt.motion;
-        this.speed = opt.speed;
     }
     bindingEvent(){
         this.btns.forEach((btn, index)=>{
