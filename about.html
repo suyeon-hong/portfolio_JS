@@ -11,12 +11,44 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script defer src="js/common.js"></script>
     <script src="js/tab.js"></script>
-    <script defer src="js/about.js"></script>
+    <script src="js/pop.js"></script>
     <script>
         window.addEventListener("load", ()=>{
             new Tab({
                 btns: ".services ul li",
                 boxs: ".services img"
+            });
+            new Pop(".projects", {
+                btnOpen: ".btnMore",
+                btnClose: ".btnClose",
+                popBox: ".swiper",
+            });
+            new Pop(".team ", {
+                btnOpen: ".btnMore",
+                btnClose: ".close",
+                popBox: ".orgchart"
+            });
+            new Pop(".news ", {
+                btnOpen: ".btnMore",
+                btnClose: ".btnClose",
+                popBox: ".more",
+            });
+            new Swiper(".mySwiper", {
+                effect: "coverflow",
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+            new Swiper(".mySwiper2", {
+                effect: "cards",
+                grabCursor: true,
+                loop: true,
             })
         });
     </script>
