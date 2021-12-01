@@ -18,37 +18,52 @@ class Tab{
                 e.preventDefault();
 
                 if(opt.type == "slideDown"){
-                    this.activation(this.btns, index);
-                    this.activation(this.boxs, index);
                     this.slideDown(index);
                 }else{
-                    this.activation(this.btns, index);
+                    this.activation(btn);
                     this.showBox(index);
                 }
             });
         });
     }
-    activation(item, index){
-        this.isOn = item[index].classList.contains("on");
-        if (this.isOn) return;
+    activation(btn){
+        let isOn = btn.classList.contains("on");
+        if (isOn) return;
     
-        for(let el of item) el.classList.remove("on");
-        item[index].classList.add("on");
+        for(let el of this.btns) el.classList.remove("on");
+        btn.classList.add("on");
     }
     showBox(index){
         for(let el of this.boxs) el.style.display = "none";
         this.boxs[index].style.display = "block";
     }
     slideDown(index){
-        if(this.isOn) return;
-
-        for(let box of this.boxs) box.style.height = "0px";
-        new Anim(this.boxs[index],{
-            prop: "height",
-            value: 180,
-            duration: 500,
-            callback: ()=>{
-            }
-        });
+        let isOn = this.btns[index].classList.contains("on");
+        if(isOn){
+            this.btns[index].classList.remove("on");
+            this.boxs[index].classList.remove("on");
+            new Anim(this.boxs[index],{
+                prop: "height",
+                value: 0,
+                duration: 500,
+                callback: ()=>{
+                    this.boxs[index].style.height = 0;
+                }
+            });
+        }else{
+            for(let el of this.btns) el.classList.remove("on");
+            this.btns[index].classList.add("on");
+            for(let el of this.boxs) el.classList.remove("on");
+            this.boxs[index].classList.add("on");
+            for(let box of this.boxs) box.style.height = "0px";
+            new Anim(this.boxs[index],{
+                prop: "height",
+                value: 100,
+                duration: 500,
+                callback: ()=>{
+                    this.boxs[index].style.height = "auto"
+                }
+            });
+        }
     }
 }

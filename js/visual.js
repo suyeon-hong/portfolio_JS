@@ -109,12 +109,6 @@ class Visual{
             this.detail_img.style.height = `${this.imgHeight}px`;
             this.detail_img.style.top = `${this.imgTop}px`;
             this.detail_img.style.left = `${this.imgLeft}px`;
-        
-            this.timer = setInterval(()=>{
-                        let i;
-                        (i >= 2) ? i=0 : i++;
-                        this.reverse(i)
-                    }, 4000);
         });
     }
     letterMotion(item, delay){
@@ -149,9 +143,6 @@ class Visual{
 
         for(let el of this.back) el.style.display = "block";
 
-        setTimeout(()=>{
-            
-        },1000);
         setTimeout(()=>{
             for(let el of this.back) el.style.display = "none";
             this.enableClick = true;
