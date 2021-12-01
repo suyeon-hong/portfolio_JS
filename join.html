@@ -7,13 +7,12 @@
     <title>join</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/0c5c47f3c6.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script defer src="js/common.js"></script>
     <script defer src="js/myform.js"></script>
     <script defer src="js/join.js"></script>
     <script>
-        $(document).ready(function(){
-            new MyForm(".join input[type=submit]", [
+        window.addEventListener("load", ()=>{
+            new MyForm(".join", [
                 {
                     type: "id",
                     name: "userid"
@@ -450,7 +449,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row"><label for="email1">이메일</label></th>
+                            <th scope="row"><label for="email">이메일</label></th>
                             <td>
                                 <input type="text" name="email1" id="email1">@
                                 <input type="text" name="email2" id="email2">
