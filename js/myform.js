@@ -23,7 +23,7 @@ class MyForm{
                     if(!this.isSelect(opt.name)) e.preventDefault();
                 }
                 if(opt.type == "text"){
-                    if(!this.isTxt(opt.name)) e.preventDefault();
+                    if(!this.isTxt(opt.name, opt.len)) e.preventDefault();
                 }
                 if(opt.type == "address"){
                     if(!this.isAddress(opt.name[0], opt.name[1], opt.name[2])) e.preventDefault();
@@ -43,7 +43,7 @@ class MyForm{
             e.preventDefault();
 
             if(this.result.length) {
-                window.scroll = 0;
+                window.scrollTo(0,0);
                 alert(`아래 항목의 필수 입력값을 확인해 주세요\n\n ${this.result}`);
                 this.result = [];
             }
@@ -90,20 +90,20 @@ class MyForm{
         const num = /[0-9]/;
         const spc = /[~!@#$%^&*()_+]/;
     
-        if(val1 === val2 && txt1.length >= 8 && txt1.length <= 16){
+        if(val1 == val2 && val1.length >= 8 && val1.length <= 16){
             if(eng.test(val1) && num.test(val1)){
                 const errMsg2 = txt2.closest("td").querySelector("p");
                 const errMsg1 = txt1.closest("td").querySelector("p");
                 if(errMsg2) errMsg2.remove();
                 if(errMsg1) errMsg1.remove();
                 return true;
-            }else if(num.test(txt1) && spc.test(txt1)){
+            }else if(num.test(val1) && spc.test(val1)){
                 const errMsg2 = txt2.closest("td").querySelector("p");
                 const errMsg1 = txt1.closest("td").querySelector("p");
                 if(errMsg2) errMsg2.remove();
                 if(errMsg1) errMsg1.remove();
                 return true;
-            }else if(eng.test(txt1) && spc.test(txt1)){
+            }else if(eng.test(val1) && spc.test(val1)){
                 const errMsg2 = txt2.closest("td").querySelector("p");
                 const errMsg1 = txt1.closest("td").querySelector("p");
                 if(errMsg2) errMsg2.remove();
@@ -121,7 +121,7 @@ class MyForm{
                 this.result.push(document.querySelector(`label[for= ${name1}]`).innerText);
                 return false;
             }
-        }else if(txt1 === txt2){
+        }else if(val1 === val2){
             const errMsg2 = txt2.closest("td").querySelector("p");
             const errMsg1 = txt1.closest("td").querySelector("p");
             if(errMsg2) errMsg2.remove();
@@ -161,7 +161,7 @@ class MyForm{
             const errMsg = sel.closest("td").querySelector("p");
             if(errMsg) errMsg.remove();
 
-            const htmls = "<p class='caution'>항목을 선택해 주세요.</p>";
+            const htmls = "<p class='caution'>필수 입력사항 입니다. 옵션을 선택해 주세요.</p>";
             sel.closest("td").innerHTML += htmls;
             
             this.result.push(document.querySelector(`label[for=${name}]`).innerText);
@@ -170,11 +170,11 @@ class MyForm{
         }
     }
     
-    isTxt(name){
+    isTxt(name, len){
         const txt = document.querySelector(`[name=${name}]`);
         const val = txt.value;
         
-        if(val !== ""){
+        if(val.length >= len){
             const errMsg = txt.closest("td").querySelector("p");
             if(errMsg) errMsg.remove();
             return true;
@@ -182,7 +182,7 @@ class MyForm{
             const errMsg = txt.closest("td").querySelector("p");
             if(errMsg) errMsg.remove();
 
-            const htmls = "<p class='caution'>필수 입력값을 입력해 주세요.</p>";
+            const htmls = `<p class='caution'>필수 입력사항 입니다. ${len}자 이상 입력해 주세요.</p>`;
             txt.closest("td").innerHTML += htmls;
             
             this.result.push(document.querySelector(`label[for=${name}]`).innerText);
@@ -206,7 +206,7 @@ class MyForm{
             const errMsg = txt[0].parentElement.querySelector(".caution");
             if(errMsg) errMsg.remove();
 
-            const htmls = `<p class='caution'> ${text}에 체크해 주세요.</p>`;
+            const htmls = `<p class='caution'>${text}에 체크해 주세요.</p>`;
             txt[0].parentElement.innerHTML += htmls;
 
             this.result.push(text);
@@ -252,7 +252,7 @@ class MyForm{
             const errMsg = txt1.closest("td").querySelector("p");
             if(errMsg) errMsg.remove();
 
-            const htmls = "<p class='caution'>필수 입력값을 입력해 주세요.</p>";
+            const htmls = "<p class='caution'>필수 입력사항 입니다. 올바른 값을 입력해 주세요.</p>";
             txt1.closest("td").innerHTML += htmls;
             
             this.result.push(document.querySelector(`label[for=${name1}]`).innerText);
