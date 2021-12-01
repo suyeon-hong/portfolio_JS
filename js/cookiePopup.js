@@ -46,6 +46,6 @@ class CookiePopup{
     
         let duedate = today.toGMTString();
     
-        document.cookie = `${this.name}=${this.value}; expires=${duedate}`;
+        document.cookie = `${this.name}=${this.value}; path=/; expires=${duedate}`;
     }
 }

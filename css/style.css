@@ -3517,8 +3517,15 @@ body {
           .community .inner > dl > dd#faq .qna dt.on .arrow {
             transform: rotate(-180deg); }
         .community .inner > dl > dd#faq .qna dd {
-          display: none;
+          height: 0;
+          padding: 0;
+          opacity: 0;
           background: #f1f1f1; }
+          .community .inner > dl > dd#faq .qna dd.on {
+            opacity: 1;
+            padding: 20px;
+            padding-left: 70px;
+            transition: .5s, padding 0s, opacity .5s .4s; }
           .community .inner > dl > dd#faq .qna dd .icon {
             color: #008a00; }
           .community .inner > dl > dd#faq .qna dd p {

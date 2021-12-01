@@ -266,9 +266,17 @@
                             
                         }
                         dd{
-                            display: none;
+                            height: 0;
+                            padding: 0;
+                            opacity: 0;
                             background: #f1f1f1;
     
+                            &.on{
+                                opacity: 1;
+                                padding: 20px;
+                                padding-left: 70px;
+                                transition: .5s, padding 0s, opacity .5s .4s;
+                            }
                             .icon{
                                 color: #008a00;
                             }
