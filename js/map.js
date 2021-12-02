@@ -4,7 +4,7 @@ const mapContainer = document.getElementById('map'),
         level: 3
     };
 const map = new kakao.maps.Map(mapContainer, mapOption);
-const tBtn = document.querySelector(".location .traffic");
+const tBtn = document.querySelector(".traffic");
 
 // 교통정보 보기 버튼
 map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
@@ -22,7 +22,8 @@ tBtn.addEventListener("click", (e)=>{
 })
 
 // 마커 표시
-const map_btns = document.querySelectorAll(".location .tabmenu li");
+const map_btns = document.querySelectorAll(".tabmenu li");
+const addressBox = document.querySelector("#map .address");
 const positions = [
     {
         title: '스타필드 하남', 
@@ -56,9 +57,9 @@ for (let i = 0; i < positions.length; i ++) {
             map_btns[k].classList.remove("on");
         }
         positions[i].button.classList.add("on");
-        $(".address h2").text($(map_btns[i]).find("h2").text());
-        $(".address address").text($(map_btns[i]).find("address").text());
-        $(".address p").text($(map_btns[i]).find("p").text());
+        addressBox.querySelector("h1").innerText = map_btns[i].querySelector("h1").innerText;
+        addressBox.querySelector("address").innerText = map_btns[i].querySelector("address").innerText;
+        addressBox.querySelector("p").innerText = map_btns[i].querySelector("p").innerText;
         panTo(positions[i].latlng);
     });
 }
