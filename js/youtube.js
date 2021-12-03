@@ -11,7 +11,8 @@ class MyYoutube{
     }
 
     init(opt){
-        this.frame = $(opt.frame);
+        this.body = document.querySelector("body");
+        this.frame = document.querySelector(opt.frame);
         this.key = opt.key;
         this.playlist = opt.playlist;
         this.num = opt.num;
@@ -20,68 +21,58 @@ class MyYoutube{
     bindingEvent(){
         this.createVid();
 
-        $("body").on("click", this.frame.selector +(" article .play"), e=>{
-            e.preventDefault();
-        
-            let vidId = $(e.currentTarget).parent().find("a").attr("href");
-        
-            $("body").append(
-                $("<div class='pop'>").append(
-                    $("<iframe>").attr({
-                        src: "https://www.youtube.com/embed/"+ vidId,
-                        width: "100%",
-                        height: "100%",
-                        frameborder: 0,
-                        allowfullscreen: true,
-                    }),
-                    $("<span class='close'>").text("CLOSE")
-                )
-            )
+        this.frame.addEventListener("click", e=>{
+            if(e.target.nodeName !== "SPAN") return;
+
+            const vidId = e.target.closest("article").querySelector("a").getAttribute("href");
+            const pop = document.createElement("aside");
+            pop.innerHTML = `
+                <iframe src="https://www.youtube.com/embed/${vidId}" width="100%" height="100%" frameborder=0 allowfullscreen=true></iframe>
+                <span class="close">CLOSE</span>
+            `;
+            this.body.append(pop);
         });
-        
-        $("body").on("click", ".close", ()=>{
-            $(".pop").remove();
-        })
+
+        this.body.addEventListener("click", e=>{
+            const pop = this.body.querySelector("aside");
+            if(pop == null) return;
+
+            const closeBtn = pop.querySelector(".close");
+            if(e.target == closeBtn) pop.remove();
+        });
     }
 
     createVid(){
-        $.ajax({
-            url:"https://www.googleapis.com/youtube/v3/playlistItems",
-            dataType: "jsonp",
-            data: {
-                part: "snippet",
-                key: this.key,
-                maxResults: this.num,
-                playlistId: this.playlist
-            }
-        }).success(data=>{
-            let items = data.items;
-        
-            $(items).each((_, data)=>{
-                let txt = data.snippet.description;
-                let len = txt.length;
-        
-                if (len > 200){
-                    txt = txt.substr(0, 200)+ "..";
-                }
-        
-                $(this.frame).append(
-                    $("<article>").append(
-                        $("<a>").attr({
-                            href : data.snippet.resourceId.videoId
-                        }).append(
-                            $("<img>").attr({src: data.snippet.thumbnails.high.url})
-                        ),
-                        $("<h3>").text(data.snippet.title),
-                        $("<p>").text(txt),
-                        $("<span class='play'>").text("비디오재생").append(
-                            $("<i class='fas fa-play'>")
-                        )
-                    )
-                )
+        const url = `https://www.googleapis.com/youtube/v3/playlistItems?key=${this.key}&part=snippet&playlistId=${this.playlist}&maxResults=${this.num}`;
+
+        fetch(url)
+        .then(data=>{
+            return data.json();
+        })
+        .then(json=>{
+            const items = json.items;
+            let htmls = "";
+
+            items.forEach(item=>{
+                let txt = item.snippet.description;
+                
+                if(txt.length > 200) txt = txt.substr(0, 200) + "..";
+
+                htmls += `
+                    <article>
+                        <a href=${item.snippet.resourceId.videoId}>
+                            <img src=${item.snippet.thumbnails.high.url}>
+                        </a>
+                        <h3>${item.snippet.title}</h3>
+                        <p>${txt}</p>
+                        <span class="play">
+                            비디오재생
+                            <i class='fas fa-play'></i>
+                        </span>
+                    </article>
+                `;
             });
-        }).error(err=>{
-            console.error(err);
+            this.frame.innerHTML += htmls;
         });
     }
 }

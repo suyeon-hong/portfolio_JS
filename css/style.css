@@ -4087,24 +4087,24 @@ body {
 
   .pop {
     padding: 100px 20px; } }
+.youtube .inner h1 {
+  font: 120px/1 "Arapey";
+  color: #111;
+  text-align: center;
+  letter-spacing: -5px;
+  margin-bottom: 50px; }
+  .youtube .inner h1 span {
+    display: block;
+    font-size: 100px;
+    font-weight: normal;
+    color: #333;
+    font-style: italic; }
 .youtube .inner #vidGallery {
   width: 100%; }
   .youtube .inner #vidGallery::after {
     content: '';
     display: block;
     clear: both; }
-  .youtube .inner #vidGallery h1 {
-    font: 120px/1 "Arapey";
-    color: #111;
-    text-align: center;
-    letter-spacing: -5px;
-    margin-bottom: 50px; }
-    .youtube .inner #vidGallery h1 span {
-      display: block;
-      font-size: 100px;
-      font-weight: normal;
-      color: #333;
-      font-style: italic; }
   .youtube .inner #vidGallery article {
     width: 50%;
     height: 550px;
@@ -4172,8 +4172,24 @@ body {
         .youtube .inner #vidGallery article .play:hover i {
           color: #eee; }
 
-.pop iframe {
-  object-fit: contain; }
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 10vw;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2; }
+  aside iframe {
+    object-fit: contain; }
+  aside .close {
+    position: absolute;
+    top: 5vw;
+    right: 5vw;
+    font: 500 18px/1 "Gothic A1";
+    color: #fff;
+    cursor: pointer; }
 
 @media screen and (max-width: 1179px) {
   .youtube .inner #vidGallery article a {
@@ -4187,9 +4203,9 @@ body {
     height: 70px;
     right: 20px; } }
 @media screen and (max-width: 768px) {
-  .youtube .inner #vidGallery h1 {
+  .youtube .inner h1 {
     font-size: 70px; }
-    .youtube .inner #vidGallery h1 span {
+    .youtube .inner h1 span {
       font-size: 60px; }
   .youtube .inner #vidGallery article {
     width: 100%;
