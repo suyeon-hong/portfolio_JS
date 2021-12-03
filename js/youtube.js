@@ -9,7 +9,6 @@ class MyYoutube{
         this.init(opt);
         this.bindingEvent();
     }
-
     init(opt){
         this.body = document.querySelector("body");
         this.frame = document.querySelector(opt.frame);
@@ -17,31 +16,13 @@ class MyYoutube{
         this.playlist = opt.playlist;
         this.num = opt.num;
     }
-
     bindingEvent(){
         this.createVid();
 
-        this.frame.addEventListener("click", e=>{
-            if(e.target.nodeName !== "SPAN") return;
+        this.frame.addEventListener("click", e=>this.createPop(e));
 
-            const vidId = e.target.closest("article").querySelector("a").getAttribute("href");
-            const pop = document.createElement("aside");
-            pop.innerHTML = `
-                <iframe src="https://www.youtube.com/embed/${vidId}" width="100%" height="100%" frameborder=0 allowfullscreen=true></iframe>
-                <span class="close">CLOSE</span>
-            `;
-            this.body.append(pop);
-        });
-
-        this.body.addEventListener("click", e=>{
-            const pop = this.body.querySelector("aside");
-            if(pop == null) return;
-
-            const closeBtn = pop.querySelector(".close");
-            if(e.target == closeBtn) pop.remove();
-        });
+        this.body.addEventListener("click", e=>this.removePop(e));
     }
-
     createVid(){
         const url = `https://www.googleapis.com/youtube/v3/playlistItems?key=${this.key}&part=snippet&playlistId=${this.playlist}&maxResults=${this.num}`;
 
@@ -74,5 +55,23 @@ class MyYoutube{
             });
             this.frame.innerHTML += htmls;
         });
+    }
+    createPop(e){
+        if(e.target.nodeName !== "SPAN") return;
+
+        const vidId = e.target.closest("article").querySelector("a").getAttribute("href");
+        const pop = document.createElement("aside");
+        pop.innerHTML = `
+            <iframe src="https://www.youtube.com/embed/${vidId}" width="100%" height="100%" frameborder=0 allowfullscreen=true></iframe>
+            <span class="close">CLOSE</span>
+        `;
+        this.body.append(pop);
+    }
+    removePop(e){
+        const pop = this.body.querySelector("aside");
+        if(pop == null) return;
+
+        const closeBtn = pop.querySelector(".close");
+        if(e.target == closeBtn) pop.remove();
     }
 }
