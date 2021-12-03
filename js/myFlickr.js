@@ -1,13 +1,3 @@
-/*
-https://www.flickr.com/services/rest/?method=flickr.photos.search
-https://live.staticflickr.com/{server-id}/{id}_{secret}_{size-suffix}.jpg
-
-21be590b77fb11bd12a7266f99a2f2d8
-*/
-
-
-
-
 class MyFlickr{
     constructor(opt){
         if(!opt.selector || !opt.api_key){
@@ -21,7 +11,7 @@ class MyFlickr{
     
     init(opt){
         this.gallery = document.querySelector(opt.selector);
-        this.main = document.querySelector(opt.main);
+        this.btnMain = document.querySelector(opt.btnMain);
         this.tabBox = document.querySelector(opt.tabBox);
         this.photoBox = document.querySelector(opt. photoBox);
         this.loadingImg = document.querySelector(opt. loadingImg);
@@ -66,35 +56,11 @@ class MyFlickr{
             }
         });
         
-        this.photoBox.addEventListener("click", e=>{
-            e.preventDefault();
+        this.photoBox.addEventListener("click", e=>this.createPop(e));
 
-            if(e.target !== e.target.closest(".item").querySelector("img")) return;
+        this.gallery.addEventListener("click", e=>this.removePop(e));
 
-            let target = e.target.closest(".item");
-            let imgSrc = target.querySelector("a").getAttribute("href");
-
-            let pop = document.createElement("aside");
-            let pops = `
-                <img src=${imgSrc}>
-                <span class="close">CLOSE</span>
-            `
-            pop.innerHTML = pops;
-            this.gallery.append(pop);
-        });
-
-        this.gallery.addEventListener("click", e=>{
-            e.preventDefault();
-
-            let target = e.target.closest("aside");
-
-            if(target !== null){
-                let close = target.querySelector(".close");
-                if(e.target == close) target.remove();
-            }
-        });
-
-        this.main.addEventListener("click", ()=>{
+        this.btnMain.addEventListener("click", ()=>{
             this.type = "interest",
             this.tag = "interest";
             this.loadingImg.classList.remove("off");
@@ -103,7 +69,7 @@ class MyFlickr{
             this.getList();
         });
 
-        this.tabBox.querySelectorAll("li a").forEach((btn, index)=>{
+        this.tabBox.querySelectorAll("li a").forEach(btn=>{
             btn.addEventListener("click", e=>{
                 e.preventDefault();
 
@@ -177,5 +143,33 @@ class MyFlickr{
                 this.photoBox.classList.add("on");
             }
         });
+    }
+
+    createPop(e){
+        e.preventDefault();
+
+        if(e.target !== e.target.closest(".item").querySelector("img")) return;
+
+        let target = e.target.closest(".item");
+        let imgSrc = target.querySelector("a").getAttribute("href");
+
+        let pop = document.createElement("aside");
+        let pops = `
+            <img src=${imgSrc}>
+            <span class="close">CLOSE</span>
+        `
+        pop.innerHTML = pops;
+        this.gallery.append(pop);
+    }
+
+    removePop(e){
+        e.preventDefault();
+
+        let target = e.target.closest("aside");
+
+        if(target !== null){
+            let close = target.querySelector(".close");
+            if(e.target == close) target.remove();
+        }
     }
 }
