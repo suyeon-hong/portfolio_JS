@@ -33,6 +33,8 @@ class Visual{
         this.letterMotion(this.letter2, 0.2);
 
         this.wrap[0].classList.add("on");
+        this.wrap[0].style.display = "block";
+
         setTimeout(()=>{
             for(let el of this.back) el.style.display = "none";
         },2000);
@@ -138,15 +140,20 @@ class Visual{
         }
     }
     reverse(index){
-        this.activeBtn(this.btns, index);
-        this.activeBtn(this.wrap, index);
-
-        for(let el of this.back) el.style.display = "block";
+        for(let el of this.wrap) el.style.display = "none";
+        this.wrap[index].style.display = "block";
 
         setTimeout(()=>{
-            for(let el of this.back) el.style.display = "none";
-            this.enableClick = true;
-        },2000);
+            this.activeBtn(this.btns, index);
+            this.activeBtn(this.wrap, index);
+    
+            for(let el of this.back) el.style.display = "block";
+    
+            setTimeout(()=>{
+                for(let el of this.back) el.style.display = "none";
+                this.enableClick = true;
+            },2000);
+        }, 100);
     }
     activeBtn(item, index){
         for(let el of item) el.classList.remove("on");

@@ -419,7 +419,8 @@ body {
       position: absolute;
       opacity: 0;
       perspective: 5000px;
-      transition: .6s; }
+      transition: .6s;
+      display: none; }
       #visual .inner > .wrap.on {
         opacity: 1; }
         #visual .inner > .wrap.on section {

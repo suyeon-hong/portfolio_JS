@@ -524,6 +524,7 @@ body{
             opacity: 0;
             perspective: 5000px;
             transition: .6s;
+            display: none;
 
             &.on{
                 opacity: 1;
