@@ -613,8 +613,7 @@ body {
       opacity: 0;
       transition: 1s; }
       #visual .detail .inner .pic {
-        position: absolute;
-        transition: 1.4s; }
+        position: absolute; }
         #visual .detail .inner .pic img {
           width: 100%;
           height: 100%;

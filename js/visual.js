@@ -67,19 +67,19 @@ class Visual{
             item.addEventListener("click", e=>{
                 e.preventDefault();
         
-                let target = e.target.closest("article").querySelector("img");
+                const target = e.target.closest("article").querySelector("img");
                 if(e.target !== target) return;
         
-                let imgSrc = e.target.getAttribute("src");
-                let imgAlt = e.target.getAttribute("alt");
+                const imgSrc = e.target.getAttribute("src");
+                const imgAlt = e.target.getAttribute("alt");
                 this.imgWidth = e.target.offsetWidth;
                 this.imgHeight = e.target.offsetHeight;
                 this.imgTop = e.target.getBoundingClientRect().top;
                 this.imgLeft =e.target.getBoundingClientRect().left;
         
-                let tit1 = e.target.closest("article").querySelector("h2").innerText;
-                let tit2 = e.target.closest("article").querySelector("h1").innerText;
-                let desc = e.target.closest("article").querySelector(".wrap p").innerText;
+                const tit1 = e.target.closest("article").querySelector("h2").innerText;
+                const tit2 = e.target.closest("article").querySelector("h1").innerText;
+                const desc = e.target.closest("article").querySelector(".wrap p").innerText;
         
                 clearInterval(this.timer);
         
@@ -87,11 +87,13 @@ class Visual{
                 this.detail_img.style.height = `${this.imgHeight}px`;
                 this.detail_img.style.top = `${this.imgTop}px`;
                 this.detail_img.style.left = `${this.imgLeft}px`;
+                this.detail_img.style.transition = "0s";
                 setTimeout(()=>{
                     this.detail_img.style.width = "40vw";
                     this.detail_img.style.height = "100%";
                     this.detail_img.style.top = 0;
                     this.detail_img.style.left = "10vw";
+                    this.detail_img.style.transition = ".8s";
                 }, 100);
                 this.detail_img.querySelector("img").setAttribute("src", imgSrc);
                 this.detail_img.querySelector("img").setAttribute("alt", imgAlt);
