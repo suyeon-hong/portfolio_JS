@@ -26,27 +26,21 @@ for(let i=0; i<gnbMo_tabs.length; i++){
 // gnb 2depth menu
 const gnb_lis = document.querySelectorAll(" #gnb >li");
 
-gnb_lis.forEach((gnb_li,index)=>{
+gnb_lis.forEach(gnb_li=>{
+    const len = gnb_li.querySelectorAll("a").length;
+
     gnb_li.addEventListener("mouseenter", e=>{
         e.currentTarget.querySelector(".sub").style.display = "block";
     })
     gnb_li.addEventListener("mouseleave", e=>{
         e.currentTarget.querySelector(".sub").style.display = "none";
     })
-    // gnb_li.querySelector("a").addEventListener("focusin", e=>{
-    //     e.currentTarget.querySelector(".sub").style.display = "block";
-    // })
-    // gnb_li.querySelector("a").lastElementChild.addEventListener("focusout", e=>{
-    //     e.currentTarget.querySelector(".sub").style.display = "none";
-    // })
+    gnb_li.querySelector("a").addEventListener("focusin", e=>{
+        e.currentTarget.parentElement.querySelector(".sub").style.display = "block";
+    })
+    gnb_li.querySelectorAll("a")[len-1].addEventListener("focusout", ()=>{
+        for(let li of gnb_lis){
+            li.querySelector(".sub").style.display = "none";
+        }
+    })
 });
-
-// 자바스크립트로 수정해야함!!
-// $("#gnb>li").each(function(index){
-//     $("#gnb>li").eq(index).find("a").on("focusin", function(){
-//         $("#gnb>li").eq(index).find(".sub").show();
-//     })
-//     $("#gnb>li").eq(index).find("a").last().on("focusout", function(){
-//         $("#gnb>li").eq(index).find(".sub").hide();
-//     })
-// });
