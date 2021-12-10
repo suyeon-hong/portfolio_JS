@@ -260,17 +260,13 @@ class MyForm{
         }
     }
     
-    isEmail(name1, name2, name3){
+    isEmail(name1, name2){
         const txt1 = document.querySelector(`[name=${name1}]`);
         const txt2 = document.querySelector(`[name=${name2}]`);
-        const isChecked = this.isSelect(name3);
         const val1 = txt1.value;
         const val2 = txt2.value;
-        
-        console.log(txt1);
-        console.log(txt1.closest("td"));
 
-        if(val1 !== "" && (val2 !== "" || isChecked)){
+        if(val1 !== "" && val2 !== ""){
             const errMsg = txt1.closest("td").querySelector("p");
             if(errMsg) errMsg.remove();
             return true;
@@ -281,7 +277,7 @@ class MyForm{
             const htmls = "<p class='caution'>필수 입력값을 입력해 주세요.</p>"
             txt1.closest("td").innerHTML += htmls;
             
-            this.result.push(document.querySelector(`label[for=${name3}]`).innerText);
+            this.result.push(document.querySelector(`label[for=${name1}]`).innerText);
             return false;
         }
     }    
