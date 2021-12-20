@@ -16,3 +16,28 @@ function activeBtn(items){
         });
     });
 }
+
+const qna = document.querySelector(".qna");
+
+fetch('../data.json')
+.then(data=> {return data.json()})
+.then(json=> {
+    const items = json.qna;
+    let htmls = "";
+
+    items.map(item=>{
+        htmls += `
+            <dt>
+                <span class="icon">Q</span>
+                <p>${item.question}</p>
+                <span class="subj">${item.subject}</span>
+                <a href="#" class="arrow" title="답변보기"></a>
+            </dt>
+            <dd>
+                <span class="icon">A</span>
+                <p>${item.answer}</p>
+            </dd>
+        `;
+    });
+    qna.innerHTML = htmls;
+});
