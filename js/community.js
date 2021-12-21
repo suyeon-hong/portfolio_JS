@@ -20,7 +20,7 @@ function activeBtn(items){
     });
 }
 
-fetch('../data.json')
+fetch('js/data.json')
 .then(data=> data.json())
 .then(json=> {
     const itemsQna = json.qna;
