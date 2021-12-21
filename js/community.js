@@ -3,6 +3,7 @@ const tabs = document.querySelectorAll(".community .tabs li");
 const faq_nums = document.querySelectorAll(".community #faq .numbers span");
 const notice_nums = document.querySelectorAll(".community #notice .numbers span");
 const qna = document.querySelector(".qna");
+const notice = document.querySelector("#notice tbody");
 
 activeBtn(tabs);
 activeBtn(faq_nums);
@@ -19,17 +20,20 @@ function activeBtn(items){
     });
 }
 
-
 fetch('../data.json')
 .then(data=> data.json())
 .then(json=> {
-    const items = json.qna;
-    createList(items);
+    const itemsQna = json.qna;
+    const itemsNotice = json.notice;
+
+    createList(itemsQna);
+    createList2(itemsNotice);
+
     tab.addEventListener("click", e=>{
         const value = e.target.dataset.value;
     
         if(value == null) return;
-        updateItems(items, value);
+        updateItems(itemsQna, value);
     });
 });
 
@@ -52,6 +56,19 @@ function createList(items){
         `;
     });
     qna.innerHTML = htmls;
+}
+
+function createList2(items){
+    items.map((item,index)=>{
+        let tr = document.createElement("tr");
+
+        tr.innerHTML = `
+            <td>${index + 1}</td>
+            <td><a href="#">${item.title}</a></td>
+            <td>${item.date}</td>
+        `;
+        notice.prepend(tr);
+    });
 }
 
 function updateItems(items, value){
