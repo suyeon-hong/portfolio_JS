@@ -1,4 +1,16 @@
-let speed = 1000;
+// skip navigation
+const skip = document.querySelectorAll("#skip a");
+if(skip !== null){
+    skip.forEach(a=>{
+        a.addEventListener("focusin", ()=>{
+            a.classList.add("on")
+        });
+        a.addEventListener("focusout", ()=>{
+            a.classList.remove("on")
+        });
+    })
+}
+
 
 // btnMo button
 const btnMo = document.querySelector(".btnMo");
