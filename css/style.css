@@ -4101,6 +4101,9 @@ body {
     .gallery .inner .photos li:last-child {
       display: none; } }
 @media screen and (max-width: 539px) {
+  .gallery .inner .loading {
+    width: 300px;
+    height: 300px; }
   .gallery .inner .search input {
     width: 70%;
     height: 40px;

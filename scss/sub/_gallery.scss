@@ -278,6 +278,10 @@
 @media screen and (max-width: $mobile) {
     .gallery{
         .inner{
+            .loading{
+                width: 300px;
+                height: 300px;
+            }
             .search{
                 input{
                     width: 70%;
