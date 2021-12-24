@@ -1180,7 +1180,9 @@ body {
                   display: block;
                   position: absolute;
                   top: 50%;
-                  left: 0; }
+                  left: 0;
+                  width: 50px;
+                  height: 50px; }
                   #main .inner .box3 .wrap .left article:nth-of-type(3) .frame .prev::before {
                     content: '';
                     display: block;
@@ -1202,7 +1204,9 @@ body {
                   display: block;
                   position: absolute;
                   top: 50%;
-                  right: 0; }
+                  right: 0;
+                  width: 50px;
+                  height: 50px; }
                   #main .inner .box3 .wrap .left article:nth-of-type(3) .frame .next::before {
                     content: '';
                     display: block;
@@ -1364,7 +1368,9 @@ body {
           position: absolute;
           top: 50%;
           left: 0;
-          margin-top: -40px; }
+          margin-top: -40px;
+          width: 50px;
+          height: 50px; }
           #main .mento .inner .sliderbox .prev::before {
             content: '';
             display: block;
@@ -1387,7 +1393,9 @@ body {
           position: absolute;
           top: 50%;
           right: 0;
-          margin-top: -40px; }
+          margin-top: -40px;
+          width: 50px;
+          height: 50px; }
           #main .mento .inner .sliderbox .next::before {
             content: '';
             display: block;
@@ -1982,8 +1990,12 @@ body {
         margin-bottom: 15px; }
       #main .mento .inner .sliderbox .frame .slider-wrapper .slider h4 {
         font-size: 15px; }
-      #main .mento .inner .sliderbox .prev::before, #main .mento .inner .sliderbox .prev::after, #main .mento .inner .sliderbox .next::before, #main .mento .inner .sliderbox .next::after {
-        width: 30px; }
+      #main .mento .inner .sliderbox .prev, #main .mento .inner .sliderbox .next {
+        margin-top: -30px;
+        width: 30px;
+        height: 30px; }
+        #main .mento .inner .sliderbox .prev::before, #main .mento .inner .sliderbox .prev::after, #main .mento .inner .sliderbox .next::before, #main .mento .inner .sliderbox .next::after {
+          width: 30px; }
 
   #footer .inner {
     padding: 70px 30px 40px; }
@@ -2163,16 +2175,20 @@ body {
     #main .inner .box3 .wrap .left article:nth-of-type(3) .frame .prev {
       top: auto;
       left: auto;
-      bottom: 50px;
-      right: 40px; }
+      bottom: 30px;
+      right: 40px;
+      width: 20px;
+      height: 20px; }
       #main .inner .box3 .wrap .left article:nth-of-type(3) .frame .prev::before, #main .inner .box3 .wrap .left article:nth-of-type(3) .frame .prev::after {
-        width: 30px; }
+        width: 20px; }
     #main .inner .box3 .wrap .left article:nth-of-type(3) .frame .next {
       top: auto;
-      bottom: 50px;
-      right: 10px; }
+      bottom: 30px;
+      right: 10px;
+      width: 20px;
+      height: 20px; }
       #main .inner .box3 .wrap .left article:nth-of-type(3) .frame .next::before, #main .inner .box3 .wrap .left article:nth-of-type(3) .frame .next::after {
-        width: 30px; }
+        width: 20px; }
     #main .inner .box4 h1 {
       font-size: 18px; }
     #main .inner .box4 .wrap {
@@ -2205,7 +2221,11 @@ body {
       font-size: 12px;
       font-weight: 300; }
     #main .mento .inner .sliderbox .prev, #main .mento .inner .sliderbox .next {
-      margin-top: -20px; }
+      margin-top: -20px;
+      width: 20px;
+      height: 20px; }
+      #main .mento .inner .sliderbox .prev::before, #main .mento .inner .sliderbox .prev::after, #main .mento .inner .sliderbox .next::before, #main .mento .inner .sliderbox .next::after {
+        width: 20px; }
 
   #footer .inner {
     padding: 50px 10px 20px; }
