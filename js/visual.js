@@ -108,6 +108,10 @@ class Visual{
         this.btnClose.addEventListener("click", e=>{
             e.preventDefault();
         
+            this.timer = setInterval(()=>{
+                (this.i >= 2) ? this.i=0 : this.i++;
+                this.reverse(this.i)
+            }, 4000);
             this.detail.classList.remove("on");
             this.detail_img.style.width = `${this.imgWidth}px`;
             this.detail_img.style.height = `${this.imgHeight}px`;
