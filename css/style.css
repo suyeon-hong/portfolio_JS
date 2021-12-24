@@ -4072,7 +4072,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 100px;
+  padding: 10vw;
   background: rgba(0, 0, 0, 0.8);
   z-index: 3; }
   .gallery aside img {
