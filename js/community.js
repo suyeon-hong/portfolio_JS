@@ -35,6 +35,45 @@ fetch('js/data.json')
         if(value == null) return;
         updateItems(itemsQna, value);
     });
+
+    qna.addEventListener("click", e=>{
+        e.preventDefault();
+
+        const target = e.target.closest("dt");
+        const isOn = target.classList.contains("on");
+
+        if(target == null) return;
+        if(isOn){
+            target.classList.remove("on");
+            target.nextElementSibling.classList.remove("on");
+            new Anim(target.nextElementSibling,{
+                prop: "height",
+                value: 0,
+                duration: 500,
+                callback: ()=>{
+                    target.nextElementSibling.style.height = 0;
+                }
+            });
+        }else{
+            const dts = qna.querySelectorAll("dt");
+            const dds = qna.querySelectorAll("dd");
+
+            dts.forEach(dt=> dt.classList.remove("on"));
+            dds.forEach(dd=> dd.classList.remove("on"));
+            target.classList.add("on");
+            target.nextElementSibling.classList.add("on");
+
+            for(let dd of dds) dd.style.height = "0px";
+            new Anim(target.nextElementSibling,{
+                prop: "height",
+                value: 100,
+                duration: 500,
+                callback: ()=>{
+                    target.nextElementSibling.style.height = "auto"
+                }
+            });
+        }
+    })
 });
 
 
@@ -92,4 +131,34 @@ function updateItems(items, value){
         `;
     });
     qna.innerHTML = htmls;
+}
+
+function slideDown(index){
+    let isOn = this.btns[index].classList.contains("on");
+    if(isOn){
+        this.btns[index].classList.remove("on");
+        this.boxs[index].classList.remove("on");
+        new Anim(this.boxs[index],{
+            prop: "height",
+            value: 0,
+            duration: 500,
+            callback: ()=>{
+                this.boxs[index].style.height = 0;
+            }
+        });
+    }else{
+        for(let el of this.btns) el.classList.remove("on");
+        this.btns[index].classList.add("on");
+        for(let el of this.boxs) el.classList.remove("on");
+        this.boxs[index].classList.add("on");
+        for(let box of this.boxs) box.style.height = "0px";
+        new Anim(this.boxs[index],{
+            prop: "height",
+            value: 100,
+            duration: 500,
+            callback: ()=>{
+                this.boxs[index].style.height = "auto"
+            }
+        });
+    }
 }

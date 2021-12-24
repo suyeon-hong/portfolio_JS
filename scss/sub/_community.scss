@@ -213,7 +213,7 @@
     
                             p{
                                 width: 90%;
-                                font: 600 16px/1 $font;
+                                font: 600 16px/1.2 $font;
                                 color: #333;
                                 margin-bottom: 10px;
                             }
@@ -429,11 +429,11 @@
                             }
                         }
                         .tabs li{
-                            height: 50px;
+                            height: 40px;
     
                             a{
-                                font-size: 12px;
-                                line-height: 50px;
+                                font-size: 11px;
+                                line-height: 40px;
                             }
                         }
                         .qna{
@@ -454,8 +454,13 @@
                                     right: 10px;
                                 }
                             } 
-                            dd p{
-                                width: 100%;
+                            dd{
+                                p{
+                                    width: 100%;
+                                }
+                                &.on{
+                                    padding-left: 40px;
+                                }
                             }
                         }
                     }

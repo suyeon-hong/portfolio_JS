@@ -3511,7 +3511,7 @@ body {
             border-bottom: none; }
           .community .inner > dl > dd#faq .qna dt p {
             width: 90%;
-            font: 600 16px/1 "Gothic A1";
+            font: 600 16px/1.2 "Gothic A1";
             color: #333;
             margin-bottom: 10px; }
           .community .inner > dl > dd#faq .qna dt .subj {
@@ -3644,10 +3644,10 @@ body {
           .community .inner > dl dd#faq .search form .btn::after {
             width: 10px; }
     .community .inner > dl dd#faq .tabs li {
-      height: 50px; }
+      height: 40px; }
       .community .inner > dl dd#faq .tabs li a {
-        font-size: 12px;
-        line-height: 50px; }
+        font-size: 11px;
+        line-height: 40px; }
     .community .inner > dl dd#faq .qna {
       margin-bottom: 50px; }
       .community .inner > dl dd#faq .qna dt, .community .inner > dl dd#faq .qna dd {
@@ -3660,6 +3660,8 @@ body {
         right: 10px; }
       .community .inner > dl dd#faq .qna dd p {
         width: 100%; }
+      .community .inner > dl dd#faq .qna dd.on {
+        padding-left: 40px; }
     .community .inner > dl dd#notice table thead tr th:nth-of-type(1), .community .inner > dl dd#notice table tbody tr td:nth-of-type(1) {
       display: none; }
     .community .inner > dl dd .pagination > span {
