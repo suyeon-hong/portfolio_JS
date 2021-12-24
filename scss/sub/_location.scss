@@ -369,6 +369,16 @@
             }
             #map{
                 height: 300px;
+
+                .address{
+                    width: 180px;
+                    top: auto;
+                    bottom: 25px;
+
+                    h1, address, p{
+                        font-size: 13px;
+                    }
+                }
             }
             .trafficInfo{
                 margin-bottom: 100px;

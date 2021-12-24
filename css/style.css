@@ -4514,6 +4514,12 @@ aside {
     font-size: 12px; }
   .location .inner #map {
     height: 300px; }
+    .location .inner #map .address {
+      width: 180px;
+      top: auto;
+      bottom: 25px; }
+      .location .inner #map .address h1, .location .inner #map .address address, .location .inner #map .address p {
+        font-size: 13px; }
   .location .inner .trafficInfo {
     margin-bottom: 100px; }
     .location .inner .trafficInfo article {
