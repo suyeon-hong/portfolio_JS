@@ -66,7 +66,7 @@ class LoopSlider{
             duration: 1000,
             callback: ()=>{
                 this.frame.style.marginLeft = `${this.default_per}%`;
-                this.frame.append(this.frame.lastElementChild);
+                this.frame.prepend(this.frame.lastElementChild);
                 this.enableClick = true;
             }
         });
