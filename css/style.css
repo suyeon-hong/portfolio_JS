@@ -3421,7 +3421,7 @@ body {
           cursor: text; }
     .community .inner > dl > dd#faq {
       display: block; }
-      .community .inner > dl > dd#faq h2 {
+      .community .inner > dl > dd#faq h2, .community .inner > dl > dd#faq h3 {
         font: 600 22px/1 "Gothic A1";
         color: #000;
         margin-bottom: 20px; }
@@ -3626,7 +3626,7 @@ body {
       font-size: 20px; }
     .community .inner > dl > dt:nth-of-type(2) {
       left: 50px; }
-    .community .inner > dl dd#faq h2 {
+    .community .inner > dl dd#faq h2, .community .inner > dl dd#faq h3 {
       font-size: 18px; }
     .community .inner > dl dd#faq .search {
       margin-bottom: 50px; }
