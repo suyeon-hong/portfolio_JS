@@ -77,8 +77,8 @@ class Visual{
                 this.imgTop = e.target.getBoundingClientRect().top;
                 this.imgLeft =e.target.getBoundingClientRect().left;
         
-                const tit1 = e.target.closest("article").querySelector("h2").innerText;
-                const tit2 = e.target.closest("article").querySelector("h1").innerText;
+                const tit1 = e.target.closest("article").querySelector("h4").innerText;
+                const tit2 = e.target.closest("article").querySelector("h3").innerText;
                 const desc = e.target.closest("article").querySelector(".wrap p").innerText;
         
                 clearInterval(this.timer);

@@ -590,7 +590,7 @@ body{
                         height: 545px;
                         border-width: 2px;
 
-                        h1{
+                        h5{
                             border-bottom: none;
                             font: 600 30px/1 $font;
                             color: #111;
@@ -600,13 +600,13 @@ body{
                             transform: translate(-50%, -50%);
                         }
                     }
-                    h1{
+                    h3{
                         font: 600 16px/1 $font;
                         color: #666;
                         padding: 10px 20px;
                         border-bottom: 1px solid #333;
                     }
-                    h2{
+                    h4{
                         font: 500 45px/1 $font;
                         color: #333;
                         padding: 10px 20px 50px;
@@ -2115,7 +2115,7 @@ body{
                         right: 30px;
                     }
                     article{
-                        h2{
+                        h4{
                             font-size: 33px;
                             padding-bottom: 40px;
                         }
@@ -2280,10 +2280,10 @@ body{
     #visual{
         .inner >.wrap section{
             article{
-                h1{
+                h3{
                     font-size: 12px;
                 }
-                h2{
+                h4{
                     font-size: 25px;
                 }
                 .wrap{
@@ -2470,10 +2470,10 @@ body{
                     display: none;
                 }
                 article{
-                    h1{
+                    h3{
                         padding: 5px 10px;
                     }
-                    h2{
+                    h4{
                         padding: 5px 10px 20px;
                         font-size: 18px;
                     }
@@ -2878,7 +2878,7 @@ body{
                     &.back{
                         height: 260px;
                     }
-                    h2{
+                    h4{
                         font-weight: 600;
                         padding: 10px;
                     }

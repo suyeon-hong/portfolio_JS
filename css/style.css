@@ -472,7 +472,7 @@ body {
             z-index: 1;
             height: 545px;
             border-width: 2px; }
-            #visual .inner > .wrap section article.back h1 {
+            #visual .inner > .wrap section article.back h5 {
               border-bottom: none;
               font: 600 30px/1 "Gothic A1";
               color: #111;
@@ -480,12 +480,12 @@ body {
               top: 50%;
               left: 50%;
               transform: translate(-50%, -50%); }
-          #visual .inner > .wrap section article h1 {
+          #visual .inner > .wrap section article h3 {
             font: 600 16px/1 "Gothic A1";
             color: #666;
             padding: 10px 20px;
             border-bottom: 1px solid #333; }
-          #visual .inner > .wrap section article h2 {
+          #visual .inner > .wrap section article h4 {
             font: 500 45px/1 "Gothic A1";
             color: #333;
             padding: 10px 20px 50px;
@@ -1618,7 +1618,7 @@ body {
           #visual .inner > .wrap section:nth-of-type(3) {
             left: auto;
             right: 30px; }
-          #visual .inner > .wrap section article h2 {
+          #visual .inner > .wrap section article h4 {
             font-size: 33px;
             padding-bottom: 40px; }
           #visual .inner > .wrap section article .wrap {
@@ -1704,9 +1704,9 @@ body {
   #navi {
     right: 0; } }
 @media screen and (max-width: 980px) {
-  #visual .inner > .wrap section article h1 {
+  #visual .inner > .wrap section article h3 {
     font-size: 12px; }
-  #visual .inner > .wrap section article h2 {
+  #visual .inner > .wrap section article h4 {
     font-size: 25px; }
   #visual .inner > .wrap section article .wrap p {
     height: 64px; }
@@ -1809,9 +1809,9 @@ body {
           right: 30px; }
         #visual .inner > .wrap section:nth-of-type(3) {
           display: none; }
-        #visual .inner > .wrap section article h1 {
+        #visual .inner > .wrap section article h3 {
           padding: 5px 10px; }
-        #visual .inner > .wrap section article h2 {
+        #visual .inner > .wrap section article h4 {
           padding: 5px 10px 20px;
           font-size: 18px; }
         #visual .inner > .wrap section article .wrap {
@@ -2049,7 +2049,7 @@ body {
         display: none; }
       #visual > .inner > .wrap section article.back {
         height: 260px; }
-      #visual > .inner > .wrap section article h2 {
+      #visual > .inner > .wrap section article h4 {
         font-weight: 600;
         padding: 10px; }
       #visual > .inner > .wrap section article .wrap p {
