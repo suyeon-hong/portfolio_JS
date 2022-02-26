@@ -7,5 +7,5 @@
 
 <br>
 
-### 🚀 [배포사이트](suyeon-hong.github.io/portfolio_js/)
+### 🚀 [배포사이트](https://suyeon-hong.github.io/portfolio_JS/)
 ### 👀 [작업설명서](https://velog.io/@suyeon-hong/%EA%B8%B0%EC%97%85%ED%98%95-%EC%9B%B9-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%9E%91%EC%97%85%EC%84%A4%EB%AA%85%EC%84%9C)
