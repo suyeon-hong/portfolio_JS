@@ -6,7 +6,7 @@ class MyFlickr {
 		}
 		if (!opt.type) opt.type = "interest";
 		this.init(opt);
-		this.bindingEvent();
+		this.bindingEvent(opt);
 	}
 
 	init(opt) {
@@ -22,35 +22,17 @@ class MyFlickr {
 		this.totalImg = opt.totalImg;
 	}
 
-	bindingEvent() {
+	bindingEvent(opt) {
 		this.getList();
 
 		this.gallery.querySelector("button").addEventListener("click", () => {
-			this.tag = this.gallery.querySelector("input").value;
-
-			if (!this.tag) {
-				alert("검색어를 입력해 주세요.");
-				return;
-			}
-			this.loadingImg.classList.remove("off");
-			this.photoBox.classList.remove("on");
-			this.user_id = "";
-
+			this.checkInputValue(opt.type);
 			this.getList();
 		});
 
 		window.addEventListener("keypress", (e) => {
 			if (e.key == "Enter") {
-				this.tag = this.gallery.querySelector("input").value;
-
-				if (!this.tag) {
-					alert("검색어를 입력해 주세요.");
-					return;
-				}
-				this.loadingImg.classList.remove("off");
-				this.photoBox.classList.remove("on");
-				this.user_id = "";
-
+				this.checkInputValue(opt.type);
 				this.getList();
 			}
 		});
@@ -74,7 +56,8 @@ class MyFlickr {
 			btn.addEventListener("click", (e) => {
 				e.preventDefault();
 
-				this.type = "search";
+				this.type = opt.type;
+				this.user_id = opt.user_id;
 				this.tag = e.currentTarget.innerText;
 				this.loadingImg.classList.remove("off");
 				this.photoBox.classList.remove("on");
@@ -175,5 +158,18 @@ class MyFlickr {
 			let close = target.querySelector(".close");
 			if (e.target == close) target.remove();
 		}
+	}
+
+	checkInputValue(type) {
+		this.tag = this.gallery.querySelector("input").value;
+
+		if (!this.tag) {
+			alert("검색어를 입력해 주세요.");
+			return;
+		}
+		this.type = type;
+		this.loadingImg.classList.remove("off");
+		this.photoBox.classList.remove("on");
+		this.user_id = "";
 	}
 }
