@@ -1,4 +1,4 @@
-# 기업형 웹 사이트
+# 바닐라자바스크립트로 구현한 기업형 웹 사이트
 
 - [x] j-Query로 제작했던 [기존의 사이트](https://github.com/suyeon-hong/portfolio_jQ)를 JavaScript를 이용해 재구현한 사이트 입니다.<br>
 - [x]  1200px 그리드를 기준으로 웹표준, 웹접근성에 맞추어 제작한 반응형 사이트입니다.<br>
