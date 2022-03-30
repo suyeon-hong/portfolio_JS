@@ -1,702 +1,795 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio_JS</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <script src="https://kit.fontawesome.com/0c5c47f3c6.js" crossorigin="anonymous"></script>
-    <script defer src="js/anime.js"></script>
-    <script defer src="js/common.js"></script>
-    <script defer src="js/skip.js"></script>
-    <script src="js/cookiePopup.js"></script>
-    <script src="js/scroll.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/visual.js"></script>
-    <script>
-        window.addEventListener("load", ()=>{
-            new CookiePopup("#popup");
-            new Visual("#visual",{
-                letter1: ".inner >h1",
-                letter2: ".inner >h2",
-                cardBoxs: ".wrapbox >.wrap",
-                cards: "section",
-                card_back: ".back",
-                card_img: ".wrapbox img",
-                btns: ".filter li",
-                detail: ".detail",
-                detail_close: ".close",
-                detail_img: ".pic",
-                date: ".date"
-            });
-            new BasicSlider({
-                frame: ".box1 .slider-wrapper",
-                btns: ".box1 .btns li",
-                speed: 500
-            });
-            new LoopSlider({
-                frame: ".mento .slider-wrapper",
-                slider: ".slider",
-                prev: ".mento .prev",
-                next: ".mento .next",
-                default_percent: -50,
-                moving_percent: -100,
-                speed: 2000
-            });
-            new LoopSlider({
-                frame: ".box3 .slider-wrapper",
-                slider: ".slider",
-                prev: ".box3 .prev",
-                next: ".box3 .next",
-                default_percent: -100,
-                moving_percent: -200,
-                speed: 3000
-            });
-            new MyScroll({
-                panel: ".myScroll",
-                btns: "#navi li"
-            })
-        });
-    </script>
-</head>
-<body>
-    <div id="skip">
-        <a href="#gnb">메인메뉴 바로가기</a>
-        <a href="#main">컨텐츠 바로가기</a>
-        <a href="#footer">하단메뉴 바로가기</a>
-    </div>
-    
-    <header id="header" class="myScroll">
-        <div class="inner">
-            <h1><a href="index.html">Lorem</a></h1>
-            <ul id="gnb">
-                <li>
-                    <a href="about.html">ABOUTUS</a>
-                    <div class="sub">
-                        <ul>
-                            <li>
-                                <h2>PROJECTS</h2>
-                                <a href="#">2017</a>
-                                <a href="#">2018</a>
-                                <a href="#">2019</a>
-                                <a href="#">2020</a>
-                            </li>
-                            <li>
-                                <h2>SERVICES</h2>
-                                <a href="#">architecture</a>
-                                <a href="#">interior</a>
-                                <a href="#">design</a>
-                            </li>
-                            <li>
-                                <h2>PROCESS</h2>
-                                <a href="#">method</a>
-                                <a href="#">technology</a>
-                                <a href="#">project</a>
-                            </li>
-                            <li>
-                                <h2>OUR TEAM</h2>
-                                <a href="#">member</a>
-                                <a href="#">org chart</a>
-                            </li>
-                            <li>
-                                <div class="pic">
-                                    <img src="img/gnb1.jpg" alt="라디오 테이프 사진">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="community.html">COMMUNITY</a>
-                    <div class="sub">
-                        <ul>
-                            <li>
-                                <h2>FAQ</h2>
-                                <a href="#">전체</a>
-                                <a href="#">배송</a>
-                                <a href="#">결제/영수증</a>
-                                <a href="#">주문</a>
-                            </li>
-                            <li>
-                                <h2>NOTICE</h2>
-                                <a href="#">주문취소</a>
-                                <a href="#">배송지변경</a>
-                                <a href="#">서비스</a>
-                            </li>
-                            <li>
-                                <h2>FAQ</h2>
-                                <a href="#">검색</a>
-                                <a href="#">리뷰/포인트</a>
-                                <a href="#">기타</a>
-                            </li>
-                            <li>
-                                <h2>NOTICE</h2>
-                                <a href="#">공지사항</a>
-                            </li>
-                            <li>
-                                <div class="pic">
-                                    <img src="img/gnb2.jpg" alt="창문 사진">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="youtube.html">YOUTUBE</a>
-                    <div class="sub">
-                        <ul>
-                            <li>
-                                <p>NEW</p>
-                                <p>BEST</p>
-                                <p>TREND</p>
-                            </li>
-                            <li>
-                                <h2>WOMEN</h2>
-                                <a href="#">S/S SEASON</a>
-                                <a href="#">F/W SEASON</a>
-                            </li>
-                            <li>
-                                <h2>MEN</h2>
-                                <a href="#">S/S SEASON</a>
-                                <a href="#">F/W SEASON</a>
-                            </li>
-                            <li>
-                                <h2>2021</h2>
-                                <a href="#">S/S SEASON</a>
-                                <a href="#">F/W SEASON</a>
-                            </li>
-                            <li>
-                                <div class="pic">
-                                    <img src="img/gnb3.jpg" alt="꽃 사진">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="gallery.html">GALLERY</a>
-                    <div class="sub">
-                        <ul>
-                            <li>
-                                <p>NEW</p>
-                                <p>BEST</p>
-                                <p>PHOTOS</p>
-                            </li>
-                            <li>
-                                <h2>CATEGORY</h2>
-                                <a href="#">LANDSCAPE</a>
-                                <a href="#">FASHION</a>
-                            </li>
-                            <li>
-                                <h2>CATEGORY</h2>
-                                <a href="#">OCEAN</a>
-                                <a href="#">CITY</a>
-                            </li>
-                            <li>
-                                <h2>CATEGORY</h2>
-                                <a href="#">SEARCH</a>
-                            </li>
-                            <li>
-                                <div class="pic">
-                                    <img src="img/gnb4.jpg" alt="벽에 비친 나뭇잎 그림자">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="location.html">LOCATION</a>
-                    <div class="sub">
-                        <ul>
-                            <li>
-                                <h2><a href="#">스타필드 하남</a></h2>
-                                <div class="pic">
-                                    <img src="img/gnb5.jpg" alt="관람차 사진">
-                                </div>
-                            </li>
-                            <li>
-                                <h2><a href="#">스타필드 코엑스몰</a></h2>
-                                <div class="pic">
-                                    <img src="img/gnb6.jpg" alt="관람차 사진">
-                                </div>
-                            </li>
-                            <li>
-                                <h2><a href="#">스타필드 시티 위례</a></h2>
-                                <div class="pic">
-                                    <img src="img/gnb7.jpg" alt="관람차 사진">
-                                </div>
-                            </li>
-                            <li>
-                                <p><a href="#">CONTACT</a></p>
-                                <p><a href="#">LOCATION</a></p>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-            <ul class="util">
-                <li>
-                    <a href="#">
-                        <span class="hidden">검색</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="join.html">
-                        <span class="hidden">로그인</span>
-                    </a>
-                </li>
-                <li class="btnMo">
-                    <a href="#">
-                        <span>메뉴</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="gnbMo">
-            <ul>
-                <li>
-                    <a href="about.html">
-                        <div class="pic">
-                            <img src="img/gnb1.jpg" alt="라디오 테이프">
-                        </div>
-                        ABOUT
-                    </a>
-                    <span class="arrow"></span>
-                    <ul>
-                        <li>
-                            <a href="#">project</a>
-                        </li>
-                        <li>
-                            <a href="#">services</a>
-                        </li>
-                        <li>
-                            <a href="#">process</a>
-                        </li>
-                        <li>
-                            <a href="#">our team</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="community.html">
-                        <div class="pic">
-                            <img src="img/gnb2.jpg" alt="창문">
-                        </div>
-                        COMMUNITY
-                    </a>
-                    <span class="arrow"></span>
-                    <ul>
-                        <li>
-                            <a href="#">FAQ</a>
-                        </li>
-                        <li>
-                            <a href="#">NOTICE</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="youtube.html">
-                        <div class="pic">
-                            <img src="img/gnb3.jpg" alt="꽃">
-                        </div>
-                        YOUTUBE
-                    </a>
-                    <span class="arrow"></span>
-                    <ul>
-                        <li>
-                            <a href="#">runway</a>
-                        </li>
-                        <li>
-                            <a href="#">trend</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="gallery.html">
-                        <div class="pic">
-                            <img src="img/gnb4.jpg" alt="벽에 비친 나뭇잎 그림자">
-                        </div>
-                        GALLERY
-                    </a>
-                    <span class="arrow"></span>
-                    <ul>
-                        <li>
-                            <a href="#">flickr</a>
-                        </li>
-                        <li>
-                            <a href="#">photos</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="location.html">
-                        <div class="pic">
-                            <img src="img/gnb5.jpg" alt="관람차">
-                        </div>
-                        LOCATION
-                    </a>
-                    <span class="arrow"></span>
-                    <ul>
-                        <li>
-                            <a href="#">contact</a>
-                        </li>
-                        <li>
-                            <a href="#">map</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio_JS</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
+		<script
+			src="https://kit.fontawesome.com/0c5c47f3c6.js"
+			crossorigin="anonymous"
+		></script>
+		<script defer src="js/anime.js"></script>
+		<script defer src="js/common.js"></script>
+		<script defer src="js/skip.js"></script>
+		<script src="js/cookiePopup.js"></script>
+		<script src="js/scroll.js"></script>
+		<script src="js/slider.js"></script>
+		<script src="js/visual.js"></script>
+		<script>
+			window.addEventListener("load", () => {
+				new CookiePopup("#popup");
+				new Visual("#visual", {
+					letter1: ".inner >h1",
+					letter2: ".inner >h2",
+					cardBoxs: ".wrapbox >.wrap",
+					cards: "section",
+					card_back: ".back",
+					card_img: ".wrapbox img",
+					btns: ".filter li",
+					detail: ".detail",
+					detail_close: ".close",
+					detail_img: ".pic",
+					date: ".date",
+				});
+				new BasicSlider({
+					frame: ".box1 .slider-wrapper",
+					btns: ".box1 .btns li",
+					speed: 500,
+				});
+				new LoopSlider({
+					frame: ".mento .slider-wrapper",
+					slider: ".slider",
+					prev: ".mento .prev",
+					next: ".mento .next",
+					default_percent: -50,
+					moving_percent: -100,
+					speed: 2000,
+				});
+				new LoopSlider({
+					frame: ".box3 .slider-wrapper",
+					slider: ".slider",
+					prev: ".box3 .prev",
+					next: ".box3 .next",
+					default_percent: -100,
+					moving_percent: -200,
+					speed: 3000,
+				});
+				new MyScroll({
+					panel: ".myScroll",
+					btns: "#navi li",
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="skip">
+			<a href="#gnb">메인메뉴 바로가기</a>
+			<a href="#main">컨텐츠 바로가기</a>
+			<a href="#footer">하단메뉴 바로가기</a>
+		</div>
 
-    <figure id="visual">
-        <div class="inner">
-            <h1>CHOOSE YOUR</h1><br>
-            <h2>FASHION</h2>
-        </div>
-        <div class="filter">
-            <div class="inner">
-                <em>FILTER BY</em>
-                <ul>
-                    <li class="on"><a href="#">WOMAN</a></li>
-                    <li><a href="#">MAN</a></li>
-                    <li><a href="#">KIDS</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="inner wrapbox">
-            <div class="wrap">
-                <section>
-                    <article class="front">
-                        <h3>WOMAN</h3>
-                        <h4>ROMANTIC <br>COUNTRY</h4>
-                        <div class="wrap">
-                            <p>
-                                감미롭고 상냥함을 느끼게하는 이미지의 디자인. 또한 회고적인 디자인을 말할 때도 있다. 전원풍의 소박함 속에 소녀다운 귀여움을 살린 스타일을 말하며, 프릴이 붙은 에이프런, 드레스 등이 이에 해당된다.<br> 감미롭고 상냥함을 느끼게하는 이미지의 디자인. 또한 회고적인 디자인을 말할 때도 있다. 전원풍의 소박함 속에 소녀다운 귀여움을 살린 스타일을 말하며, 프릴이 붙은 에이프런, 드레스 등이 이에 해당된다. 감미롭고 상냥함을 느끼게하는 이미지의 디자인. 또한 회고적인 디자인을 말할 때도 있다.
-                            </p>
-                            <ul>
-                                <li>RUFFLE </li>
-                                <li>RACE </li>
-                                <li>DRESS</li>
-                            </ul>
-                        </div>
-                        <div class="pic">
-                            <a href="#"><img src="img/woman1.jpg" alt="드레스코디"></a>
-                            <p>BEST<span>ITEM</span></p>
-                            <p>ROMANTIC<span>STYLE</span></p>
-                        </div>
-                    </article>
-                    <article class="back">
-                        <h5>WOMAN</h5>
-                    </article>
-                </section>
-                <section>
-                    <article class="front">
-                        <h3>WOMAN</h3>
-                        <h4>LAYERED / <br>LAYERED LOOK</h4>
-                        <div class="wrap">
-                            <p>
-                                서로 다른 아이템의 옷을 겹쳐 입음으로써 효과를 내는 코디 유형. 특히 70년대 전반에 유행한 속에 입은 것이 겉에 보이게 입거나, 긴 소매의 블라우스 위에 반 소매의 스웨터나 자켓 등을 여러 방법으로 겹쳐 입은 룩이 유행했다.<br> 서로 다른 아이템의 옷을 겹쳐 입음으로써 효과를 내는 코디 유형. 특히 70년대 전반에 유행한 속에 입은 것이 겉에 보이게 입거나, 긴 소매의 블라우스 위에 반 소매의 스웨터나 자켓 등을 여러 방법으로 겹쳐 입은 룩이 유행했다. 서로 다른 아이템의 옷을 겹쳐 입음으로써 효과를 내는 코디 유형.
-                            </p>
-                            <ul>
-                                <li>WRAP SKIRT </li>
-                                <li>MIX & MATCH </li>
-                                <li>LOOSE FIT</li>
-                            </ul>
-                        </div>
-                        <div class="pic">
-                            <a href="#"><img src="img/woman2.jpg" alt="자켓을 레이어드한 코디"></a>
-                            <p>NEW<span>ITEM</span></p>
-                            <p>MODERN<span>STYLE</span></p>
-                        </div>
-                    </article>
-                    <article class="back">
-                        <h5>WOMAN</h5>
-                    </article>
-                </section>
-                <section>
-                    <article class="front">
-                        <h3>WOMAN</h3>
-                        <h4>RIDERS <br>LOOK</h4>
-                        <div class="wrap">
-                            <p>
-                                불량스럽고 과격한 느낌을 주는 오토바이 라이더들의 복장에서 아이디어를 얻어 디자인한 패션스타일. 주로 검은색 가죽소재를 이용한 자켓과 바지등 아이템들을 함께 코디하여 강하고 단단한 이미지를 보여준다.<br> 불량스럽고 과격한 느낌을 주는 오토바이 라이더들의 복장에서 아이디어를 얻어 디자인한 패션스타일. 주로 검은색 가죽소재를 이용한 자켓과 바지등 아이템들을 함께 코디하여 강하고 단단한 이미지를 보여준다. 불량스럽고 과격한 느낌을 주는 오토바이 라이더들의 복장에서 아이디어를 얻어 디자인한 패션스타일.
-                            </p>
-                            <ul>
-                                <li>LEATER </li>
-                                <li>RUST </li>
-                                <li>BLACK</li>
-                            </ul>
-                        </div>
-                        <div class="pic">
-                            <a href="#"><img src="img/woman3.jpg" alt="가죽자켓을 활용해 올블랙컬러로 코디"></a>
-                            <p>HOT<span>ITEM</span></p>
-                            <p>CLASSIC<span>STYLE</span></p>
-                        </div>
-                    </article>
-                    <article class="back">
-                        <h5>WOMAN</h5>
-                    </article>
-                </section>
-            </div>
-            <div class="wrap">
-                <section>
-                    <article class="front">
-                        <h3>MAN</h3>
-                        <h4>MODS <br>LOOK</h4>
-                        <div class="wrap">
-                            <p>
-                                런던의 카너비 스트리트에서 생긴 유행으로, 기존의 보수화된 관습에 저항하며 이를 패션으로 승화시킨 사람들의 스타일을 모즈룩이라 부르게 되었다. 1960년대 초반 영국의 비틀즈와 미국의 엘비스 프레슬리에 의해 크게 유행하기 시작했다.<br> 런던의 카너비 스트리트에서 생긴 유행으로, 기존의 보수화된 관습에 저항하며 이를 패션으로 승화시킨 사람들의 스타일을 모즈룩이라 부르게 되었다. 1960년대 초반 영국의 비틀즈와 미국의 엘비스 프레슬리에 의해 크게 유행하기 시작했다.
-                            </p>
-                            <ul>
-                                <li>LONG HAIR </li>
-                                <li>FLORAL SHIRT </li>
-                                <li>SUIT</li>
-                            </ul>
-                        </div>
-                        <div class="pic">
-                            <a href="#">
-                                <img src="img/man1.jpg" alt="횡단보도 건너는 모습의 비틀즈">
-                            </a>
-                            <p>BEST<span>ITEM</span></p>
-                            <p>VINTAGE<span>STYLE</span></p>
-                        </div>
-                    </article>
-                    <article class="back">
-                        <h5>MAN</h5>
-                    </article>
-                </section>
-                <section>
-                    <article class="front">
-                        <h3>MAN</h3>
-                        <h4>DANDY / <br>MANNISH LOOK</h4>
-                        <div class="wrap">
-                            <p>
-                                19세기의 보 블럼멜로 알려진 죠지 브라이언 브럼멜이 대표적인 인물로 그는 질 좋은 순백의 마로 만든 셔츠와 장식이 없는 의복을 꼭 맞게 착용하였으며, 이후 이것은 영국 신사복 유행의 기본 원칙이 되었다.<br> 19세기의 보 블럼멜로 알려진 죠지 브라이언 브럼멜이 대표적인 인물로 그는 질 좋은 순백의 마로 만든 셔츠와 장식이 없는 의복을 꼭 맞게 착용하였으며, 이후 이것은 영국 신사복 유행의 기본 원칙이 되었다.
-                            </p>
-                            <ul>
-                                <li>BLAZER </li>
-                                <li>OXFORD </li>
-                                <li>LOAFER </li>
-                            </ul>
-                        </div>
-                        <div class="pic">
-                            <a href="#">
-                                <img src="img/man2.jpg" alt="정장입은 남자">
-                            </a>
-                            <p>NEW<span>ITEM</span></p>
-                            <p>CLASSIC<span>STYLE</span></p>
-                        </div>
-                    </article>
-                    <article class="back">
-                        <h5>MAN</h5>
-                    </article>
-                </section>
-                <section>
-                    <article class="front">
-                        <h3>MAN</h3>
-                        <h4>EDWARDIAN <br>LOOK</h4>
-                        <div class="wrap">
-                            <p>
-                                20세기 초 영국의 에드워드 7세 시대에 유행하였던 남녀 복장을 모티브로 한 패션으로 리전시 칼라, 목의 주름이 있는 우아한 실루엣이 특징이다. 특히 남성복의 우아한 프록코트 스타일을 가르키는 경우가 많다.<br> 20세기 초 영국의 에드워드 7세 시대에 유행하였던 남녀 복장을 모티브로 한 패션으로 리전시 칼라, 목의 주름이 있는 우아한 실루엣이 특징이다. 특히 남성복의 우아한 프록코트 스타일을 가르키는 경우가 많다.
-                            </p>
-                            <ul>
-                                <li>JACKET </li>
-                                <li>TROUSERS </li>
-                                <li>WAISTCOAT </li>
-                            </ul>
-                        </div>
-                        <div class="pic">
-                            <a href="#">
-                                <img src="img/man3.jpg" alt="프록코트입은 남자">
-                            </a>
-                            <p>HOT<span>ITEM</span></p>
-                            <p>MODERN<span>STYLE</span></p>
-                        </div>
-                    </article>
-                    <article class="back">
-                        <h5>MAN</h5>
-                    </article>
-                </section>
-            </div>
-            <div class="wrap">
-                <section>
-                    <article class="front">
-                        <h3>KIDS</h3>
-                        <h4>BIRTHDAY <br>LOOK</h4>
-                        <div class="wrap">
-                            <p>
-                                한국에서는 사람이 태어난 뒤 만 1세에 처음 맞는 생일은 첫돌, 첫돌과 같은 간지인 만 60세 생일을 환갑, 그 이듬해를 진갑이라고 부르는 등 특별한 생일에는 이름을 붙이기도 한다. 왕국에서는 왕의 생일을 공휴일로 지정하기도 한다.<br> 한국에서는 사람이 태어난 뒤 만 1세에 처음 맞는 생일은 첫돌, 첫돌과 같은 간지인 만 60세 생일을 환갑, 그 이듬해를 진갑이라고 부르는 등 특별한 생일에는 이름을 붙이기도 한다. 왕국에서는 왕의 생일을 공휴일로 지정하기도 한다.
-                            </p>
-                            <ul>
-                                <li>DRESS </li>
-                                <li>SPARKLY </li>
-                                <li>BLACK TIE </li>
-                            </ul>
-                        </div>
-                        <div class="pic">
-                            <a href="#">
-                                <img src="img/kids1.jpg" alt="별무늬 드레스를 입은 아이">
-                            </a>
-                            <p>BEST<span>ITEM</span></p>
-                            <p>LOVELY<span>STYLE</span></p>
-                        </div>
-                    </article>
-                    <article class="back">
-                        <h5>KIDS</h5>
-                    </article>
-                </section>
-                <section>
-                    <article class="front">
-                        <h3>KIDS</h3>
-                        <h4>HALLOWEEN <br>PARTY</h4>
-                        <div class="wrap">
-                            <p>
-                                10월 31일 밤을 기념하여 행해지는 영미권의 전통 행사. 이 날에는 죽은 영혼들이 되살아나며 정령이나 마녀 등이 출몰한다고 믿고 귀신들에게 육신을 뺏기지 않기 위해 사람들은 유령이나 흡혈귀, 괴물 등의 복장을 하고 축제를 즐긴다.<br> 10월 31일 밤을 기념하여 행해지는 영미권의 전통 행사. 이 날에는 죽은 영혼들이 되살아나며 정령이나 마녀 등이 출몰한다고 믿고 귀신들에게 육신을 뺏기지 않기 위해 사람들은 유령이나 흡혈귀, 괴물 등의 복장을 하고 축제를 즐긴다. 10월 31일 밤을 기념하여 행해지는 영미권의 전통 행사.
-                            </p>
-                            <ul>
-                                <li>COSTUME </li>
-                                <li>HERO </li>
-                                <li>PUMPKIN </li>
-                            </ul>
-                        </div>
-                        <div class="pic">
-                            <a href="#">
-                                <img src="img/kids2.jpg" alt="코끼리옷을 입은 아이">
-                            </a>
-                            <p>HOT<span>ITEM</span></p>
-                            <p>UNIQUE <span>STYLE</span></p>
-                        </div>
-                    </article>
-                    <article class="back">
-                        <h5>KIDS</h5>
-                    </article>
-                </section>
-                <section>
-                    <article class="front">
-                        <h3>KIDS</h3>
-                        <h4>HOLIDAY <br>LOOK</h4>
-                        <div class="wrap">
-                            <p>
-                                추수감사절, 블랙프라이데이 시점이나 11월을 기점으로, 새해 첫날 직후 까지를 홀리데이라고 칭한다. 이 때에는 여러 민족, 종교의 명절이 모여있기 때문에 이를 뭉뚱그려 "홀리데이 시즌"이라 칭하는 것이다.<br> 추수감사절, 블랙프라이데이 시점이나 11월을 기점으로, 새해 첫날 직후 까지를 홀리데이라고 칭한다. 이 때에는 여러 민족, 종교의 명절이 모여있기 때문에 이를 뭉뚱그려 "홀리데이 시즌"이라 칭하는 것이다. 추수감사절, 블랙프라이데이 시점이나 11월을 기점으로, 새해 첫날 직후 까지를 홀리데이라고 칭한다.
-                            </p>
-                            <ul>
-                                <li>NEAT </li>
-                                <li>TIDY </li>
-                                <li>FORMAL </li>
-                            </ul>
-                        </div>
-                        <div class="pic">
-                            <a href="#">
-                                <img src="img/kids3.jpg" alt="나비넥타이를 한 아이">
-                            </a>
-                            <p>NEW<span>ITEM</span></p>
-                            <p>BASIC<span>STYLE</span></p>
-                        </div>
-                    </article>
-                    <article class="back">
-                        <h5>KIDS</h5>
-                    </article>
-                </section>
-            </div>
-        </div>
-        <div class="detail">
-            <div class="inner">
-                <div class="pic">
-                    <img src="" alt="">
-                </div>
-                <div class="con">
-                    <span class="arrow"></span>
-                    <h1>Titles</h1>
-                    <h2>subtitle</h2>
-                    <div class="wrap">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae minima aspernatur vel pariatur hic, maxime commodi doloremque, exercitationem voluptatem qui quisquam tenetur, eos adipisci necessitatibus officiis rerum animi veniam omnis perspiciatis ipsum ullam. Incidunt dolorum quidem aliquid debitis odit Molestiae minima aspernatur vel pariatur hic, maxime commodi doloremque<br><br> Explicabo consequatur at, similique deleniti natus a eum. Maiores perferendis repudiandae omnis nemo, et aliquam excepturi dolorum laboriosam.</p>
-                        <div class="thumb">
-                            <img src="" alt="">
-                        </div>
-                    </div>
-                    <h3>laboriosam</h3>
-                    <div class="date">
-                        <h1>date</h1>
-                        <h2>day</h2>
-                        <h3>month</h3>
-                    </div>
-                </div>
-                <a href="#" class="close"><span class="arrow"></span></a>
-                <p>Lorem ipsum dolor sit</p>
-            </div>
-        </div>
-    </figure>
+		<header id="header" class="myScroll">
+			<div class="inner">
+				<h1><a href="index.html">Lorem</a></h1>
+				<ul id="gnb">
+					<li>
+						<a href="about.html">ABOUTUS</a>
+						<div class="sub">
+							<ul>
+								<li>
+									<h2>PROJECTS</h2>
+									<a href="#">2017</a>
+									<a href="#">2018</a>
+									<a href="#">2019</a>
+									<a href="#">2020</a>
+								</li>
+								<li>
+									<h2>SERVICES</h2>
+									<a href="#">architecture</a>
+									<a href="#">interior</a>
+									<a href="#">design</a>
+								</li>
+								<li>
+									<h2>PROCESS</h2>
+									<a href="#">method</a>
+									<a href="#">technology</a>
+									<a href="#">project</a>
+								</li>
+								<li>
+									<h2>OUR TEAM</h2>
+									<a href="#">member</a>
+									<a href="#">org chart</a>
+								</li>
+								<li>
+									<div class="pic">
+										<img src="img/gnb1.jpg" alt="라디오 테이프 사진" />
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="community.html">COMMUNITY</a>
+						<div class="sub">
+							<ul>
+								<li>
+									<h2>FAQ</h2>
+									<a href="#">전체</a>
+									<a href="#">배송</a>
+									<a href="#">결제/영수증</a>
+									<a href="#">주문</a>
+								</li>
+								<li>
+									<h2>NOTICE</h2>
+									<a href="#">주문취소</a>
+									<a href="#">배송지변경</a>
+									<a href="#">서비스</a>
+								</li>
+								<li>
+									<h2>FAQ</h2>
+									<a href="#">검색</a>
+									<a href="#">리뷰/포인트</a>
+									<a href="#">기타</a>
+								</li>
+								<li>
+									<h2>NOTICE</h2>
+									<a href="#">공지사항</a>
+								</li>
+								<li>
+									<div class="pic">
+										<img src="img/gnb2.jpg" alt="창문 사진" />
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="youtube.html">YOUTUBE</a>
+						<div class="sub">
+							<ul>
+								<li>
+									<p>NEW</p>
+									<p>BEST</p>
+									<p>TREND</p>
+								</li>
+								<li>
+									<h2>WOMEN</h2>
+									<a href="#">S/S SEASON</a>
+									<a href="#">F/W SEASON</a>
+								</li>
+								<li>
+									<h2>MEN</h2>
+									<a href="#">S/S SEASON</a>
+									<a href="#">F/W SEASON</a>
+								</li>
+								<li>
+									<h2>2021</h2>
+									<a href="#">S/S SEASON</a>
+									<a href="#">F/W SEASON</a>
+								</li>
+								<li>
+									<div class="pic">
+										<img src="img/gnb3.jpg" alt="꽃 사진" />
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="gallery.html">GALLERY</a>
+						<div class="sub">
+							<ul>
+								<li>
+									<p>NEW</p>
+									<p>BEST</p>
+									<p>PHOTOS</p>
+								</li>
+								<li>
+									<h2>CATEGORY</h2>
+									<a href="#">LANDSCAPE</a>
+									<a href="#">FASHION</a>
+								</li>
+								<li>
+									<h2>CATEGORY</h2>
+									<a href="#">OCEAN</a>
+									<a href="#">CITY</a>
+								</li>
+								<li>
+									<h2>CATEGORY</h2>
+									<a href="#">SEARCH</a>
+								</li>
+								<li>
+									<div class="pic">
+										<img src="img/gnb4.jpg" alt="벽에 비친 나뭇잎 그림자" />
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="location.html">LOCATION</a>
+						<div class="sub">
+							<ul>
+								<li>
+									<h2><a href="#">스타필드 하남</a></h2>
+									<div class="pic">
+										<img src="img/gnb5.jpg" alt="관람차 사진" />
+									</div>
+								</li>
+								<li>
+									<h2><a href="#">스타필드 코엑스몰</a></h2>
+									<div class="pic">
+										<img src="img/gnb6.jpg" alt="관람차 사진" />
+									</div>
+								</li>
+								<li>
+									<h2><a href="#">스타필드 시티 위례</a></h2>
+									<div class="pic">
+										<img src="img/gnb7.jpg" alt="관람차 사진" />
+									</div>
+								</li>
+								<li>
+									<p><a href="#">CONTACT</a></p>
+									<p><a href="#">LOCATION</a></p>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<ul class="util">
+					<li>
+						<a href="#">
+							<span class="hidden">검색</span>
+						</a>
+					</li>
+					<li>
+						<a href="join.html">
+							<span class="hidden">로그인</span>
+						</a>
+					</li>
+					<li class="btnMo">
+						<a href="#">
+							<span>메뉴</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="gnbMo">
+				<ul>
+					<li>
+						<a href="about.html">
+							<div class="pic">
+								<img src="img/gnb1.jpg" alt="라디오 테이프" />
+							</div>
+							ABOUT
+						</a>
+						<span class="arrow"></span>
+						<ul>
+							<li>
+								<a href="#">project</a>
+							</li>
+							<li>
+								<a href="#">services</a>
+							</li>
+							<li>
+								<a href="#">process</a>
+							</li>
+							<li>
+								<a href="#">our team</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="community.html">
+							<div class="pic">
+								<img src="img/gnb2.jpg" alt="창문" />
+							</div>
+							COMMUNITY
+						</a>
+						<span class="arrow"></span>
+						<ul>
+							<li>
+								<a href="#">FAQ</a>
+							</li>
+							<li>
+								<a href="#">NOTICE</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="youtube.html">
+							<div class="pic">
+								<img src="img/gnb3.jpg" alt="꽃" />
+							</div>
+							YOUTUBE
+						</a>
+						<span class="arrow"></span>
+						<ul>
+							<li>
+								<a href="#">runway</a>
+							</li>
+							<li>
+								<a href="#">trend</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="gallery.html">
+							<div class="pic">
+								<img src="img/gnb4.jpg" alt="벽에 비친 나뭇잎 그림자" />
+							</div>
+							GALLERY
+						</a>
+						<span class="arrow"></span>
+						<ul>
+							<li>
+								<a href="#">flickr</a>
+							</li>
+							<li>
+								<a href="#">photos</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="location.html">
+							<div class="pic">
+								<img src="img/gnb5.jpg" alt="관람차" />
+							</div>
+							LOCATION
+						</a>
+						<span class="arrow"></span>
+						<ul>
+							<li>
+								<a href="#">contact</a>
+							</li>
+							<li>
+								<a href="#">map</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
 
-    <main id="main">
-        <div class="inner">
-            <section class="box1 myScroll">
-                <div class="wrap">
-                    <div class="frame">
-                        <div class="mySlider">
-                            <div class="slider-wrapper">
-                                <div>
-                                    <h1>This is who we are and how we like to work.1</h1>
-                                    <p>More about Lorem.</p>
-                                </div>
-                                <div>
-                                    <h1>This is who we are and how we like to work.2</h1>
-                                    <p>More about Lorem.</p>
-                                </div>
-                                <div>
-                                    <h1>This is who we are and how we like to work.3</h1>
-                                    <p>More about Lorem.</p>
-                                </div>
-                                <div>
-                                    <h1>This is who we are and how we like to work.4</h1>
-                                    <p>More about Lorem.</p>
-                                </div>
-                            </div>
-                            <ul class="btns">
-                                <li class="on"></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="con">
-                        <ul>
-                            <li>
-                                <div class="pic">
-                                    <img src="img/pic1-1.jpg" alt="미팅룸">
-                                </div>
-                                <h1>MEETING ROOMS.</h1>
-                                <h2>Fit for all your needs.</h2>
-                            </li>
-                            <li>
-                                <div class="pic">
-                                    <img src="img/pic1-2.jpg" alt="멤버쉽가입하는 모습">
-                                </div>
-                                <h1>BECOME A MEMBER.</h1>
-                                <h2>Get connected.</h2>
-                            </li>
-                            <li>
-                                <h1>Let's talk</h1>
-                                <h2>021231234</h2>
-                            </li>
-                            <li>
-                                <h1>Let's get started</h1>
-                                <h2>JOIN TODAY.</h2>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section class="box2">
-                <h1>WE WELCOME ALL</h1>
-                <div class="wrap">
-                    <article>
-                        <div class="pic">
-                            <svg viewBox="1000 343 1160 977.2894">
-                                <path d="M1632.97,400c13.53-2.33,27.28-2.73,40.9501-3.7
+		<figure id="visual">
+			<div class="inner">
+				<h1>CHOOSE YOUR</h1>
+				<br />
+				<h2>FASHION</h2>
+			</div>
+			<div class="filter">
+				<div class="inner">
+					<em>FILTER BY</em>
+					<ul>
+						<li class="on"><a href="#">WOMAN</a></li>
+						<li><a href="#">MAN</a></li>
+						<li><a href="#">KIDS</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="inner wrapbox">
+				<div class="wrap">
+					<section>
+						<article class="front">
+							<h3>WOMAN</h3>
+							<h4>ROMANTIC <br />COUNTRY</h4>
+							<div class="wrap">
+								<p>
+									감미롭고 상냥함을 느끼게하는 이미지의 디자인. 또한 회고적인
+									디자인을 말할 때도 있다. 전원풍의 소박함 속에 소녀다운
+									귀여움을 살린 스타일을 말하며, 프릴이 붙은 에이프런, 드레스
+									등이 이에 해당된다.<br />
+									감미롭고 상냥함을 느끼게하는 이미지의 디자인. 또한 회고적인
+									디자인을 말할 때도 있다. 전원풍의 소박함 속에 소녀다운
+									귀여움을 살린 스타일을 말하며, 프릴이 붙은 에이프런, 드레스
+									등이 이에 해당된다. 감미롭고 상냥함을 느끼게하는 이미지의
+									디자인. 또한 회고적인 디자인을 말할 때도 있다.
+								</p>
+								<ul>
+									<li>RUFFLE</li>
+									<li>RACE</li>
+									<li>DRESS</li>
+								</ul>
+							</div>
+							<div class="pic">
+								<a href="#"><img src="img/woman1.jpg" alt="드레스코디" /></a>
+								<p>BEST<span>ITEM</span></p>
+								<p>ROMANTIC<span>STYLE</span></p>
+							</div>
+						</article>
+						<article class="back">
+							<h5>WOMAN</h5>
+						</article>
+					</section>
+					<section>
+						<article class="front">
+							<h3>WOMAN</h3>
+							<h4>LAYERED / <br />LAYERED LOOK</h4>
+							<div class="wrap">
+								<p>
+									서로 다른 아이템의 옷을 겹쳐 입음으로써 효과를 내는 코디 유형.
+									특히 70년대 전반에 유행한 속에 입은 것이 겉에 보이게 입거나,
+									긴 소매의 블라우스 위에 반 소매의 스웨터나 자켓 등을 여러
+									방법으로 겹쳐 입은 룩이 유행했다.<br />
+									서로 다른 아이템의 옷을 겹쳐 입음으로써 효과를 내는 코디 유형.
+									특히 70년대 전반에 유행한 속에 입은 것이 겉에 보이게 입거나,
+									긴 소매의 블라우스 위에 반 소매의 스웨터나 자켓 등을 여러
+									방법으로 겹쳐 입은 룩이 유행했다. 서로 다른 아이템의 옷을 겹쳐
+									입음으로써 효과를 내는 코디 유형.
+								</p>
+								<ul>
+									<li>WRAP SKIRT</li>
+									<li>MIX & MATCH</li>
+									<li>LOOSE FIT</li>
+								</ul>
+							</div>
+							<div class="pic">
+								<a href="#"
+									><img src="img/woman2.jpg" alt="자켓을 레이어드한 코디"
+								/></a>
+								<p>NEW<span>ITEM</span></p>
+								<p>MODERN<span>STYLE</span></p>
+							</div>
+						</article>
+						<article class="back">
+							<h5>WOMAN</h5>
+						</article>
+					</section>
+					<section>
+						<article class="front">
+							<h3>WOMAN</h3>
+							<h4>RIDERS <br />LOOK</h4>
+							<div class="wrap">
+								<p>
+									불량스럽고 과격한 느낌을 주는 오토바이 라이더들의 복장에서
+									아이디어를 얻어 디자인한 패션스타일. 주로 검은색 가죽소재를
+									이용한 자켓과 바지등 아이템들을 함께 코디하여 강하고 단단한
+									이미지를 보여준다.<br />
+									불량스럽고 과격한 느낌을 주는 오토바이 라이더들의 복장에서
+									아이디어를 얻어 디자인한 패션스타일. 주로 검은색 가죽소재를
+									이용한 자켓과 바지등 아이템들을 함께 코디하여 강하고 단단한
+									이미지를 보여준다. 불량스럽고 과격한 느낌을 주는 오토바이
+									라이더들의 복장에서 아이디어를 얻어 디자인한 패션스타일.
+								</p>
+								<ul>
+									<li>LEATER</li>
+									<li>RUST</li>
+									<li>BLACK</li>
+								</ul>
+							</div>
+							<div class="pic">
+								<a href="#"
+									><img
+										src="img/woman3.jpg"
+										alt="가죽자켓을 활용해 올블랙컬러로 코디"
+								/></a>
+								<p>HOT<span>ITEM</span></p>
+								<p>CLASSIC<span>STYLE</span></p>
+							</div>
+						</article>
+						<article class="back">
+							<h5>WOMAN</h5>
+						</article>
+					</section>
+				</div>
+				<div class="wrap">
+					<section>
+						<article class="front">
+							<h3>MAN</h3>
+							<h4>MODS <br />LOOK</h4>
+							<div class="wrap">
+								<p>
+									런던의 카너비 스트리트에서 생긴 유행으로, 기존의 보수화된
+									관습에 저항하며 이를 패션으로 승화시킨 사람들의 스타일을
+									모즈룩이라 부르게 되었다. 1960년대 초반 영국의 비틀즈와 미국의
+									엘비스 프레슬리에 의해 크게 유행하기 시작했다.<br />
+									런던의 카너비 스트리트에서 생긴 유행으로, 기존의 보수화된
+									관습에 저항하며 이를 패션으로 승화시킨 사람들의 스타일을
+									모즈룩이라 부르게 되었다. 1960년대 초반 영국의 비틀즈와 미국의
+									엘비스 프레슬리에 의해 크게 유행하기 시작했다.
+								</p>
+								<ul>
+									<li>LONG HAIR</li>
+									<li>FLORAL SHIRT</li>
+									<li>SUIT</li>
+								</ul>
+							</div>
+							<div class="pic">
+								<a href="#">
+									<img src="img/man1.jpg" alt="횡단보도 건너는 모습의 비틀즈" />
+								</a>
+								<p>BEST<span>ITEM</span></p>
+								<p>VINTAGE<span>STYLE</span></p>
+							</div>
+						</article>
+						<article class="back">
+							<h5>MAN</h5>
+						</article>
+					</section>
+					<section>
+						<article class="front">
+							<h3>MAN</h3>
+							<h4>DANDY / <br />MANNISH LOOK</h4>
+							<div class="wrap">
+								<p>
+									19세기의 보 블럼멜로 알려진 죠지 브라이언 브럼멜이 대표적인
+									인물로 그는 질 좋은 순백의 마로 만든 셔츠와 장식이 없는 의복을
+									꼭 맞게 착용하였으며, 이후 이것은 영국 신사복 유행의 기본
+									원칙이 되었다.<br />
+									19세기의 보 블럼멜로 알려진 죠지 브라이언 브럼멜이 대표적인
+									인물로 그는 질 좋은 순백의 마로 만든 셔츠와 장식이 없는 의복을
+									꼭 맞게 착용하였으며, 이후 이것은 영국 신사복 유행의 기본
+									원칙이 되었다.
+								</p>
+								<ul>
+									<li>BLAZER</li>
+									<li>OXFORD</li>
+									<li>LOAFER</li>
+								</ul>
+							</div>
+							<div class="pic">
+								<a href="#">
+									<img src="img/man2.jpg" alt="정장입은 남자" />
+								</a>
+								<p>NEW<span>ITEM</span></p>
+								<p>CLASSIC<span>STYLE</span></p>
+							</div>
+						</article>
+						<article class="back">
+							<h5>MAN</h5>
+						</article>
+					</section>
+					<section>
+						<article class="front">
+							<h3>MAN</h3>
+							<h4>EDWARDIAN <br />LOOK</h4>
+							<div class="wrap">
+								<p>
+									20세기 초 영국의 에드워드 7세 시대에 유행하였던 남녀 복장을
+									모티브로 한 패션으로 리전시 칼라, 목의 주름이 있는 우아한
+									실루엣이 특징이다. 특히 남성복의 우아한 프록코트 스타일을
+									가르키는 경우가 많다.<br />
+									20세기 초 영국의 에드워드 7세 시대에 유행하였던 남녀 복장을
+									모티브로 한 패션으로 리전시 칼라, 목의 주름이 있는 우아한
+									실루엣이 특징이다. 특히 남성복의 우아한 프록코트 스타일을
+									가르키는 경우가 많다.
+								</p>
+								<ul>
+									<li>JACKET</li>
+									<li>TROUSERS</li>
+									<li>WAISTCOAT</li>
+								</ul>
+							</div>
+							<div class="pic">
+								<a href="#">
+									<img src="img/man3.jpg" alt="프록코트입은 남자" />
+								</a>
+								<p>HOT<span>ITEM</span></p>
+								<p>MODERN<span>STYLE</span></p>
+							</div>
+						</article>
+						<article class="back">
+							<h5>MAN</h5>
+						</article>
+					</section>
+				</div>
+				<div class="wrap">
+					<section>
+						<article class="front">
+							<h3>KIDS</h3>
+							<h4>BIRTHDAY <br />LOOK</h4>
+							<div class="wrap">
+								<p>
+									한국에서는 사람이 태어난 뒤 만 1세에 처음 맞는 생일은 첫돌,
+									첫돌과 같은 간지인 만 60세 생일을 환갑, 그 이듬해를 진갑이라고
+									부르는 등 특별한 생일에는 이름을 붙이기도 한다. 왕국에서는
+									왕의 생일을 공휴일로 지정하기도 한다.<br />
+									한국에서는 사람이 태어난 뒤 만 1세에 처음 맞는 생일은 첫돌,
+									첫돌과 같은 간지인 만 60세 생일을 환갑, 그 이듬해를 진갑이라고
+									부르는 등 특별한 생일에는 이름을 붙이기도 한다. 왕국에서는
+									왕의 생일을 공휴일로 지정하기도 한다.
+								</p>
+								<ul>
+									<li>DRESS</li>
+									<li>SPARKLY</li>
+									<li>BLACK TIE</li>
+								</ul>
+							</div>
+							<div class="pic">
+								<a href="#">
+									<img src="img/kids1.jpg" alt="별무늬 드레스를 입은 아이" />
+								</a>
+								<p>BEST<span>ITEM</span></p>
+								<p>LOVELY<span>STYLE</span></p>
+							</div>
+						</article>
+						<article class="back">
+							<h5>KIDS</h5>
+						</article>
+					</section>
+					<section>
+						<article class="front">
+							<h3>KIDS</h3>
+							<h4>HALLOWEEN <br />PARTY</h4>
+							<div class="wrap">
+								<p>
+									10월 31일 밤을 기념하여 행해지는 영미권의 전통 행사. 이 날에는
+									죽은 영혼들이 되살아나며 정령이나 마녀 등이 출몰한다고 믿고
+									귀신들에게 육신을 뺏기지 않기 위해 사람들은 유령이나 흡혈귀,
+									괴물 등의 복장을 하고 축제를 즐긴다.<br />
+									10월 31일 밤을 기념하여 행해지는 영미권의 전통 행사. 이 날에는
+									죽은 영혼들이 되살아나며 정령이나 마녀 등이 출몰한다고 믿고
+									귀신들에게 육신을 뺏기지 않기 위해 사람들은 유령이나 흡혈귀,
+									괴물 등의 복장을 하고 축제를 즐긴다. 10월 31일 밤을 기념하여
+									행해지는 영미권의 전통 행사.
+								</p>
+								<ul>
+									<li>COSTUME</li>
+									<li>HERO</li>
+									<li>PUMPKIN</li>
+								</ul>
+							</div>
+							<div class="pic">
+								<a href="#">
+									<img src="img/kids2.jpg" alt="코끼리옷을 입은 아이" />
+								</a>
+								<p>HOT<span>ITEM</span></p>
+								<p>UNIQUE <span>STYLE</span></p>
+							</div>
+						</article>
+						<article class="back">
+							<h5>KIDS</h5>
+						</article>
+					</section>
+					<section>
+						<article class="front">
+							<h3>KIDS</h3>
+							<h4>HOLIDAY <br />LOOK</h4>
+							<div class="wrap">
+								<p>
+									추수감사절, 블랙프라이데이 시점이나 11월을 기점으로, 새해 첫날
+									직후 까지를 홀리데이라고 칭한다. 이 때에는 여러 민족, 종교의
+									명절이 모여있기 때문에 이를 뭉뚱그려 "홀리데이 시즌"이라
+									칭하는 것이다.<br />
+									추수감사절, 블랙프라이데이 시점이나 11월을 기점으로, 새해 첫날
+									직후 까지를 홀리데이라고 칭한다. 이 때에는 여러 민족, 종교의
+									명절이 모여있기 때문에 이를 뭉뚱그려 "홀리데이 시즌"이라
+									칭하는 것이다. 추수감사절, 블랙프라이데이 시점이나 11월을
+									기점으로, 새해 첫날 직후 까지를 홀리데이라고 칭한다.
+								</p>
+								<ul>
+									<li>NEAT</li>
+									<li>TIDY</li>
+									<li>FORMAL</li>
+								</ul>
+							</div>
+							<div class="pic">
+								<a href="#">
+									<img src="img/kids3.jpg" alt="나비넥타이를 한 아이" />
+								</a>
+								<p>NEW<span>ITEM</span></p>
+								<p>BASIC<span>STYLE</span></p>
+							</div>
+						</article>
+						<article class="back">
+							<h5>KIDS</h5>
+						</article>
+					</section>
+				</div>
+			</div>
+			<div class="detail">
+				<div class="inner">
+					<div class="pic">
+						<img src="" alt="" />
+					</div>
+					<div class="con">
+						<span class="arrow"></span>
+						<h1>Titles</h1>
+						<h2>subtitle</h2>
+						<div class="wrap">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Molestiae minima aspernatur vel pariatur hic, maxime commodi
+								doloremque, exercitationem voluptatem qui quisquam tenetur, eos
+								adipisci necessitatibus officiis rerum animi veniam omnis
+								perspiciatis ipsum ullam. Incidunt dolorum quidem aliquid
+								debitis odit Molestiae minima aspernatur vel pariatur hic,
+								maxime commodi doloremque<br /><br />
+								Explicabo consequatur at, similique deleniti natus a eum.
+								Maiores perferendis repudiandae omnis nemo, et aliquam excepturi
+								dolorum laboriosam.
+							</p>
+							<div class="thumb">
+								<img src="" alt="" />
+							</div>
+						</div>
+						<h3>laboriosam</h3>
+						<div class="date">
+							<h1>date</h1>
+							<h2>day</h2>
+							<h3>month</h3>
+						</div>
+					</div>
+					<a href="#" class="close"><span class="arrow"></span></a>
+					<p>Lorem ipsum dolor sit</p>
+				</div>
+			</div>
+		</figure>
+
+		<main id="main">
+			<div class="inner">
+				<section class="box1 myScroll">
+					<div class="wrap">
+						<div class="frame">
+							<div class="mySlider">
+								<div class="slider-wrapper">
+									<div>
+										<h1>This is who we are and how we like to work.1</h1>
+										<p>More about Lorem.</p>
+									</div>
+									<div>
+										<h1>This is who we are and how we like to work.2</h1>
+										<p>More about Lorem.</p>
+									</div>
+									<div>
+										<h1>This is who we are and how we like to work.3</h1>
+										<p>More about Lorem.</p>
+									</div>
+									<div>
+										<h1>This is who we are and how we like to work.4</h1>
+										<p>More about Lorem.</p>
+									</div>
+								</div>
+								<ul class="btns">
+									<li class="on"></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+						<div class="con">
+							<ul>
+								<li>
+									<div class="pic">
+										<img src="img/pic1-1.jpg" alt="미팅룸" />
+									</div>
+									<h1>MEETING ROOMS.</h1>
+									<h2>Fit for all your needs.</h2>
+								</li>
+								<li>
+									<div class="pic">
+										<img src="img/pic1-2.jpg" alt="멤버쉽가입하는 모습" />
+									</div>
+									<h1>BECOME A MEMBER.</h1>
+									<h2>Get connected.</h2>
+								</li>
+								<li>
+									<h1>Let's talk</h1>
+									<h2>021231234</h2>
+								</li>
+								<li>
+									<h1>Let's get started</h1>
+									<h2>JOIN TODAY.</h2>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="box2">
+					<h1>WE WELCOME ALL</h1>
+					<div class="wrap">
+						<article>
+							<div class="pic">
+								<svg viewBox="1000 343 1160 977.2894">
+									<path
+										d="M1632.97,400c13.53-2.33,27.28-2.73,40.9501-3.7
 		c36.59-1.64,73.62,1.27,109.0299,10.93c2.2201,0.48,4.8101,2.05,4.55,4.67c0,14.3,0.05,28.62-0.03,42.93
 		c-0.11,3.15-3.6899,4.52-6.4,4.45c-5.5199-0.04-11.12,0.98-16.5699,0.09c-24.5-9.07-50.45-14.19-76.5601-15.11
 		c-17.3899-1.1-35.1599,2.16-50.87,9.73c-13.96,6.79-25.1499,18.93-30.59,33.49c-4.76,12.22-6.26,25.5-6.02,38.55
@@ -768,17 +861,19 @@
 		c-1.33,0.64-2.91,0.31-4.29,0.52c-0.7899,1.85-1.5299,3.71-2.27,5.58c0.8201,3.84,2.1101,7.58,4.5901,10.7
 		c2.52-2.2899,5.0699-4.5399,7.51-6.9199c-0.8401-1.38-1.67-2.76-2.4501-4.1201c0.74-4.05,1.3101-8.12,2.0601-12.16
 		C1715.9,1011.64,1714.51,1012.47,1713.27,1013.5 M1725.05,1019.96c1.83-1.66,3.58-3.41,5.35-5.15c-0.84,0.04-2.53,0.13-3.37,0.17
-                                C1726.34,1016.63,1725.67,1018.28,1725.05,1019.96z"/>    
-                            </svg>
-                        </div>
-                        <h2>Office Spaces.</h2>
-                        <p>Lorem ipsum dolor, consectetur adipisicing elit, fugiat.</p>
-                        <a href="#">Find out more<span class="arrow"></span></a>
-                    </article>
-                    <article>
-                        <div class="pic">
-                            <svg viewBox="370 383 1100 977.2894">
-                                <path d="M940.95,435.66c10.61-1.73,21.35-1.08,32.05-1.18
+                                C1726.34,1016.63,1725.67,1018.28,1725.05,1019.96z"
+									/>
+								</svg>
+							</div>
+							<h2>Office Spaces.</h2>
+							<p>Lorem ipsum dolor, consectetur adipisicing elit, fugiat.</p>
+							<a href="#">Find out more<span class="arrow"></span></a>
+						</article>
+						<article>
+							<div class="pic">
+								<svg viewBox="370 383 1100 977.2894">
+									<path
+										d="M940.95,435.66c10.61-1.73,21.35-1.08,32.05-1.18
                                     c10.02,0.02,20.05-0.04,30.07,0.01c2.89-0.22,4.43,3.02,4.03,5.53c-0.58,12.94,0.25,25.88-0.25,38.83
                                     c37.8201,1.39,75.9,2.2,113.22,9.15c6.9801,1.48,14,2.94,20.76,5.3c2.03,0.51,2.87,2.77,2.7201,4.69
                                     c-0.02,13.96,0.0199,27.93-0.02,41.9c0.11,2.19-1.66,4.31-3.92,4.28c-4.87,0.28-9.75,0.51-14.61,0.72
@@ -846,17 +941,19 @@
                                     c2.09,1.69,4.12,3.47,6.13,5.29c4.63-5.46,9.8-10.4301,14.54-15.79c-3.3401-4.95-5.5701-10.52-8.27-15.81
                                     c1.08-6.17,1.6-12.42,2.7999-18.57c-3.35-1.99-6.96-3.51-10.12-5.8c-4.8999,1.72-7.8099-3.26-11.1599-5.86
                                     c-1.49-0.05-3.1801,0.51-4.29-0.75c-8.42-6.23-13.66-15.73-22.0601-21.96c-2.34-1.56-2.83-4.45-4.35-6.57
-                                    c-4.13-3.91-8.62-7.42-13.14-10.84c-6.46-4.67-11.85-10.59-17.6399-16.02C1024.92,873.66,1020.47,876.17,1015.98,878.59z"/>
-                            </svg>
-                        </div>
-                        <h2>Memberships.</h2>
-                        <p>Lorem ipsum dolor, consectetur adipisicing elit, fugiat.</p>
-                        <a href="#">Find out more<span class="arrow"></span></a>
-                    </article>
-                    <article>
-                        <div class="pic">
-                            <svg viewBox="-250 383 1100 977.2894">
-                                <path d="M366.9,458.33c47.31-6.86,95.61-7.55,142.98-0.76
+                                    c-4.13-3.91-8.62-7.42-13.14-10.84c-6.46-4.67-11.85-10.59-17.6399-16.02C1024.92,873.66,1020.47,876.17,1015.98,878.59z"
+									/>
+								</svg>
+							</div>
+							<h2>Memberships.</h2>
+							<p>Lorem ipsum dolor, consectetur adipisicing elit, fugiat.</p>
+							<a href="#">Find out more<span class="arrow"></span></a>
+						</article>
+						<article>
+							<div class="pic">
+								<svg viewBox="-250 383 1100 977.2894">
+									<path
+										d="M366.9,458.33c47.31-6.86,95.61-7.55,142.98-0.76
                                     c14.16,2.18,28.25,4.93,42.06,8.8c2.15,0.34,3.56,2.46,3.25,4.6c0.02,12.69,0.01,25.38,0,38.07c0.34,2.34-1.57,4.93-4.08,4.62
                                     c-3.31-0.02-6.69,0.95-9.93,0.15c-39.33-14.23-81.52-19.47-123.2-18.38c-40.18,2.5-80.36,16.95-110.67,43.89
                                     c-11.93,10.6-21.54,23.64-28.76,37.84c72.84-0.15,145.67,0,218.51-0.0699c2.35-0.51,4.83,1.39,4.54,3.87
@@ -921,355 +1018,469 @@
                                     c0.03,0.64,0.1,1.9,0.13,2.54c1.91-1.94,3.98-3.73,5.64-5.88C473.8,1013.58,471.94,1014.85,470.13,1016.15 M453.16,1021.07
                                     c0.75,3.27,1.65,6.57,3.74,9.28c-0.4-1.12-0.83-2.22-1.27-3.2999c0.43-3.9401,1.07-7.85,1.68-11.7601
                                     C454.35,1015.56,454.22,1018.92,453.16,1021.07 M465.81,1019.8c-0.74,1.7-1.44,3.42-2.13,5.16c1.97-1.74,3.81-3.61,5.74-5.39
-                                    C468.21,1019.63,467.01,1019.71,465.81,1019.8z"/>
-                            </svg>
-                        </div>
-                        <h2>Meeting rooms.</h2>
-                        <p>Lorem ipsum dolor, consectetur adipisicing elit, fugiat.</p>
-                        <a href="#">Find out more<span class="arrow"></span></a>
-                    </article>
-                </div>
-            </section>
-        </div>
-        <div class="mento myScroll">
-            <div class="inner">
-                <h1>World Style Star</h1>
-                <h2>FASHION NEWS AND TRENDS</h2>
-                <h3>LATEST STORIES</h3>
-                <div class="sliderbox">
-                    <div class="frame">
-                        <div class="slider-wrapper">
-                            <div class="slider">
-                                <div class="pic">
-                                    <img src="img/mento1.jpg" alt="할로윈파티를 위해 모인 사람들">
-                                </div>
-                                <h4>Harry Styles Threw the Best Halloween Party in New York</h4>
-                            </div>
-                            <div class="slider">
-                                <div class="pic">
-                                    <img src="img/mento2.jpg" alt="닥터마틴을 신은 사람들">
-                                </div>
-                                <h4>An Ode to Dr. Martens, the Combat Boots That Stole My Heart at 13</h4>
-                            </div>
-                            <div class="slider">
-                                <div class="pic">
-                                    <img src="img/mento3.jpg" alt="디왈리를 기념하는 Mindy Kaling">
-                                </div>
-                                <h4>Mindy Kaling Celebrated Diwali by Honoring Inspiring Women</h4>
-                            </div>
-                            <div class="slider">
-                                <div class="pic">
-                                    <img src="img/mento4.jpg" alt="베스트 드레서로 뽑힌 사람들">
-                                </div>
-                                <h4>This Week, The Best Dressed Stars Kickstarted Party Season</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="prev"></a>
-                    <a href="#" class="next"></a>
-                </div>
-            </div>
-        </div>
-        <div class="inner">
-            <section class="box3 myScroll">
-                <div class="wrap">
-                    <div class="left">
-                        <article>
-                            <div class="pic">
-                                <img src="img/box3-1.jpg" alt="레몬물에 잠긴 얼굴">
-                            </div>
-                            <span class="tag">FASHION</span>
-                            <h1>Macaulay Culkin makes surprise runway appearance at star-studded Gucci show</h1>
-                            <h2>Macaulay Culkin often shirks the spotlight, but he made a surprise appearance Tuesday as a runway model for Gucci.</h2>
-                        </article>
-                        <article>
-                            <h1>LOREM LOVES</h1>
-                            <h2>#패션, #트렌드, #쇼핑, #fashion, #trend, #style, #shopping</h2>
-                            <div class="wrap">
-                                <div>
-                                    <div class="pic">
-                                        <img src="img/box3-2.jpg" alt="독특한 어글리슈즈">
-                                    </div>
-                                    <h3>Love’ Em or Hate’ Em—A Complete Guide to the Ugly Shoe</h3>
-                                </div>
-                                <div>
-                                    <div class="pic">
-                                        <img src="img/box3-3.jpg" alt="버킷햇 모자를 쓴 사람들">
-                                    </div>
-                                    <h3>The Bucket-Hat Trend Is (Still) Going Nowhere </h3>
-                                </div>
-                            </div>
-                            <a href="#" class="more">More<span class="arrow"></span></a>
-                        </article>
-                        <article>
-                            <h1>HOROSCOPE<span>WEEKLY 2021.11.08-2021.11.15</span></h1>
-                            <div class="frame">
-                                <div class="slider-wrapper">
-                                    <div class="slider">
-                                        <div class="wrap">
-                                            <div class="pic">
-                                                <img src="img/aquarius.jpg" alt="물병자리">
-                                            </div>
-                                            <div class="con">
-                                                <h2>AQUARIUS</h2>
-                                                <h3>물병자리</h3>
-                                                <p>갑작스러운 소식에 놀라지 않도록 긴장을 늦추지 마세요. 회사 경영진의 예상치 못한 발표로 지금의 회사에 남을지 이직할지 결정해야 하거나, 먼 곳으로 이사해야 할 수도 있어요.</p>
-                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider">
-                                        <div class="wrap">
-                                            <div class="pic">
-                                                <img src="img/picses.jpg" alt="물고기자리">
-                                            </div>
-                                            <div class="con">
-                                                <h2>PISCES</h2>
-                                                <h3>물고기자리</h3>
-                                                <p>예상 밖의 소식이 찾아오겠네요. 누 군가의 비밀이나 불성실한 행동이 표 면 위로 드러날 수 있어요. 미디어와 관련된 프로젝트를 맡게 될지도 모르 겠고요.</p>
-                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider">
-                                        <div class="wrap">
-                                            <div class="pic">
-                                                <img src="img/aries.jpg" alt="양자리">
-                                            </div>
-                                            <div class="con">
-                                                <h2>ARIES</h2>
-                                                <h3>양자리</h3>
-                                                <p>예상치 못한 변화가 찾아올 수 있습니다. 특히 돈 문제를 조심하세요. 상황이 유동적이니 임금 협상은 나중으로 미루는 것이 좋겠어요. 미래의 수입을 생각하고 미리 지출했다가 화를 당할 수도 있습니다.</p>
-                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider">
-                                        <div class="wrap">
-                                            <div class="pic">
-                                                <img src="img/taurus.jpg" alt="황소자리">
-                                            </div>
-                                            <div class="con">
-                                                <h2>TAURUS</h2>
-                                                <h3>황소자리</h3>
-                                                <p>가까운 관계가 느닷없이 불안정해지면서, 친밀한 사람에 대해 어떤 결정을 내려야 할 수도 있습니다. 상대의 의견을 충분히 경청하고 수용하려는 태도가 필요해요.</p>
-                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider">
-                                        <div class="wrap">
-                                            <div class="pic">
-                                                <img src="img/gemini.jpg" alt="쌍둥이자리">
-                                            </div>
-                                            <div class="con">
-                                                <h2>GEMINI</h2>
-                                                <h3>쌍둥이자리</h3>
-                                                <p>시간을 유연하게 활용하는 태도가 중요한 달이에요. 그러니 일정을 과도하게 잡지 않도록 주의하세요. 이달 당신의 모든 활동이 회사 업무에 집중되겠군요.</p>
-                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider">
-                                        <div class="wrap">
-                                            <div class="pic">
-                                                <img src="img/cancer.jpg" alt="게자리">
-                                            </div>
-                                            <div class="con">
-                                                <h2>CANCER</h2>
-                                                <h3>게자리</h3>
-                                                <p>4일 이후 애정 관계에 난기류가 찾아올지도 모릅니다. 상대가 다른 사람을 마음에 두고 있다는 가슴 아픈 이야기를 전하거나 자녀와 의견이 충돌할 수 있으니 신중한 대응이 필요합니다. </p>
-                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider">
-                                        <div class="wrap">
-                                            <div class="pic">
-                                                <img src="img/leo.jpg" alt="사자자리">
-                                            </div>
-                                            <div class="con">
-                                                <h2>LEO</h2>
-                                                <h3>사자자리</h3>
-                                                <p>가족, 거주지 또는 재산과 관련된 문제가 생깁니다. 예상치 못한 부분이기에 충격을 받을 수 있어요. 마치 세상의 모든 어려움을 짊어진 듯한 기분이 들지도 모르지만, 잠시뿐이라는 걸 기억해요.</p>
-                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider">
-                                        <div class="wrap">
-                                            <div class="pic">
-                                                <img src="img/virgo.jpg" alt="처녀자리">
-                                            </div>
-                                            <div class="con">
-                                                <h2>VIRGO</h2>
-                                                <h3>처녀자리</h3>
-                                                <p>분주한 시간을 보내온 터라 여행을 가고 싶은 마음은 이해하지만, 이달은 여행운이 좋 지 않아요. 집에서 가까운 곳에 다녀오는 것만으로도 충분할 겁니다.</p>
-                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider">
-                                        <div class="wrap">
-                                            <div class="pic">
-                                                <img src="img/libra.jpg" alt="천칭자리">
-                                            </div>
-                                            <div class="con">
-                                                <h2>LIBRA</h2>
-                                                <h3>천칭자리</h3>
-                                                <p>4일 이후 뜻밖의 지출이 발생하면서 여러 대금을 지불하는 데 몰두해야 할 것 같네요. 사람들을 냉정하게 비판하고 싶은 생각이 들더라도 그 엄격함을 내려놓고 다정한 시선을 건네보 는 건 어떨까요.</p>
-                                                <a href="#" class="more">더보기<span class="arrow"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="#" class="prev"></a>
-                                <a href="#" class="next"></a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="right">
-                        <h1>WEEKLY HOT ISSUE</h1>
-                        <article>
-                            <div class="pic">
-                                <img src="img/issue1.jpg" alt="모자">
-                            </div>
-                            <h2>Hat styling for autumn daily look</h2>
-                        </article>
-                        <article>
-                            <div class="pic">
-                                <img src="img/issue2.jpg" alt="요리하는 방탄소년단 정국">
-                            </div>
-                            <h2>Wear Knitwear Like a Street Styler This Labor Day Weekend</h2>
-                        </article>
-                        <article>
-                            <div class="pic">
-                                <img src="img/issue3.jpg" alt="보아">
-                            </div>
-                            <h2>Shane Gabier Puts His Colorful, Collectible Ceramics</h2>
-                        </article>
-                        <article>
-                            <div class="pic">
-                                <img src="img/issue4.jpg" alt="대화하는모습">
-                            </div>
-                            <h2>Like Gwyneth, Street Style Loves a Power Suit</h2>
-                        </article>
-                    </div>
-                </div>
-            </section>
-            <section class="box4 myScroll">
-                <h1>WHAT WE'RE ALL ABOUT</h1>
-                <div class="wrap">
-                    <article>
-                        <div class="pic">
-                            <img src="img/pic4-1.jpg" alt="개인공간">
-                        </div>
-                        <h2>Independent Spaces</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugiat incidunt amet totam obcaecati eius atque exercitationem cupiditate cumque accusantium.</p>
-                    </article>
-                    <article>
-                        <div class="pic">
-                            <img src="img/pic4-2.jpg" alt="바다가 보이는 사무실">
-                        </div>
-                        <h2>Inspiring Ofiice Spaces</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugiat incidunt amet totam obcaecati eius atque exercitationem cupiditate cumque accusantium.</p>
-                    </article>
-                    <article>
-                        <div class="pic">
-                            <img src="img/pic4-3.jpg" alt="멤버십 가입 공간">
-                        </div>
-                        <h2>Spaces Membership</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugiat incidunt amet totam obcaecati eius atque exercitationem cupiditate cumque accusantium.</p>
-                    </article>
-                    <article>
-                        <div class="pic">
-                            <img src="img/pic4-4.jpg" alt="여러사람들이 협업하는 모습">
-                        </div>
-                        <h2>Social Networking</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugiat incidunt amet totam obcaecati eius atque exercitationem cupiditate cumque accusantium.</p>
-                    </article>
-                    <article>
-                        <div class="pic">
-                            <img src="img/pic4-5.jpg" alt="메뉴사진">
-                        </div>
-                        <h2>Service & Catering</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugiat incidunt amet totam obcaecati eius atque exercitationem cupiditate cumque accusantium.</p>
-                    </article>
-                </div>
-            </section>
-        </div>
-    </main>
+                                    C468.21,1019.63,467.01,1019.71,465.81,1019.8z"
+									/>
+								</svg>
+							</div>
+							<h2>Meeting rooms.</h2>
+							<p>Lorem ipsum dolor, consectetur adipisicing elit, fugiat.</p>
+							<a href="#">Find out more<span class="arrow"></span></a>
+						</article>
+					</div>
+				</section>
+			</div>
+			<div class="mento myScroll">
+				<div class="inner">
+					<h1>World Style Star</h1>
+					<h2>FASHION NEWS AND TRENDS</h2>
+					<h3>LATEST STORIES</h3>
+					<div class="sliderbox">
+						<div class="frame">
+							<div class="slider-wrapper">
+								<div class="slider">
+									<div class="pic">
+										<img
+											src="img/mento1.jpg"
+											alt="할로윈파티를 위해 모인 사람들"
+										/>
+									</div>
+									<h4>
+										Harry Styles Threw the Best Halloween Party in New York
+									</h4>
+								</div>
+								<div class="slider">
+									<div class="pic">
+										<img src="img/mento2.jpg" alt="닥터마틴을 신은 사람들" />
+									</div>
+									<h4>
+										An Ode to Dr. Martens, the Combat Boots That Stole My Heart
+										at 13
+									</h4>
+								</div>
+								<div class="slider">
+									<div class="pic">
+										<img
+											src="img/mento3.jpg"
+											alt="디왈리를 기념하는 Mindy Kaling"
+										/>
+									</div>
+									<h4>
+										Mindy Kaling Celebrated Diwali by Honoring Inspiring Women
+									</h4>
+								</div>
+								<div class="slider">
+									<div class="pic">
+										<img
+											src="img/mento4.jpg"
+											alt="베스트 드레서로 뽑힌 사람들"
+										/>
+									</div>
+									<h4>
+										This Week, The Best Dressed Stars Kickstarted Party Season
+									</h4>
+								</div>
+							</div>
+						</div>
+						<a href="#" class="prev"></a>
+						<a href="#" class="next"></a>
+					</div>
+				</div>
+			</div>
+			<div class="inner">
+				<section class="box3 myScroll">
+					<div class="wrap">
+						<div class="left">
+							<article>
+								<div class="pic">
+									<img src="img/box3-1.jpg" alt="레몬물에 잠긴 얼굴" />
+								</div>
+								<span class="tag">FASHION</span>
+								<h1>
+									Macaulay Culkin makes surprise runway appearance at
+									star-studded Gucci show
+								</h1>
+								<h2>
+									Macaulay Culkin often shirks the spotlight, but he made a
+									surprise appearance Tuesday as a runway model for Gucci.
+								</h2>
+							</article>
+							<article>
+								<h1>LOREM LOVES</h1>
+								<h2>
+									#패션, #트렌드, #쇼핑, #fashion, #trend, #style, #shopping
+								</h2>
+								<div class="wrap">
+									<div>
+										<div class="pic">
+											<img src="img/box3-2.jpg" alt="독특한 어글리슈즈" />
+										</div>
+										<h3>
+											Love’ Em or Hate’ Em—A Complete Guide to the Ugly Shoe
+										</h3>
+									</div>
+									<div>
+										<div class="pic">
+											<img src="img/box3-3.jpg" alt="버킷햇 모자를 쓴 사람들" />
+										</div>
+										<h3>The Bucket-Hat Trend Is (Still) Going Nowhere</h3>
+									</div>
+								</div>
+								<a href="#" class="more">More<span class="arrow"></span></a>
+							</article>
+							<article>
+								<h1>HOROSCOPE<span>WEEKLY 2021.11.08-2021.11.15</span></h1>
+								<div class="frame">
+									<div class="slider-wrapper">
+										<div class="slider">
+											<div class="wrap">
+												<div class="pic">
+													<img src="img/aquarius.jpg" alt="물병자리" />
+												</div>
+												<div class="con">
+													<h2>AQUARIUS</h2>
+													<h3>물병자리</h3>
+													<p>
+														갑작스러운 소식에 놀라지 않도록 긴장을 늦추지
+														마세요. 회사 경영진의 예상치 못한 발표로 지금의
+														회사에 남을지 이직할지 결정해야 하거나, 먼 곳으로
+														이사해야 할 수도 있어요.
+													</p>
+													<a href="#" class="more"
+														>더보기<span class="arrow"></span
+													></a>
+												</div>
+											</div>
+										</div>
+										<div class="slider">
+											<div class="wrap">
+												<div class="pic">
+													<img src="img/picses.jpg" alt="물고기자리" />
+												</div>
+												<div class="con">
+													<h2>PISCES</h2>
+													<h3>물고기자리</h3>
+													<p>
+														예상 밖의 소식이 찾아오겠네요. 누 군가의 비밀이나
+														불성실한 행동이 표 면 위로 드러날 수 있어요.
+														미디어와 관련된 프로젝트를 맡게 될지도 모르 겠고요.
+													</p>
+													<a href="#" class="more"
+														>더보기<span class="arrow"></span
+													></a>
+												</div>
+											</div>
+										</div>
+										<div class="slider">
+											<div class="wrap">
+												<div class="pic">
+													<img src="img/aries.jpg" alt="양자리" />
+												</div>
+												<div class="con">
+													<h2>ARIES</h2>
+													<h3>양자리</h3>
+													<p>
+														예상치 못한 변화가 찾아올 수 있습니다. 특히 돈
+														문제를 조심하세요. 상황이 유동적이니 임금 협상은
+														나중으로 미루는 것이 좋겠어요. 미래의 수입을
+														생각하고 미리 지출했다가 화를 당할 수도 있습니다.
+													</p>
+													<a href="#" class="more"
+														>더보기<span class="arrow"></span
+													></a>
+												</div>
+											</div>
+										</div>
+										<div class="slider">
+											<div class="wrap">
+												<div class="pic">
+													<img src="img/taurus.jpg" alt="황소자리" />
+												</div>
+												<div class="con">
+													<h2>TAURUS</h2>
+													<h3>황소자리</h3>
+													<p>
+														가까운 관계가 느닷없이 불안정해지면서, 친밀한 사람에
+														대해 어떤 결정을 내려야 할 수도 있습니다. 상대의
+														의견을 충분히 경청하고 수용하려는 태도가 필요해요.
+													</p>
+													<a href="#" class="more"
+														>더보기<span class="arrow"></span
+													></a>
+												</div>
+											</div>
+										</div>
+										<div class="slider">
+											<div class="wrap">
+												<div class="pic">
+													<img src="img/gemini.jpg" alt="쌍둥이자리" />
+												</div>
+												<div class="con">
+													<h2>GEMINI</h2>
+													<h3>쌍둥이자리</h3>
+													<p>
+														시간을 유연하게 활용하는 태도가 중요한 달이에요.
+														그러니 일정을 과도하게 잡지 않도록 주의하세요. 이달
+														당신의 모든 활동이 회사 업무에 집중되겠군요.
+													</p>
+													<a href="#" class="more"
+														>더보기<span class="arrow"></span
+													></a>
+												</div>
+											</div>
+										</div>
+										<div class="slider">
+											<div class="wrap">
+												<div class="pic">
+													<img src="img/cancer.jpg" alt="게자리" />
+												</div>
+												<div class="con">
+													<h2>CANCER</h2>
+													<h3>게자리</h3>
+													<p>
+														4일 이후 애정 관계에 난기류가 찾아올지도 모릅니다.
+														상대가 다른 사람을 마음에 두고 있다는 가슴 아픈
+														이야기를 전하거나 자녀와 의견이 충돌할 수 있으니
+														신중한 대응이 필요합니다.
+													</p>
+													<a href="#" class="more"
+														>더보기<span class="arrow"></span
+													></a>
+												</div>
+											</div>
+										</div>
+										<div class="slider">
+											<div class="wrap">
+												<div class="pic">
+													<img src="img/leo.jpg" alt="사자자리" />
+												</div>
+												<div class="con">
+													<h2>LEO</h2>
+													<h3>사자자리</h3>
+													<p>
+														가족, 거주지 또는 재산과 관련된 문제가 생깁니다.
+														예상치 못한 부분이기에 충격을 받을 수 있어요. 마치
+														세상의 모든 어려움을 짊어진 듯한 기분이 들지도
+														모르지만, 잠시뿐이라는 걸 기억해요.
+													</p>
+													<a href="#" class="more"
+														>더보기<span class="arrow"></span
+													></a>
+												</div>
+											</div>
+										</div>
+										<div class="slider">
+											<div class="wrap">
+												<div class="pic">
+													<img src="img/virgo.jpg" alt="처녀자리" />
+												</div>
+												<div class="con">
+													<h2>VIRGO</h2>
+													<h3>처녀자리</h3>
+													<p>
+														분주한 시간을 보내온 터라 여행을 가고 싶은 마음은
+														이해하지만, 이달은 여행운이 좋 지 않아요. 집에서
+														가까운 곳에 다녀오는 것만으로도 충분할 겁니다.
+													</p>
+													<a href="#" class="more"
+														>더보기<span class="arrow"></span
+													></a>
+												</div>
+											</div>
+										</div>
+										<div class="slider">
+											<div class="wrap">
+												<div class="pic">
+													<img src="img/libra.jpg" alt="천칭자리" />
+												</div>
+												<div class="con">
+													<h2>LIBRA</h2>
+													<h3>천칭자리</h3>
+													<p>
+														4일 이후 뜻밖의 지출이 발생하면서 여러 대금을
+														지불하는 데 몰두해야 할 것 같네요. 사람들을 냉정하게
+														비판하고 싶은 생각이 들더라도 그 엄격함을 내려놓고
+														다정한 시선을 건네보 는 건 어떨까요.
+													</p>
+													<a href="#" class="more"
+														>더보기<span class="arrow"></span
+													></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<a href="#" class="prev"></a>
+									<a href="#" class="next"></a>
+								</div>
+							</article>
+						</div>
+						<div class="right">
+							<h1>WEEKLY HOT ISSUE</h1>
+							<article>
+								<div class="pic">
+									<img src="img/issue1.jpg" alt="모자" />
+								</div>
+								<h2>Hat styling for autumn daily look</h2>
+							</article>
+							<article>
+								<div class="pic">
+									<img src="img/issue2.jpg" alt="요리하는 방탄소년단 정국" />
+								</div>
+								<h2>
+									Wear Knitwear Like a Street Styler This Labor Day Weekend
+								</h2>
+							</article>
+							<article>
+								<div class="pic">
+									<img src="img/issue3.jpg" alt="보아" />
+								</div>
+								<h2>Shane Gabier Puts His Colorful, Collectible Ceramics</h2>
+							</article>
+							<article>
+								<div class="pic">
+									<img src="img/issue4.jpg" alt="대화하는모습" />
+								</div>
+								<h2>Like Gwyneth, Street Style Loves a Power Suit</h2>
+							</article>
+						</div>
+					</div>
+				</section>
+				<section class="box4 myScroll">
+					<h1>WHAT WE'RE ALL ABOUT</h1>
+					<div class="wrap">
+						<article>
+							<div class="pic">
+								<img src="img/pic4-1.jpg" alt="개인공간" />
+							</div>
+							<h2>Independent Spaces</h2>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Reiciendis fugiat incidunt amet totam obcaecati eius atque
+								exercitationem cupiditate cumque accusantium.
+							</p>
+						</article>
+						<article>
+							<div class="pic">
+								<img src="img/pic4-2.jpg" alt="바다가 보이는 사무실" />
+							</div>
+							<h2>Inspiring Ofiice Spaces</h2>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Reiciendis fugiat incidunt amet totam obcaecati eius atque
+								exercitationem cupiditate cumque accusantium.
+							</p>
+						</article>
+						<article>
+							<div class="pic">
+								<img src="img/pic4-3.jpg" alt="멤버십 가입 공간" />
+							</div>
+							<h2>Spaces Membership</h2>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Reiciendis fugiat incidunt amet totam obcaecati eius atque
+								exercitationem cupiditate cumque accusantium.
+							</p>
+						</article>
+						<article>
+							<div class="pic">
+								<img src="img/pic4-4.jpg" alt="여러사람들이 협업하는 모습" />
+							</div>
+							<h2>Social Networking</h2>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Reiciendis fugiat incidunt amet totam obcaecati eius atque
+								exercitationem cupiditate cumque accusantium.
+							</p>
+						</article>
+						<article>
+							<div class="pic">
+								<img src="img/pic4-5.jpg" alt="메뉴사진" />
+							</div>
+							<h2>Service & Catering</h2>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Reiciendis fugiat incidunt amet totam obcaecati eius atque
+								exercitationem cupiditate cumque accusantium.
+							</p>
+						</article>
+					</div>
+				</section>
+			</div>
+		</main>
 
-    <footer id="footer">
-        <div class="inner">
-            <div class="wrap">
-                <h1><a href="index.html" title="홈으로">Lorem</a></h1>
-                <address>
-                    <span>(주)Lorem</span> 대표: 홍길동 사업자등록번호: 123-12-12345<br>
-                    주소: 서울특별시 종로구 율곡로12 1234호<br>
-                    통신판매업번호: 2021-서울종로-1234 호스팅사업자: Lorem<br>
-                    계좌: 신한은행 123-123-123456 예금주: (주)Lorem
-                </address>
-                <ul>
-                    <li>
-                        <h2>CS CENTER</h2>
-                        <p>문의 02-123-1234</p>
-                        <p>평일 10:00-18:00</p>
-                        <p>점심시간 12:30-13:30</p>
-                    </li>
-                    <li>
-                        <h2>CONTACT</h2>
-                        <p>카카오톡 채팅상담</p>
-                        <p>온라인숍 이용안내</p>
-                        <p>1:1문의</p>
-                    </li>
-                    <li>
-                        <h2>HELP</h2>
-                        <p>고객센터</p>
-                        <p>혜택안내</p>
-                        <p>교환 및 환불</p>
-                    </li>
-                    <li>
-                        <h2>MENU</h2>
-                        <p>캘린더</p>
-                        <p>회사소개</p>
-                        <p>매장안내</p>
-                    </li>
-                </ul>
-            </div>
-            <ul>
-                <li><a href="#">COPYRIGHT &copy; SUYEONHONG, ALL RIGHTS RESERVED.</a></li>
-                <li><a href="#">PRIVACY</a></li>
-                <li><a href="#">TERMS OF USE</a></li>
-                <li><a href="#">BELLAHONG95@GMAIL.COM</a></li>
-                <li><a href="#">SITE BY SUYEON</a></li>
-            </ul>
-        </div>
-    </footer>
+		<footer id="footer">
+			<div class="inner">
+				<div class="wrap">
+					<h1><a href="index.html" title="홈으로">Lorem</a></h1>
+					<address>
+						<span>(주)Lorem</span> 대표: 홍길동 사업자등록번호: 123-12-12345<br />
+						주소: 서울특별시 종로구 율곡로12 1234호<br />
+						통신판매업번호: 2021-서울종로-1234 호스팅사업자: Lorem<br />
+						계좌: 신한은행 123-123-123456 예금주: (주)Lorem
+					</address>
+					<ul>
+						<li>
+							<h2>CS CENTER</h2>
+							<p>문의 02-123-1234</p>
+							<p>평일 10:00-18:00</p>
+							<p>점심시간 12:30-13:30</p>
+						</li>
+						<li>
+							<h2>CONTACT</h2>
+							<p>카카오톡 채팅상담</p>
+							<p>온라인숍 이용안내</p>
+							<p>1:1문의</p>
+						</li>
+						<li>
+							<h2>HELP</h2>
+							<p>고객센터</p>
+							<p>혜택안내</p>
+							<p>교환 및 환불</p>
+						</li>
+						<li>
+							<h2>MENU</h2>
+							<p>캘린더</p>
+							<p>회사소개</p>
+							<p>매장안내</p>
+						</li>
+					</ul>
+				</div>
+				<ul>
+					<li>
+						<a href="#">COPYRIGHT &copy; SUYEONHONG, ALL RIGHTS RESERVED.</a>
+					</li>
+					<li><a href="#">PRIVACY</a></li>
+					<li><a href="#">TERMS OF USE</a></li>
+					<li><a href="#">BELLAHONG95@GMAIL.COM</a></li>
+					<li><a href="#">SITE BY SUYEON</a></li>
+				</ul>
+			</div>
+		</footer>
 
-    <ul id="navi">
-        <li class="on"><a href="#header"></a></li>
-        <li><a href=".box1"></a></li>
-        <li><a href=".mento"></a></li>
-        <li><a href=".box3"></a></li>
-        <li><a href=".box4"></a></li>
-    </ul>
+		<ul id="navi">
+			<li class="on"><a href="#header"></a></li>
+			<li><a href=".box1"></a></li>
+			<li><a href=".mento"></a></li>
+			<li><a href=".box3"></a></li>
+			<li><a href=".box4"></a></li>
+		</ul>
 
-    <div id="popup">
-        <div class="inner">
-            <div class="con">
-                <h1>Limited time offer</h1>
-                <h2>Get 15% off</h2>
-                <p>Use your unique coupon code on checkout page. <span>Style15</span></p>
-                <a href="#">Shop now</a>
-                <input type="checkbox" name="ck" id="ck">
-                <label for="ck">Dont' show again for 24h</label>
-            </div>
-            <div class="pic">
-                <img src="img/popup.png" alt="걸어가는 모델">
-            </div>
-            <a href="#" class="close" title="닫기버튼"></a>
-        </div>
-    </div>
-</body>
+		<div id="popup">
+			<div class="inner">
+				<div class="con">
+					<h1>Limited time offer</h1>
+					<h2>Get 15% off</h2>
+					<p>
+						Use your unique coupon code on checkout page. <span>Style15</span>
+					</p>
+					<a href="#">Shop now</a>
+					<input type="checkbox" name="ck" id="ck" />
+					<label for="ck">Dont' show again for 1day</label>
+				</div>
+				<div class="pic">
+					<img src="img/popup.png" alt="걸어가는 모델" />
+				</div>
+				<a href="#" class="close" title="닫기버튼"></a>
+			</div>
+		</div>
+	</body>
 </html>
